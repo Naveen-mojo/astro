@@ -1,0 +1,5683 @@
+.dropdown:hover .display_set_dropdwn .user_profile_drpdwn {
+  display: block !important;
+}
+.commonLoaderCss {
+  background: #7d7d7d;
+  z-index: 100000;
+  position: fixed;
+  width: 100%;
+}
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loadingCssText {
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+}
+.ings > .invalid-feedback {
+  padding: 50px;
+}
+.ttloader {
+  background-color: #0000008f;
+  height: 100%;
+  position: fixed;
+  z-index: 99999999999;
+}
+.rotating,
+.ttloader {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.rotating {
+  background-image: url(https://aws.astrotalk.com/assets/images/header/icons/pressed6.gif);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  right: 0;
+}
+.tool-kit-heading {
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-group.message {
+  text-align: center;
+  color: green;
+}
+.error > input {
+  border-bottom: 1px solid red !important;
+}
+.mobile-scroll {
+  overflow-y: scroll;
+  max-height: 410px;
+}
+.error-msg {
+  background: #ffdcdc;
+  border: 1px solid #fdbdbd;
+  color: red;
+  border-radius: 5px;
+  width: 85%;
+}
+.error-msg,
+.success-msg {
+  padding: 3px 5px;
+  text-align: center;
+  font-size: 13px;
+  margin: 0 40px 15px;
+}
+.success-msg {
+  background: #dcffe9;
+  border: 1px solid #bffdbd;
+  color: green;
+  border-radius: 5px;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.ings .invalid-feedback {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  font-size: 12px;
+  max-width: 400px;
+}
+.password-error {
+  width: 80% !important;
+  font-size: 12px;
+}
+.invalid-feedback.block {
+  display: block;
+  width: auto;
+}
+.form-controls.is-invalid,
+.was-validated .form-controls:invalid {
+  border-bottom: 1px solid red !important;
+  padding-right: calc(1.5em + 0.75rem);
+}
+.btn-check:active + .btn-secondary,
+.btn-check:checked + .btn-secondary,
+.btn-secondary.active,
+.btn-secondary:active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #000;
+}
+button.btn {
+  border-radius: 0 20px 20px 0;
+  height: 36px;
+  border-left: 0;
+}
+.regsmitbtn {
+  font-weight: 600;
+  font-size: 14px;
+}
+.form-control:focus {
+  box-shadow: none !important;
+  border: 1px solid #919191;
+}
+.lgMainHead {
+  text-align: center !important;
+  padding: 20px 0 5px;
+  font-size: 1.3em !important;
+}
+.lgMainHead.m-20 {
+  margin: 20px;
+}
+button.resendCode {
+  padding: 0.1em;
+  text-align: center;
+  margin: auto;
+  width: 100% !important;
+  border-radius: 24px;
+  box-shadow: none;
+  background: #fdfdfd;
+  border: 1px solid #4332;
+  color: #4c4c4c;
+}
+button.resendCode:disabled {
+  background-color: #cccccc2e;
+  cursor: no-drop;
+}
+.hide-pass:before {
+  content: "\f070";
+  color: #9a9a9a;
+}
+.show-pass:before {
+  content: "\f06e";
+  color: #198754;
+}
+.hide-pass:before,
+.show-pass:before {
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  cursor: pointer;
+  font-family: FontAwesome;
+}
+#user_profile .user_profile_btn {
+  background-color: #f0df20;
+  margin-left: 10px;
+  display: block;
+  padding: 0;
+  width: 30px;
+  border-radius: 100% !important;
+  border: none;
+}
+#user_profile .user_profile_pic {
+  display: inline-block;
+  width: 23px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #b2a5a5;
+  height: 23px;
+  position: relative;
+  margin-right: 3px;
+}
+#user_profile
+  .user_profile_pic
+  img {
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.section_language {
+  z-index: 1;
+  margin-left: 10px;
+  background-color: #f0df20;
+  border-radius: 50%;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  justify-content: center;
+}
+.section_language button.btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 10px;
+  color: #000;
+}
+.language_drpdown {
+  display: block;
+  position: unset !important;
+  margin-top: 40px !important;
+  top: 0 !important;
+}
+.blank_bg {
+  display: none;
+  position: absolute;
+  right: 2px;
+  top: 0;
+}
+.uses_flext {
+  display: flex;
+  align-items: center;
+}
+.section_language:hover .blank_bg,
+.user_profile:hover .display_set_dropdwn {
+  display: block;
+}
+#user_profile .user_profile_drpdwn {
+  display: block;
+  margin-top: 10px;
+  top: 0 !important;
+  position: unset !important;
+}
+.display_set_dropdwn {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  right: 0 !important;
+}
+.user_profile {
+  cursor: pointer;
+}
+@media screen and (max-width: 567px) {
+  #user_profile {
+    display: none;
+  }
+  .coming h4 {
+    font-size: 16px;
+  }
+  .coming h5 {
+    font-size: 12px;
+  }
+  .section_language {
+    margin-left: 5px;
+  }
+}
+@media screen and (min-width: 567px) {
+  #user_profile_mbl_view {
+    display: none;
+  }
+}
+#user_profile_mbl_view .user_profile_btn {
+  display: flex;
+  padding: 0;
+}
+#user_profile_mbl_view .user_profile_pic {
+  display: inline-block;
+  width: 35px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid #000;
+  height: 35px;
+  position: relative;
+}
+#user_profile_mbl_view
+  .user_profile_pic
+  img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#user_profile_mbl_view
+  .user_profile_dropdown {
+  border-top: 2px solid #f0df20 !important;
+  inset: unset !important;
+  top: 8px !important;
+  left: 0 !important;
+  border: none;
+  box-shadow: 0 0 6px #766c6c;
+  text-align: left;
+}
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 30px 10px 12px;
+  transition: 0.3s ease-in-out;
+}
+.user_profile_btn .fa-user {
+  font-size: 10px;
+}
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a:focus,
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a:hover {
+  background-color: #f8f4c1 !important;
+}
+@media screen and (max-width: 992px) {
+  #desktop_view_header {
+    display: none;
+  }
+  .mobileselect {
+    padding-right: 0;
+  }
+  .resendclass {
+    margin-top: 0;
+    padding: 0 50px 20px;
+  }
+  .mobileselect .form-control {
+    padding: 6px;
+  }
+  .wallet_amount_mbl_view {
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  #mobile_view_header {
+    display: none;
+  }
+}
+.header_section_mobile_view {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: 0 2px 4px #ccc;
+  top: 0;
+  padding: 0;
+}
+.header_section_mobile_view
+  .custom_toggler:focus {
+  box-shadow: none;
+}
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link {
+  font-size: 14px;
+  border-bottom: 1px solid #ececec;
+  color: #777;
+  padding: 10px 15px !important;
+  text-transform: capitalize;
+}
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:focus,
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  background-color: #f0df20 !important;
+  border-color: #e6e6e6 !important;
+  color: #777 !important;
+  font-weight: 700;
+}
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item {
+  font-size: 13px;
+  color: #777;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+  width: 100%;
+  padding: 10px 15px !important;
+  border-left: 3px solid #f9f9f9;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item:focus,
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item:hover {
+  background: #f2f2f2 !important;
+  color: #333 !important;
+  border-left: 3px solid #f2f2f2;
+}
+/* #mobile_view_header .header_top_baar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 10px 12px;
+} */
+.photo_user_profile img,
+photo_user_profile span {
+  width: 100%;
+  border-radius: 50px;
+}
+.photo_user_profile {
+  width: 75px;
+  border-radius: 100%;
+  margin: 0 auto;
+  background-color: #f0df20 !important;
+}
+.name_user_profile {
+  text-align: center;
+  color: #466590;
+  white-space: nowrap;
+  overflow-x: hidden;
+  line-height: 20px;
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.email_user_profile {
+  color: #868686;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 4px;
+  text-transform: lowercase;
+}
+.user_profile_mbl_view {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+}
+.contact_number_user_profile {
+  color: #716f6f;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 4px;
+  text-transform: lowercase;
+}
+.wallet_amount_mbl_view {
+  float: right;
+  font-size: 11px;
+  line-height: 2.1;
+  font-weight: 500;
+}
+.wallet_amount_mbl_view .fa-rupee-sign {
+  font-size: 13px;
+  font-weight: 300;
+}
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:focus
+  .wallet_amount_mbl_view
+  .fa-rupee-sign,
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  font-weight: 700;
+}
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover:focus,
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover:hover {
+  background-color: #fff !important;
+}
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover {
+  border-bottom: 1px dotted #ccc;
+}
+.width_special_set {
+  width: 230px !important;
+}
+#user_profile
+  .user_profile_dropdown
+  li
+  a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+#user_profile
+  .user_profile_dropdown
+  li
+  .padding_additional {
+  padding: 7px 15px !important;
+}
+.profile_pic_astrologer_Web img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.profile_pic_astrologer_Web {
+  width: 50px;
+}
+.navLinks .nav-link:hover {
+  color: #ac9e02;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: 0.3px 0 #ac9e02;
+}
+.navLinks .nav-link {
+  font-weight: 500 !important;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.Absolute-Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.card.coming {
+  box-shadow: 0 4px 18px 0 #f0df20;
+}
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 99999999 !important;
+}
+.mat-select-arrow {
+  border-left: none !important;
+  border-right: none !important;
+}
+.was-validated .form-control.ng-valid {
+  border-color: #198754 !important;
+}
+.was-validated .form-control.ng-valid,
+.was-validated .form-control:valid {
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.was-validated .form-control:valid {
+  border-color: #ccc;
+  background-image: none;
+}
+.was-validated .form-control.ng-invalid {
+  border-color: #dc3545 !important;
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.was-validated .form-control:valid:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+.was-validated
+  .form-control.ng-valid:focus {
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.25rem #19875440 !important;
+}
+.was-validated
+  .form-control.ng-invalid:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem #dc354540 !important;
+}
+.was-validated .form-control:invalid:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+.was-validated .form-control:invalid {
+  border-color: #ccc;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.nopic {
+  position: absolute;
+  left: 16.5px;
+  top: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+@media screen and (max-width: 1400px) {
+  .registration_source h5 {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .registration_source {
+    border-radius: 0 !important;
+    padding: 7px 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+  .textAreaInput {
+    margin-bottom: 0 !important;
+  }
+  .modal-footer {
+    padding: 5px;
+  }
+  .btns_language_select.registration_source_modal_item {
+    font-size: 12px !important;
+  }
+  .btnRowDiv {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 12px !important;
+  }
+  .registration_source h5 {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+  .registration_source i {
+    font-size: 21px !important;
+    font-weight: 100 !important;
+    margin-left: 30px !important;
+  }
+  .registration_source_modal_item:hover {
+    background-color: #f0df20 !important;
+  }
+}
+.registration_source {
+  filter: alpha(opacity=100) !important;
+  opacity: 0.9;
+  position: fixed !important;
+  right: 0;
+  bottom: 81px;
+  width: 20%;
+  background-color: #f0df20;
+  color: #000;
+  text-align: center !important;
+  z-index: 99999;
+  padding: 15px 0;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 0 4px 0 #919191;
+  border: 1px solid #919191;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.registration_source:focus,
+.registration_source:hover {
+  background-color: #ff0;
+}
+.registration_source i {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 22px;
+}
+.registration_source h5 {
+  margin: 0;
+  font-size: 15px;
+  display: inline-block;
+}
+.registration_source_modal_item {
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.registration_source_modal_item:hover {
+  background-color: #eee;
+}
+.registration_source_modal_item.seleted,
+.registration_source_modal_item:focus,
+.selectedBtn {
+  background-color: #f0df20;
+}
+.selectedBtn {
+  color: #000;
+}
+.textAreaInput {
+  margin-left: 7%;
+  margin-right: 7%;
+  width: 86%;
+  height: 75px;
+  margin-bottom: 10px;
+}
+.regsubmitbtn {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.btnRowDiv {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+}
+.mobile_registraion_section {
+  padding-top: 78px;
+}
+.login_with_phone_number {
+  background-color: #f0df20;
+  border: none;
+  padding: 7px 40px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 10px;
+}
+.login_with_phone_number:focus-visible {
+  outline: none;
+}
+.mobile_number_registration_popup .modal-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 95%;
+}
+.mobile_number_registration_popup .modal-content {
+  border-radius: 10px;
+}
+.mobile_number_registration_popup .modal-content .modal-body {
+  background-color: #eee;
+  border-radius: 10px;
+  position: relative;
+}
+.main_heading_mobile_number_registration {
+  text-align: center;
+  font-weight: 600;
+  color: #313131;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+}
+.subheading_for_notification {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  padding: 7% 24%;
+  color: #525252;
+  font-weight: 600;
+}
+.mobile_number_enter_section {
+  padding: 0 20px;
+}
+.mobile_number_enter_section h6 {
+  font-size: 13px;
+  margin: 0;
+  padding: 12px 0;
+  color: #525252;
+}
+.box_enter_mobile_number mat-select {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 0 0;
+  box-shadow: unset;
+  border: none;
+  max-width: 100px;
+}
+.box_enter_mobile_number input {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 500;
+  width: 100%;
+  box-shadow: unset;
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box_enter_mobile_number
+  input:focus-within {
+  outline: none;
+}
+.box_enter_mobile_number
+  select:focus-visible {
+  outline: none;
+}
+.box_enter_mobile_number {
+  background-color: #fff;
+  padding: 5px 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.get_otp_btn {
+  background-color: #f0df20;
+  border: none;
+  width: 100%;
+  margin: 30px 0;
+  padding: 7px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 0 2px 2px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.get_otp_btn:hover {
+  box-shadow: 1px 2px 3px #00000080;
+}
+.get_otp_btn i {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  top: 10px;
+}
+.otp_sent_number {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: teal;
+  text-align: center;
+  padding: 30px 0;
+}
+.otp_enter_section {
+  padding: 0 20px;
+}
+.otp_enter_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.otp_enter_row input {
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 0 2px #ccc;
+  border-radius: 5px;
+  padding: 0 19px 0 20px;
+}
+.otp_enter_row input:focus-visible {
+  outline: none;
+}
+/* .otp_enter_row[_ngcontent-serverApp-c85] input[_ngcontent-serverApp-c85] { */
+.partial-sms-box input {
+  /* .errorClass[_ngcontent-serverApp-c85] { */
+  border: 1px solid red !important;
+}
+.opt_submit_btn {
+  background-color: #f0df20;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.opt_submit_btn:focus-visible {
+  outline: none;
+}
+.resend_otp_avialable {
+  font-size: 13px;
+  color: teal;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.recent_otp_sms_call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.recent_otp_sms_call .bnts_recent_otp {
+  background-color: #f0df20;
+  border: none;
+  font-size: 11px;
+  font-weight: 500;
+  width: 48%;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recent_otp_sms_call
+  .bnts_recent_otp:focus-visible {
+  outline: none;
+}
+.country_btn_number_registration {
+  width: 60px;
+  display: block;
+  margin: 0 4px 2px;
+}
+.close_mobile_registration_popup {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  font-size: 18px;
+  color: #919191;
+  font-weight: 100;
+  cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .otp_enter_row input {
+    width: 45px;
+    height: 45px;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .otp_enter_row input {
+    width: 40px;
+    height: 40px;
+    padding: 0 12px;
+  }
+  .subheading_for_notification {
+    padding: 7% 20%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mobile_registraion_section {
+    padding-top: 71px;
+  }
+}
+.verify_phone_number_section {
+  display: none !important;
+}
+@media screen and (min-width: 576px) {
+  .padding_desktop_view {
+    padding: 0 50px;
+  }
+  .padding_first_name_view {
+    padding: 25px 50px;
+  }
+  .mobile_number_registration_popup .modal-dialog {
+    width: 480px;
+  }
+}
+.disNon,
+.displayNone {
+  display: none;
+}
+.backArrowOtp {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  cursor: pointer;
+}
+.backArrowOtp:before {
+  color: #919191;
+  font-weight: 100;
+}
+.newLoginMat .mat-select-arrow {
+  border-left: 5px solid #0000 !important;
+  border-right: 5px solid #0000 !important;
+}
+.was-validated
+  .form-control.newLoginMat.ng-valid {
+  padding: 5px 0 !important;
+}
+.errorClass {
+  border: 1px solid red !important;
+}
+.errorClassInput {
+  border: 1px solid red;
+}
+.errorClassText {
+  font-size: 10px;
+  color: red;
+  margin-left: 1px;
+}
+.errorClassTextOtp {
+  font-size: 12px;
+  color: red;
+  margin-left: 1px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.mat-option.mat-active {
+  color: #000000de;
+  background: #0000001f !important;
+}
+a.active {
+  color: #f0df20;
+}
+.navLinks a {
+  cursor: pointer;
+}
+.navLinks .nav-link.lang1 {
+  margin-right: 0;
+  padding-left: 6px;
+  padding-right: 0;
+}
+.navLinks .nav-link.lang2 {
+  margin-right: 0;
+  padding-right: 6px;
+}
+.langSeparator {
+  padding-top: 6px;
+}
+
+.subheading_side_line:after,
+.subheading_side_line:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #383838;
+  bottom: 38%;
+}
+.subheading_why_astrology:after {
+  right: 26%;
+}
+.subheading_why_astrology:before {
+  left: 26%;
+}
+.subheading_faqs_about_astrology,
+.subheading_why_astrology {
+  margin-bottom: 20px;
+}
+.box_section {
+  min-height: 290px;
+}
+.card.margin_left_right {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 576px) {
+  .carousel-inner {
+    min-height: 168px !important;
+  }
+  .desktop_view_chinese_horoscope {
+    display: none;
+  }
+  .subheading_seo_content_headline_chinese_horoscope {
+    font-size: 17px;
+  }
+  .margin_bottom {
+    margin-bottom: 20px !important;
+  }
+  .card.margin_left_right {
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: auto !important;
+  }
+  .our_customer_subheading {
+    margin-bottom: 0 !important;
+  }
+  .testimonial {
+    margin-top: 0 !important;
+  }
+}
+.mbile_vrsn .box_item {
+  cursor: pointer;
+}
+
+.box_section.free_service {
+  margin: 18px 10px !important;
+}
+.box_section .icon {
+  height: 110px !important;
+}
+.box_section .icon img {
+  height: 110px;
+}
+@media screen and (max-width: 576px) {
+  .kundli_subheading:after,
+  .kundli_subheading:before {
+    display: none;
+  }
+  .box_section.free_service {
+    margin: 8% !important;
+  }
+  .box_section.free_service .discription {
+    display: none;
+  }
+  .box_section {
+    padding: 6px !important;
+    box-shadow: 0 0 4px #ccc !important;
+    border-bottom: unset !important;
+    min-height: 96px !important;
+  }
+  .box_section .icon img {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+  }
+  .box_section .title {
+    font-size: 16px;
+    text-align: center;
+    margin: 5px 0 3px;
+    color: #525151;
+    font-family: Philosopher;
+    font-weight: 600;
+  }
+  .margin_bottom {
+    margin-bottom: 20px !important;
+  }
+}
+.kundli_subheading:before {
+  left: -100px !important;
+}
+.kundli_subheading:after {
+  right: -100px !important;
+}
+.mar-20 {
+  margin: 0 10px;
+}
+
+.ast_team_box {
+  padding: 15px !important;
+}
+@media screen and (max-width: 576px) {
+  .ast_team_box img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .ast_team_box h4 {
+    font-size: 14px;
+  }
+  .ast_team_box p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .d-flex .col-md-2 {
+    width: 18.666667%;
+  }
+}
+.paddingForBottomShadow .slick-list {
+  padding-bottom: 10px;
+}
+
+.our_cust[_ngcontent-sc165] {
+  padding: 30px 0 20px;
+  background-color: #f0df20;
+  text-align: center;
+}
+.our_cust[_ngcontent-sc165] .card[_ngcontent-sc165] {
+  margin: 0 10px;
+}
+
+.row_blog_box_content[_ngcontent-sc166] {
+  margin-top: 20px;
+}
+.latest_from_blog_chinese[_ngcontent-sc166] {
+  padding: 40px 0;
+  text-align: center;
+}
+.fa.fa-eye[_ngcontent-sc166] {
+  color: #616161;
+}
+.blog_box_content[_ngcontent-sc166] {
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 5% !important;
+  box-shadow: 2px 2px 4px #616161;
+  position: relative;
+  display: block;
+}
+.blog_img_content[_ngcontent-sc166] img[_ngcontent-sc166] {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.description_blog[_ngcontent-sc166] {
+  padding: 10px 15px 5px;
+  font-size: 16px;
+}
+.description_blog[_ngcontent-sc166] .title_blog[_ngcontent-sc166] {
+  color: #000;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 296px;
+  height: 50px;
+  text-align: left;
+}
+.heading_seo_content_headline_chinese_horoscope[_ngcontent-sc166] {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+}
+.heading_seo_content_headline_chinese_horoscope[_ngcontent-sc166],
+.heading_seo_content_headline_chinese_horoscope[_ngcontent-sc166]
+  .our_customer_subheading[_ngcontent-sc166] {
+  text-align: center !important;
+  align-items: center;
+  justify-content: center;
+}
+.subheading_seo_content_headline_chinese_horoscope[_ngcontent-sc166] {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #383838;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+}
+@media screen and (max-width: 576px) {
+  .description_blog[_ngcontent-sc166] {
+    padding: 4px 10px 10px;
+    font-size: 12px;
+  }
+  .description_blog[_ngcontent-sc166] .title_blog[_ngcontent-sc166] {
+    color: #000;
+    max-height: 38px;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 290px;
+  }
+  .blog_img_content[_ngcontent-sc166] img[_ngcontent-sc166] {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.date_description_blog[_ngcontent-sc166] {
+  text-align: right;
+  font-size: 13px;
+  color: #616161;
+}
+.author_name_home_page[_ngcontent-sc166] {
+  text-align: left;
+  font-size: 13px;
+  color: #616161;
+}
+.last_row_blog_box[_ngcontent-sc166] {
+  padding-top: 5px;
+}
+.last_row_blog_box[_ngcontent-sc166],
+.row_view_and_date[_ngcontent-sc166] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row_view_and_date[_ngcontent-sc166] {
+  padding: 5px 0;
+}
+.views_blog_box[_ngcontent-sc166] {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #ffffffe6;
+  padding: 3px 6px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+.views_blog_box[_ngcontent-sc166] i[_ngcontent-sc166] {
+  margin-right: 4px;
+  font-size: 14px;
+}
+.views_blog_box[_ngcontent-sc166] span[_ngcontent-sc166] {
+  font-size: 10px;
+  color: #000;
+}
+
+.footer-top[_ngcontent-sc167] .fade_class_up[_ngcontent-sc167] {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+.footer-top[_ngcontent-sc167] .fade_class_down[_ngcontent-sc167] {
+  visibility: visible;
+  animation-name: fadeInDown;
+}
+.pointer[_ngcontent-sc167] {
+  cursor: pointer;
+}
+.container.user-model-login {
+  padding: 0 52px !important;
+}
+ul.navbar-nav.me-auto.mt-1.mb-lg-0.mobile-scroll {
+  margin-left: 53px;
+}
+
+#wrongotp {
+  font-size: 12px;
+  color: red;
+  margin-left: 200px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 1rem !important;
+}
+/* span.icons_saprate_image {
+  background-image: url(https://astrotalk.com/icon2.4960befe72d8e90c5ab8.webp);
+} */
+
+.commonLoaderCss[_ngcontent-serverApp-c87] {
+  background: #7d7d7d;
+  z-index: 100000;
+  position: fixed;
+  width: 100%;
+}
+.loadingContainer[_ngcontent-serverApp-c87] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loadingCssText[_ngcontent-serverApp-c87] {
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+}
+.ings[_ngcontent-serverApp-c87] > .invalid-feedback[_ngcontent-serverApp-c87] {
+  padding: 50px;
+}
+.ttloader[_ngcontent-serverApp-c87] {
+  background-color: #0000008f;
+  height: 100%;
+  position: fixed;
+  z-index: 99999999999;
+}
+.rotating[_ngcontent-serverApp-c87],
+.ttloader[_ngcontent-serverApp-c87] {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.rotating[_ngcontent-serverApp-c87] {
+  background-image: url(https://aws.astrotalk.com/assets/images/header/icons/pressed6.gif);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  right: 0;
+}
+.tool-kit-heading[_ngcontent-serverApp-c87] {
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-group.message {
+  text-align: center;
+  color: green;
+}
+.error > input {
+  border-bottom: 1px solid red !important;
+}
+.mobile-scroll {
+  overflow-y: scroll;
+  max-height: 410px;
+}
+.error-msg {
+  background: #ffdcdc;
+  border: 1px solid #fdbdbd;
+  color: red;
+  border-radius: 5px;
+  width: 85%;
+}
+.error-msg,
+.success-msg {
+  padding: 3px 5px;
+  text-align: center;
+  font-size: 13px;
+  margin: 0 40px 15px;
+}
+.success-msg {
+  background: #dcffe9;
+  border: 1px solid #bffdbd;
+  color: green;
+  border-radius: 5px;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.ings .invalid-feedback {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  font-size: 12px;
+  max-width: 400px;
+}
+.password-error {
+  width: 80% !important;
+  font-size: 12px;
+}
+.invalid-feedback.block {
+  display: block;
+  width: auto;
+}
+.form-controls.is-invalid,
+.was-validated
+  .form-controls:invalid {
+  border-bottom: 1px solid red !important;
+  padding-right: calc(1.5em + 0.75rem);
+}
+.btn-check:active
+  + .btn-secondary,
+.btn-check:checked
+  + .btn-secondary,
+.btn-secondary.active,
+.btn-secondary:active,
+.show
+  > .btn-secondary.dropdown-toggle {
+  color: #000;
+}
+button.btn {
+  border-radius: 0 20px 20px 0;
+  height: 36px;
+  border-left: 0;
+}
+.regsmitbtn {
+  font-weight: 600;
+  font-size: 14px;
+}
+.form-control:focus {
+  box-shadow: none !important;
+  border: 1px solid #919191;
+}
+.lgMainHead {
+  text-align: center !important;
+  padding: 20px 0 5px;
+  font-size: 1.3em !important;
+}
+.lgMainHead.m-20 {
+  margin: 20px;
+}
+button.resendCode {
+  padding: 0.1em;
+  text-align: center;
+  margin: auto;
+  width: 100% !important;
+  border-radius: 24px;
+  box-shadow: none;
+  background: #fdfdfd;
+  border: 1px solid #4332;
+  color: #4c4c4c;
+}
+button.resendCode:disabled {
+  background-color: #cccccc2e;
+  cursor: no-drop;
+}
+.hide-pass:before {
+  content: "\f070";
+  color: #9a9a9a;
+}
+.show-pass:before {
+  content: "\f06e";
+  color: #198754;
+}
+.hide-pass:before,
+.show-pass:before {
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  cursor: pointer;
+  font-family: FontAwesome;
+}
+#user_profile
+  .user_profile_btn {
+  background-color: #f0df20;
+  margin-left: 10px;
+  display: block;
+  padding: 0;
+  width: 30px;
+  border-radius: 100% !important;
+  border: none;
+}
+#user_profile
+  .user_profile_pic {
+  display: inline-block;
+  width: 23px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #b2a5a5;
+  height: 23px;
+  position: relative;
+  margin-right: 3px;
+}
+#user_profile
+  .user_profile_pic
+  img {
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.section_language {
+  z-index: 1;
+  margin-left: 10px;
+  background-color: #f0df20;
+  border-radius: 50%;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  justify-content: center;
+}
+.section_language
+  button.btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 10px;
+  color: #000;
+}
+.language_drpdown {
+  display: block;
+  position: unset !important;
+  margin-top: 40px !important;
+  top: 0 !important;
+}
+.blank_bg {
+  display: none;
+  position: absolute;
+  right: 2px;
+  top: 0;
+}
+.uses_flext {
+  display: flex;
+  align-items: center;
+}
+.section_language:hover
+  .blank_bg,
+.user_profile:hover
+  .display_set_dropdwn {
+  display: block;
+}
+#user_profile
+  .user_profile_drpdwn {
+  display: block;
+  margin-top: 10px;
+  top: 0 !important;
+  position: unset !important;
+}
+.display_set_dropdwn {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  right: 0 !important;
+}
+.user_profile {
+  cursor: pointer;
+}
+@media screen and (max-width: 567px) {
+  #user_profile {
+    display: none;
+  }
+  .coming h4 {
+    font-size: 16px;
+  }
+  .coming h5 {
+    font-size: 12px;
+  }
+  .section_language {
+    margin-left: 5px;
+  }
+}
+@media screen and (min-width: 567px) {
+  #user_profile_mbl_view {
+    display: none;
+  }
+}
+#user_profile_mbl_view
+  .user_profile_btn {
+  display: flex;
+  padding: 0;
+}
+#user_profile_mbl_view
+  .user_profile_pic {
+  display: inline-block;
+  width: 35px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid #000;
+  height: 35px;
+  position: relative;
+}
+#user_profile_mbl_view
+  .user_profile_pic
+  img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#user_profile_mbl_view
+  .user_profile_dropdown {
+  border-top: 2px solid #f0df20 !important;
+  inset: unset !important;
+  top: 8px !important;
+  left: 0 !important;
+  border: none;
+  box-shadow: 0 0 6px #766c6c;
+  text-align: left;
+}
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 30px 10px 12px;
+  transition: 0.3s ease-in-out;
+}
+.user_profile_btn .fa-user {
+  font-size: 10px;
+}
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a:focus,
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a:hover {
+  background-color: #f8f4c1 !important;
+}
+@media screen and (max-width: 992px) {
+  #desktop_view_header {
+    display: none;
+  }
+  .mobileselect {
+    padding-right: 0;
+  }
+  .resendclass {
+    margin-top: 0;
+    padding: 0 50px 20px;
+  }
+  .mobileselect
+    .form-control {
+    padding: 6px;
+  }
+  .wallet_amount_mbl_view {
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  #mobile_view_header {
+    display: none;
+  }
+}
+.header_section_mobile_view {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: 0 2px 4px #ccc;
+  top: 0;
+  padding: 0;
+}
+.header_section_mobile_view
+  .custom_toggler:focus {
+  box-shadow: none;
+}
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link {
+  font-size: 14px;
+  border-bottom: 1px solid #ececec;
+  color: #777;
+  padding: 10px 15px !important;
+  text-transform: capitalize;
+}
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:focus,
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  background-color: #f0df20 !important;
+  border-color: #e6e6e6 !important;
+  color: #777 !important;
+  font-weight: 700;
+}
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item {
+  font-size: 13px;
+  color: #777;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+  width: 100%;
+  padding: 10px 15px !important;
+  border-left: 3px solid #f9f9f9;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item:focus,
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item:hover {
+  background: #f2f2f2 !important;
+  color: #333 !important;
+  border-left: 3px solid #f2f2f2;
+}
+#mobile_view_header
+  .header_top_baar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 10px 12px;
+}
+.photo_user_profile img,
+photo_user_profile span {
+  width: 100%;
+  border-radius: 50px;
+}
+.photo_user_profile {
+  width: 75px;
+  border-radius: 100%;
+  margin: 0 auto;
+  background-color: #f0df20 !important;
+}
+.name_user_profile {
+  text-align: center;
+  color: #466590;
+  white-space: nowrap;
+  overflow-x: hidden;
+  line-height: 20px;
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.email_user_profile {
+  color: #868686;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 4px;
+  text-transform: lowercase;
+}
+.user_profile_mbl_view {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+}
+.contact_number_user_profile {
+  color: #716f6f;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 4px;
+  text-transform: lowercase;
+}
+.wallet_amount_mbl_view {
+  float: right;
+  font-size: 11px;
+  line-height: 2.1;
+  font-weight: 500;
+}
+.wallet_amount_mbl_view
+  .fa-rupee-sign {
+  font-size: 13px;
+  font-weight: 300;
+}
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:focus
+  .wallet_amount_mbl_view
+  .fa-rupee-sign,
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  font-weight: 700;
+}
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover:focus,
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover:hover {
+  background-color: #fff !important;
+}
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover {
+  border-bottom: 1px dotted #ccc;
+}
+.width_special_set {
+  width: 230px !important;
+}
+#user_profile
+  .user_profile_dropdown
+  li
+  a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+#user_profile
+  .user_profile_dropdown
+  li
+  .padding_additional {
+  padding: 7px 15px !important;
+}
+.profile_pic_astrologer_Web
+  img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.profile_pic_astrologer_Web {
+  width: 50px;
+}
+.navLinks .nav-link:hover {
+  color: #ac9e02;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: 0.3px 0 #ac9e02;
+}
+.navLinks .nav-link {
+  font-weight: 500 !important;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.Absolute-Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.card.coming {
+  box-shadow: 0 4px 18px 0 #f0df20;
+}
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 99999999 !important;
+}
+.mat-select-arrow {
+  border-left: none !important;
+  border-right: none !important;
+}
+.was-validated
+  .form-control.ng-valid {
+  border-color: #198754 !important;
+}
+.was-validated
+  .form-control.ng-valid,
+.was-validated
+  .form-control:valid {
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.was-validated
+  .form-control:valid {
+  border-color: #ccc;
+  background-image: none;
+}
+.was-validated
+  .form-control.ng-invalid {
+  border-color: #dc3545 !important;
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.was-validated
+  .form-control:valid:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+.was-validated
+  .form-control.ng-valid:focus {
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.25rem #19875440 !important;
+}
+.was-validated
+  .form-control.ng-invalid:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem #dc354540 !important;
+}
+.was-validated
+  .form-control:invalid:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+.was-validated
+  .form-control:invalid {
+  border-color: #ccc;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.nopic {
+  position: absolute;
+  left: 16.5px;
+  top: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+@media screen and (max-width: 1400px) {
+  .registration_source h5 {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .registration_source {
+    border-radius: 0 !important;
+    padding: 7px 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+  .textAreaInput {
+    margin-bottom: 0 !important;
+  }
+  .modal-footer {
+    padding: 5px;
+  }
+  .btns_language_select.registration_source_modal_item {
+    font-size: 12px !important;
+  }
+  .btnRowDiv {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 12px !important;
+  }
+  .registration_source h5 {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+  .registration_source i {
+    font-size: 21px !important;
+    font-weight: 100 !important;
+    margin-left: 30px !important;
+  }
+  .registration_source_modal_item:hover {
+    background-color: #f0df20 !important;
+  }
+}
+.registration_source {
+  filter: alpha(opacity=100) !important;
+  opacity: 0.9;
+  position: fixed !important;
+  right: 0;
+  bottom: 81px;
+  width: 20%;
+  background-color: #f0df20;
+  color: #000;
+  text-align: center !important;
+  z-index: 99999;
+  padding: 15px 0;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 0 4px 0 #919191;
+  border: 1px solid #919191;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.registration_source:focus,
+.registration_source:hover {
+  background-color: #ff0;
+}
+.registration_source i {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 22px;
+}
+.registration_source h5 {
+  margin: 0;
+  font-size: 15px;
+  display: inline-block;
+}
+.registration_source_modal_item {
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.registration_source_modal_item:hover {
+  background-color: #eee;
+}
+.registration_source_modal_item.seleted,
+.registration_source_modal_item:focus,
+.selectedBtn {
+  background-color: #f0df20;
+}
+.selectedBtn {
+  color: #000;
+}
+.textAreaInput {
+  margin-left: 7%;
+  margin-right: 7%;
+  width: 86%;
+  height: 75px;
+  margin-bottom: 10px;
+}
+.regsubmitbtn {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.btnRowDiv {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+}
+.mobile_registraion_section {
+  padding-top: 78px;
+}
+.login_with_phone_number {
+  background-color: #f0df20;
+  border: none;
+  padding: 7px 40px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 10px;
+}
+.login_with_phone_number:focus-visible {
+  outline: none;
+}
+.mobile_number_registration_popup .modal-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 95%;
+}
+.mobile_number_registration_popup .modal-content {
+  border-radius: 10px;
+}
+.mobile_number_registration_popup .modal-content .modal-body {
+  background-color: #eee;
+  border-radius: 10px;
+  position: relative;
+}
+.main_heading_mobile_number_registration {
+  text-align: center;
+  font-weight: 600;
+  color: #313131;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+}
+.subheading_for_notification {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  padding: 7% 24%;
+  color: #525252;
+  font-weight: 600;
+}
+.mobile_number_enter_section {
+  padding: 0 20px;
+}
+.mobile_number_enter_section
+  h6 {
+  font-size: 13px;
+  margin: 0;
+  padding: 12px 0;
+  color: #525252;
+}
+.box_enter_mobile_number
+  mat-select {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 0 0;
+  box-shadow: unset;
+  border: none;
+  max-width: 100px;
+}
+.box_enter_mobile_number
+  input {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 500;
+  width: 100%;
+  box-shadow: unset;
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box_enter_mobile_number
+  input:focus-within {
+  outline: none;
+}
+.box_enter_mobile_number
+  select:focus-visible {
+  outline: none;
+}
+.box_enter_mobile_number {
+  background-color: #fff;
+  padding: 5px 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.get_otp_btn {
+  background-color: #f0df20;
+  border: none;
+  width: 100%;
+  margin: 30px 0;
+  padding: 7px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 0 2px 2px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.get_otp_btn:hover {
+  box-shadow: 1px 2px 3px #00000080;
+}
+.get_otp_btn i {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  top: 10px;
+}
+.otp_sent_number {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: teal;
+  text-align: center;
+  padding: 30px 0;
+}
+.otp_enter_section {
+  padding: 0 20px;
+}
+.otp_enter_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.otp_enter_row input {
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 0 2px #ccc;
+  border-radius: 5px;
+  padding: 0 19px 0 20px;
+}
+.otp_enter_row
+  input:focus-visible {
+  outline: none;
+}
+.opt_submit_btn {
+  background-color: #f0df20;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.opt_submit_btn:focus-visible {
+  outline: none;
+}
+.resend_otp_avialable {
+  font-size: 13px;
+  color: teal;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.recent_otp_sms_call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.recent_otp_sms_call
+  .bnts_recent_otp {
+  background-color: #f0df20;
+  border: none;
+  font-size: 11px;
+  font-weight: 500;
+  width: 48%;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recent_otp_sms_call
+  .bnts_recent_otp:focus-visible {
+  outline: none;
+}
+.country_btn_number_registration {
+  width: 60px;
+  display: block;
+  margin: 0 4px 2px;
+}
+.close_mobile_registration_popup {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  font-size: 18px;
+  color: #919191;
+  font-weight: 100;
+  cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .otp_enter_row input {
+    width: 45px;
+    height: 45px;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .otp_enter_row input {
+    width: 40px;
+    height: 40px;
+    padding: 0 12px;
+  }
+  .subheading_for_notification {
+    padding: 7% 20%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mobile_registraion_section {
+    padding-top: 71px;
+  }
+}
+.verify_phone_number_section {
+  display: none !important;
+}
+@media screen and (min-width: 576px) {
+  .padding_desktop_view {
+    padding: 0 50px;
+  }
+  .padding_first_name_view {
+    padding: 25px 50px;
+  }
+  .mobile_number_registration_popup .modal-dialog {
+    width: 480px;
+  }
+}
+.disNon,
+.displayNone {
+  display: none;
+}
+.backArrowOtp {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  cursor: pointer;
+}
+.backArrowOtp:before {
+  color: #919191;
+  font-weight: 100;
+}
+.newLoginMat .mat-select-arrow {
+  border-left: 5px solid #0000 !important;
+  border-right: 5px solid #0000 !important;
+}
+.was-validated
+  .form-control.newLoginMat.ng-valid {
+  padding: 5px 0 !important;
+}
+.errorClass {
+  border: 1px solid red !important;
+}
+.errorClassInput {
+  border: 1px solid red;
+}
+.errorClassText {
+  font-size: 10px;
+  color: red;
+  margin-left: 1px;
+}
+.errorClassTextOtp {
+  font-size: 12px;
+  color: red;
+  margin-left: 1px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.mat-option.mat-active {
+  color: #000000de;
+  background: #0000001f !important;
+}
+a.active {
+  color: #f0df20;
+}
+.navLinks a {
+  cursor: pointer;
+}
+.navLinks .nav-link.lang1 {
+  margin-right: 0;
+  padding-left: 6px;
+  padding-right: 0;
+}
+.navLinks .nav-link.lang2 {
+  margin-right: 0;
+  padding-right: 6px;
+}
+.langSeparator {
+  padding-top: 6px;
+}
+
+.chinese_horoscope_section {
+  /* padding-top: 83px; */
+  text-align: center;
+}
+.header_chinese_horoscope
+  img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+.header_contant_chinese {
+  padding: 35px 0;
+}
+.left_side_text_chinese
+  h1 {
+  font-size: 68px;
+}
+.left_side_text_chinese
+  h2 {
+  font-size: 56px;
+  color: #000;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+.left_side_text_chinese
+  h1:before {
+  content: "";
+  height: 8px;
+  width: 200px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+.heading_know_your_chinese_horoscope {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+.subheading_know_your_chinese_horoscope {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #383838;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: relative;
+}
+.subheading_know_your_chinese_horoscope:after,
+.subheading_know_your_chinese_horoscope:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #383838;
+  bottom: 40%;
+}
+.subheading_know_your_chinese_horoscope:after {
+  right: 310px;
+}
+.subheading_know_your_chinese_horoscope:before {
+  left: 310px;
+}
+.find_your_chinese_animal {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.find_your_chinese_animal
+  p {
+  font-size: 16px;
+  color: #313131;
+  margin-bottom: 20px;
+  padding-right: 60px;
+}
+.find_your_chinese_box {
+  border: 1px solid #f0df20;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px #757575;
+}
+.find_your_chinese_box
+  h6 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  color: #323232;
+}
+.find_your_chinese_box p {
+  font-size: 14px;
+  padding: 0;
+  color: #919191;
+  margin-bottom: 15px;
+}
+.find_your_chinese_box
+  .birthday_text {
+  font-size: 16px;
+  color: #313131;
+  margin-bottom: 15px;
+}
+.btn_submit_date_form {
+  background-color: #f0df20;
+  border: none;
+  font-size: 13px;
+  padding: 3px 22px;
+  border-radius: 25px;
+  display: flex;
+  margin-top: 25px;
+  transition: 0.3s ease-in-out;
+}
+.btn_submit_date_form:focus-visible {
+  outline: none;
+}
+.btn_submit_date_form:focus,
+.btn_submit_date_form:hover {
+  box-shadow: 0 0 2px #616161;
+}
+.find_your_chinese_box
+  select {
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 7px;
+  color: #ccc;
+  border: 1px solid #919191;
+  background-color: #fff;
+}
+.find_your_chinese_box
+  select:focus {
+  outline: none;
+  opacity: 1;
+}
+.find_your_chinese_box
+  select:first-child {
+  width: 40%;
+}
+.find_your_chinese_box
+  select:nth-child(2) {
+  width: 30%;
+}
+.find_your_chinese_box
+  select:nth-child(3) {
+  width: 27%;
+}
+.animal_circle {
+  background-color: #f0df20;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+.animal_circle img {
+  position: absolute;
+  min-width: 140px;
+  top: -23px;
+  left: -20px;
+}
+.animal_box_name_horoscope
+  h6 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.animals_horoscope_sign {
+  background-color: #f3f2f2;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.subheading_side_line:after,
+.subheading_side_line:before {
+  bottom: 40%;
+}
+.subheading_side_line:after {
+  right: 560px;
+}
+.subheading_side_line:before {
+  left: 560px;
+}
+.animal_chinese_horoscope_discription {
+  background-color: #fff;
+  padding-top: 50px;
+  margin-top: 20px;
+}
+.animal_chinese_horoscope_discription
+  h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  display: inline-block;
+  border-bottom: 4px solid #f0df20;
+  padding-bottom: 10px;
+  color: #000;
+  margin-bottom: 25px;
+}
+.animal_chinese_horoscope_discription
+  p {
+  font-size: 13px;
+  color: #323232;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.animal_chinese_horoscope_discription
+  img {
+  box-shadow: 0 0 8px #ccc;
+  width: 100%;
+}
+.animal_chinese_horoscope_discription
+  .row {
+  padding-bottom: 40px;
+}
+.animal_chinese_horoscope_discription
+  .row
+  .col-md-9:nth-child(2n) {
+  padding-left: 100px;
+}
+.animal_chinese_horoscope_discription
+  .row
+  .col-md-9:nth-child(odd) {
+  padding-right: 100px;
+}
+.free_services_chinese_horoscope {
+  background-color: #f0df20;
+  padding: 60px 0;
+}
+.heading_free_services_chinese_horoscope {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.subheading_free_services_chinese_horoscope {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #383838;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.subheading_free_services_chinese_horoscope:after,
+.subheading_free_services_chinese_horoscope:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #383838;
+  top: 56%;
+}
+.subheading_free_services_chinese_horoscope:before {
+  left: -100px;
+}
+.subheading_free_services_chinese_horoscope:after {
+  right: -100px;
+}
+.free_services_box_chinese {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 40px !important;
+  margin: 0 20px;
+}
+.free_services_box_chinese
+  img {
+  width: 100px;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px 0;
+}
+.free_services_box_chinese
+  h5 {
+  font-size: 12px;
+  color: #000;
+}
+.free_services_box_chinese
+  h5,
+.free_services_box_chinese
+  h6 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.free_services_box_chinese
+  h6 {
+  font-size: 10px;
+  color: #313131;
+  padding: 15px 0 30px;
+}
+.bottom_border_heading_chinese {
+  padding: 30px 0 15px !important;
+  border-bottom: 2px solid #919191 !important;
+}
+.our_expert_chinese_horoscope {
+  padding: 60px 0;
+  background-color: #fff;
+}
+.heading_our_expert_chinese_horoscope {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.subheading_our_expert_chinese_horoscope {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #383838;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+.subheading_our_expert_chinese_horoscope:after,
+.subheading_our_expert_chinese_horoscope:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #383838;
+  top: 56%;
+}
+.subheading_our_expert_chinese_horoscope:after {
+  right: -100px;
+}
+.subheading_our_expert_chinese_horoscope:before {
+  left: -100px;
+}
+.our_expert_content_box_chinese
+  img {
+  border-radius: 50%;
+  border: 5px solid #f0df20;
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+}
+.our_expert_content_box_chinese {
+  background-color: #fff4ed;
+  box-shadow: 0 0 6px #ccc;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+.our_expert_content_box_chinese
+  h3 {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #323232;
+  margin: 10px 0 2px;
+}
+.our_expert_content_box_chinese
+  h6 {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  color: #616161;
+  margin-bottom: 10px;
+}
+.circle_small_light {
+  background-color: #efefef;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px #919191;
+}
+.three_small_circle {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 25px 12px;
+}
+.experience_chinese_horoscope {
+  font-size: 14px;
+  color: #616161;
+}
+.experience_chinese_horoscope
+  span,
+.rate_chinese_horoscope {
+  font-weight: 500;
+  color: #323232;
+}
+.rate_chinese_horoscope {
+  font-size: 14px;
+}
+.exp_and_rate_chinese {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view_all_icon_right_side {
+  padding-top: 15px;
+  text-align: right;
+  display: none;
+}
+.view_all_icon_right_side
+  .view_all_text {
+  font-size: 16px;
+  color: #616161;
+}
+.view_all_text
+  .fa-chevron-right {
+  font-size: 15px;
+  background-color: initial;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq_about_aries_horoscope,
+.seo_content_headline {
+  background-color: #f3f2f2;
+  padding: 60px 0;
+}
+.seo_content_headline p {
+  font-size: 14px;
+  line-height: 2;
+  text-align: justify;
+  margin-bottom: 0;
+}
+.heading_seo_content_headline_chinese_horoscope {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.latest_from_blog_chinese
+  .row {
+  margin-top: 50px;
+}
+.heading_seo_content_headline_chinese_horoscope
+  .fa-chevron-down {
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #f0df20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.faq_about_chinese_headline {
+  background-color: #fff;
+  padding: 40px 0;
+}
+.faq_about_chinese_headline
+  .heading_seo_content_headline_chinese_horoscope
+  .fa-chevron-down {
+  height: 28px;
+  width: 28px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #f0df20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  position: absolute;
+  right: 235px;
+}
+.latest_from_blog_chinese {
+  padding: 60px 0;
+  background-color: #f3f2f2;
+}
+.row_blog_box_content {
+  display: flex;
+  margin-top: 50px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.row_blog_box_content::-webkit-scrollbar {
+  opacity: 0;
+  scroll-behavior: smooth;
+  cursor: pointer;
+}
+.blog_box_content {
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 4px #616161;
+  min-width: 270px;
+  max-width: 270px;
+  margin-right: 30px;
+}
+.blog_img_content img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 180px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.description_blog {
+  padding: 10px 15px 0;
+  font-size: 16px;
+}
+.date_description_blog {
+  padding: 0 15px 10px;
+  text-align: right;
+  font-size: 13px;
+  color: #616161;
+}
+.subheading_side_line:after,
+.subheading_side_line:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #383838;
+  bottom: 38%;
+}
+@media screen and (min-width: 1200px) and(max-width:1400px) {
+  .button_row_view_animal_page {
+    padding: 0 20px !important;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .button_row_view_animal_page {
+    padding: 0 90px !important;
+  }
+  .heading_seo_content_headline_chinese_horoscope
+    .fa-chevron-down {
+    height: 28px;
+    width: 28px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #f0df20;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    position: absolute;
+    right: 390px;
+  }
+  .subheading_seo_content_headline_chinese_horoscope {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #313131;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .subheading_seo_content_headline_chinese_horoscope:after,
+  .subheading_seo_content_headline_chinese_horoscope:before {
+    content: "";
+    height: 1px;
+    width: 80px;
+    position: absolute;
+    top: 55%;
+    background-color: #313131;
+  }
+  .subheading_seo_content_headline_chinese_horoscope:after {
+    right: -100px;
+  }
+  .subheading_seo_content_headline_chinese_horoscope:before {
+    left: -100px;
+  }
+  .faq_about_chinese_headline
+    .heading_seo_content_headline_chinese_horoscope
+    .fa-chevron-down {
+    height: 28px;
+    width: 28px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #f0df20;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    position: absolute;
+    right: 320px;
+  }
+  .subheading_know_your_chinese_horoscope:before {
+    left: 390px;
+  }
+  .subheading_know_your_chinese_horoscope:after {
+    right: 390px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .find_your_chinese_box
+    form {
+    padding: 0 20px;
+  }
+  .find_your_chinese_box
+    .birthday_text {
+    font-size: 16px;
+    color: #313131;
+    padding: 0 20px 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #919191;
+    font-weight: 500;
+  }
+  .desktop_view_chinese_horoscope,
+  .subheading_free_services_chinese_horoscope:after,
+  .subheading_free_services_chinese_horoscope:before,
+  .subheading_know_your_chinese_horoscope:after,
+  .subheading_know_your_chinese_horoscope:before,
+  .subheading_our_expert_chinese_horoscope:after,
+  .subheading_our_expert_chinese_horoscope:before,
+  .subheading_seo_content_headline_chinese_horoscope:after,
+  .subheading_seo_content_headline_chinese_horoscope:before {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) {
+  .mobile_view_chinese_horoscope,
+  .modal_view_horoscope_animal {
+    display: none;
+  }
+}
+.heading_chinese_zodiac {
+  text-align: center;
+  margin: 20px 0 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.subheading_chinese_zodiac {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #383838;
+}
+.parah_chinese_zodiac {
+  text-align: justify;
+  font-size: 13px;
+  color: #616161;
+  margin-bottom: 20px;
+}
+.find_your_chinese_animal_sign {
+  padding: 20px 0;
+  background-color: #f0df20;
+}
+.heading_find_your_chinese_zodiac_sign {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+.subheading_find_your_chinese_zodiac_sign {
+  font-size: 13px;
+  color: #616161;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.heading_animals_horoscope_sign {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.parah_saprate_chinese_mobile
+  p {
+  font-size: 13px;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+.free_services_chinese_mbl_view {
+  padding: 30px 0;
+  background-color: #fff;
+}
+.free_services_chinese_heading_mbl_view {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.free_services_content_mbl_view {
+  min-width: 140px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 4px #ccc;
+  margin-right: 10px;
+}
+.free_services_content_mbl_view
+  img {
+  width: 60px;
+  margin: 0 auto;
+  display: flex;
+}
+.free_services_content_mbl_view
+  h6 {
+  font-size: 12px;
+  text-align: center;
+  margin: 5px 0 3px;
+  color: #525151;
+  font-family: Philosopher;
+  font-weight: 600;
+}
+.row_free_Services_content_mbl {
+  display: flex;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 5px 10px;
+}
+.row_free_Services_content_mbl::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+.our_expert_chinese_mbl_view {
+  padding: 30px 0;
+}
+.heading_our_expert_mbl {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.row_testimonial::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+.our_expert_content_mbl_view {
+  min-width: 140px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 5px solid #f4f4f4;
+}
+.our_expert_content_mbl_view
+  img {
+  width: 80px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background-image: url(astro-background-gray.e43929a4baf9efd4897e.jpg);
+}
+.our_expert_content_mbl_view
+  h6 {
+  font-size: 12px;
+  text-align: center;
+  margin: 2px 0;
+  color: #525151;
+  font-family: Philosopher;
+  font-weight: 600;
+}
+.bio_data_mbl_view_free_services {
+  font-size: 10px;
+  color: #616161;
+  text-align: center;
+}
+.related_blog_chinese_mbl_view {
+  padding: 30px 0 25px;
+  background-color: #f3f2f2;
+}
+.heading_realted_blog_chinese_mbl {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.blog_box_content_mbl_view {
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 4px #616161;
+  min-width: 140px;
+  margin-right: 10px;
+}
+.blog_box_content_mbl_view
+  .blog_img_content
+  img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 100px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.blog_box_content_mbl_view
+  .description_blog {
+  padding: 5px 6px 8px;
+  font-size: 10px;
+  white-space: normal;
+  text-align: left;
+}
+.blog_box_content_mbl_view
+  .date_description_blog {
+  padding: 0 5px 5px;
+  text-align: right;
+  font-size: 9px;
+  color: #616161;
+  display: none;
+}
+.know_more_about_your_chinese_zodiac_sign {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+.heading_know_more_about_your_chinese_zodiac_sign {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+.parah_know_more_about_chinese {
+  text-align: justify;
+  font-size: 13px;
+  color: #616161;
+  margin-bottom: 20px;
+}
+.connect_live_with_astrologer
+  .row {
+  align-items: center;
+}
+.parah_saprate_chinese_mobile {
+  background-color: #fff;
+}
+.mobile_view_chinese_horoscope {
+  padding-top: 71px;
+}
+.header_chinese_horoscope_mbl_view {
+  background-color: #f0df20;
+}
+.header_contant_chinese_mbl_view {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+.right_side_text_chinese_mbl_view
+  img {
+  width: 170px;
+}
+.right_side_text_chinese_mbl_view {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.left_side_text_chinese_mbl_view
+  h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+  position: relative;
+  padding-bottom: 7px;
+}
+.left_side_text_chinese_mbl_view
+  h1:before {
+  content: "";
+  height: 2px;
+  width: 68px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+.left_side_text_chinese_mbl_view
+  h2 {
+  font-size: 16px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.parah_saprate_chinese_mobile
+  p.question_connect_live {
+  padding: 10px 0 1px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+.parah_saprate_chinese_mobile
+  p.answer_connect_live {
+  font-size: 13px;
+  text-align: left;
+  padding: 0 0 10px;
+}
+.chat_icon_connect_live {
+  width: 50px;
+  display: flex;
+  margin-right: auto;
+}
+.connect_live_with_astrologer
+  .col-2,
+.connect_live_with_astrologer
+  .col-9 {
+  padding-right: 0 !important;
+}
+.modal_view_horoscope_animal
+  .modal-dialog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+}
+.modal_view_horoscope_animal
+  .modal-dialog
+  .modal-content {
+  padding: 20px;
+  border-radius: 20px;
+}
+.modal_view_horoscope_animal
+  .modal-dialog
+  .modal-content
+  .modal-body {
+  padding: 20px 0 0;
+}
+.modal_view_horoscope_animal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  h3 {
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 10px;
+}
+.modal_view_horoscope_animal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  h2 {
+  color: #f0df20;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+.modal_view_horoscope_animal
+  .modal-header {
+  padding: 0;
+}
+.modal_view_horoscope_animal
+  .modal-header
+  .btn-close {
+  font-size: 7px;
+  border: 2px solid #313131;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 4px;
+  color: #313131;
+}
+.image_section_horoscope_animal
+  img {
+  transform: scaleX(-1);
+  width: 100%;
+}
+.animal_horoscope_btn {
+  display: flex;
+  background-color: #eee;
+  outline: none;
+  border: none;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 15px !important;
+  font-size: 18px;
+  font-weight: 640;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+}
+.animal_horoscope_btn.active {
+  background-color: #f0df20;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: none;
+  padding-top: 78px;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog
+  .modal-content
+  .modal-header {
+  padding: 0;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog
+  .modal-content {
+  border-radius: 30px;
+  padding: 30px;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog
+  .modal-content
+  .modal-body {
+  padding: 20px 0 15px;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog
+  .modal-content
+  .modal-body
+  h3 {
+  text-align: center;
+  color: #000;
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog
+  .modal-content
+  .modal-body
+  h2 {
+  color: #f0df20;
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 0;
+}
+.modal_view_horoscope_animal_desktop_view
+  .modal-dialog
+  .modal-content
+  .modal-header
+  .btn-close {
+  font-size: 10px;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 50%;
+  padding: 5px;
+}
+.button_row_view_animal_page
+  button {
+  background-color: #eee;
+  border: none;
+  width: 280px;
+  padding: 5px 0;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: 645;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_row_view_animal_page
+  button.active {
+  background-color: #f0df20;
+}
+.modal_view_horoscope_animal_desktop_view {
+  z-index: 1000000000000000000;
+}
+.button_row_view_animal_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.img_model_view_horoscope_desktop_view
+  img {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+  transform: scaleX(-1);
+}
+.display_block_none_mbl_view_cls {
+  margin-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  .seo_content_headline {
+    padding: 30px 0 !important;
+  }
+  .subheading_free_services_chinese_horoscope {
+    font-size: 12px;
+  }
+  .subheading_free_services_chinese_horoscope,
+  .subheading_our_expert_chinese_horoscope {
+    text-align: center;
+    font-weight: 400;
+    color: #383838;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: capitalize;
+    padding: 0 40px;
+  }
+  .subheading_our_expert_chinese_horoscope {
+    font-size: 13px;
+  }
+  .subheading_seo_content_headline_chinese_horoscope {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #383838;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding: 0 40px;
+    text-transform: capitalize;
+  }
+  .heading_seo_content_headline_chinese_horoscope {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0;
+  }
+  .seo_content_headline
+    p {
+    font-size: 12px;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+  .heading_seo_content_headline_chinese_horoscope
+    .fa-chevron-down {
+    margin-left: 10px !important;
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+  }
+  .modal_view_horoscope_animal_desktop_view {
+    display: none;
+  }
+  .find_your_chinese_box {
+    padding: 20px 0 !important;
+  }
+  .animals_horoscope_sign {
+    padding-top: 30px !important;
+  }
+  .heading_animals_horoscope_sign {
+    margin-bottom: 40px !important;
+  }
+  .view_all_icon_right_side
+    .view_all_text {
+    font-size: 12px;
+    color: #616161;
+  }
+  .view_all_text
+    .fa-chevron-right {
+    font-size: 11px;
+    background-color: initial;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-left: 2px;
+  }
+  .free_aries_horoscope_section {
+    padding: 30px 0 0 !important;
+    text-align: center;
+  }
+  .heading_know_your_chinese_horoscope {
+    letter-spacing: 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .subheading_free_aries {
+    font-size: 13px !important;
+    letter-spacing: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .subheading_free_aries:after,
+  .subheading_free_aries:before {
+    width: 40px !important;
+  }
+  .subheading_free_aries:before {
+    left: -50px !important;
+  }
+  .subheading_free_aries:after {
+    right: -50px !important;
+  }
+  .free_aries_horoscope {
+    margin-top: 20px !important;
+  }
+  .free_aries_horoscope
+    p {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+  }
+  .our_coutomer {
+    padding: 30px 0 !important;
+  }
+  .row_testimonial {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 10px;
+  }
+  .card {
+    min-height: 250px !important;
+    min-width: 180px !important;
+    border-radius: 10px !important;
+    max-height: 250px !important;
+    margin: 0 20px 0 0 !important;
+  }
+  .card-image > img {
+    width: 40%;
+    margin: 10px 0 0;
+  }
+  .card-text {
+    padding: 3px 10px 10px;
+    font-size: 10px;
+    line-height: unset;
+    color: #616161;
+  }
+  .card-title {
+    margin-bottom: 0;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-family: unset;
+    text-align: center;
+    color: #525151;
+    text-transform: uppercase;
+  }
+  .card_sub_title {
+    font-size: 10px;
+    margin: 2px 0 8px;
+    text-align: center;
+    color: #919191;
+  }
+  .heading_free_services_chinese_horoscope {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+}
+.ast_team_box
+  ul
+  li:nth-child(3) {
+  display: none;
+}
+.ast_team_box {
+  padding: 25px 15px;
+  min-width: 200px;
+  margin-right: 10px;
+}
+.parah_bottom_text_cls {
+  margin-top: 40px;
+}
+#display_block_none_mbl_view,
+#parah_bottom_text {
+  display: none;
+}
+.parah_bottom_text_cls p {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+.free_services_content_mbl_view
+  p {
+  font-size: 11px;
+  text-align: justify;
+  color: #525151;
+  opacity: 0.9;
+  white-space: break-spaces;
+  margin-bottom: 5px;
+  display: none;
+}
+.free_services_chinese_mbl_view
+  .view_all_icon_right_side {
+  display: none;
+}
+.our_expert_content_mbl_view
+  ul {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.our_expert_content_mbl_view
+  ul
+  li {
+  list-style: none;
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  float: left;
+  background-color: #fff;
+  color: #333;
+  border-radius: 50%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  box-shadow: inset 1px 1px 7px -5px #000;
+  -webkit-box-shadow: inset 1px 1px 7px -5px #000;
+  align-items: center;
+  justify-content: center;
+}
+.our_expert_content_mbl_view
+  ul
+  li:nth-child(3) {
+  display: none;
+}
+.our_expert_content_mbl_view
+  ul
+  li
+  .icn1,
+.our_expert_content_mbl_view
+  ul
+  li
+  .icn2 {
+  font-size: 12px;
+}
+.box_section {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  color: #000;
+  box-shadow: 0 0 6px #a99e9e;
+  border-bottom: 5px solid #f0df20;
+  min-width: 225px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.row_box_section {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.row_box_section::-webkit-scrollbar {
+  opacity: 0;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+.diff_font_family {
+  display: flex;
+}
+.subheading_free_aries {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #313131;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+.testimonial {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.subheading_free_aries:after,
+.subheading_free_aries:before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  position: absolute;
+  top: 55%;
+  background-color: #313131;
+}
+.subheading_free_aries:before {
+  left: -70px;
+}
+.subheading_free_aries:after {
+  right: -70px;
+}
+.button_free_aries {
+  font-size: 22px;
+  text-align: center;
+  background-color: #f0df20;
+  color: #000;
+  font-weight: 600;
+  width: 18%;
+  padding: 10px 30px;
+  border-radius: 15px;
+  line-height: 1.1;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_free_aries:focus,
+.button_free_aries:hover {
+  color: initial;
+  text-decoration: none;
+}
+.free_aries_horoscope {
+  margin-top: 40px;
+}
+.free_aries_horoscope p {
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.free_aries_horoscope_section {
+  background-color: #fff;
+  padding: 60px 0 20px;
+}
+.btns_contact_astrologer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bnt_astrologer_contact {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-size: 18px;
+  box-shadow: 1px 1px 4px #ccc;
+  border-radius: 30px;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+.bnt_astrologer_contact
+  i {
+  color: #f0df20;
+  font-size: 26px;
+  margin-right: 10px;
+}
+.more_about_aries {
+  background-color: #f3f2f2;
+  padding: 70px 0;
+  text-align: center;
+}
+.more_about_aries h2 {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+.more_about_aries h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #313131;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.more_about_aries
+  h4:after,
+.more_about_aries
+  h4:before {
+  content: "";
+  height: 1px;
+  width: 80px;
+  position: absolute;
+  top: 55%;
+  background-color: #313131;
+}
+.more_about_aries
+  h4:before {
+  left: -100px;
+}
+.more_about_aries
+  h4:after {
+  right: -100px;
+}
+.content_more_about_aries
+  img {
+  width: 45%;
+  margin: 0 auto;
+}
+.content_more_about_aries {
+  margin-top: 30px;
+}
+.content_more_about_aries
+  a {
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+  margin-top: 10px;
+}
+.zodiacList a {
+  color: #000;
+}
+.content_more_about_aries
+  .col-md-3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.aries_compatibility_with_other_signs {
+  background-color: #f0df20;
+  padding: 40px 0;
+}
+.aries_compatibility_with_other_signs
+  h2 {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+.aries_compatibility_with_other_signs
+  h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #313131;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.aries_compatibility_with_other_signs
+  h4:after,
+.aries_compatibility_with_other_signs
+  h4:before {
+  content: "";
+  height: 1px;
+  width: 80px;
+  position: absolute;
+  top: 55%;
+  background-color: #313131;
+}
+.aries_compatibility_with_other_signs
+  h4:before {
+  left: -100px;
+}
+.aries_compatibility_with_other_signs
+  h4:after {
+  right: -100px;
+}
+.aries_compatibility_with_other_image_section
+  img {
+  width: 40%;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.aries_compatibility_with_other_image_section {
+  margin-top: 40px;
+}
+.aries_virgo {
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+  display: inline-flex;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 25px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  box-shadow: 1px 1px 4px #919191;
+  text-decoration: none;
+}
+.aries_virgo:focus,
+.aries_virgo:hover {
+  text-decoration: none;
+  color: initial;
+}
+.aries_celebrities {
+  padding: 50px 0;
+}
+.aries_celebrities h2 {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+.aries_celebrities h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #313131;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.aries_celebrities
+  h4:after,
+.aries_celebrities
+  h4:before {
+  content: "";
+  height: 1px;
+  width: 80px;
+  position: absolute;
+  top: 55%;
+  background-color: #313131;
+}
+.aries_celebrities
+  h4:after {
+  right: -100px;
+}
+.aries_celebrities
+  h4:before {
+  left: -100px;
+}
+.aries_celebrities img {
+  background-color: #f0df20;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 15px;
+  margin-top: 40px;
+}
+.aries_celebrities h5 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+.aries_celebrities h6 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #616161;
+}
+.seo_content_headline h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #313131;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.seo_content_headline
+  h4:after,
+.seo_content_headline
+  h4:before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  position: absolute;
+  top: 55%;
+  background-color: #313131;
+}
+.seo_content_headline
+  h4:before {
+  left: -70px;
+}
+.seo_content_headline
+  h4:after {
+  right: -70px;
+}
+.faq_about_aries_horoscope
+  h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #313131;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.faq_about_aries_horoscope
+  h4:after,
+.faq_about_aries_horoscope
+  h4:before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  position: absolute;
+  top: 55%;
+  background-color: #313131;
+}
+.faq_about_aries_horoscope
+  h4:after {
+  right: -700px;
+}
+.faq_about_aries_horoscope
+  h4:before {
+  left: -700px;
+}
+.faqDivision h5 {
+  text-align: left;
+}
+.more_about_weekly_horoscope_zodiac_signs {
+  background-color: #f3f2f2;
+  padding: 40px 0;
+  text-align: center;
+}
+.box_more_about_weekly_horoscope
+  img {
+  width: 80px;
+}
+.box_more_about_weekly_horoscope {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 4px #919191;
+  margin-bottom: 20px;
+}
+.more_about_weekly_horoscope_row {
+  margin-top: 50px;
+}
+.box_more_about_weekly_horoscope
+  h5 {
+  font-size: 15px;
+  color: #000;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.box_more_about_weekly_horoscope
+  h6 {
+  font-size: 12px;
+  color: #616161;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.hear_from_our_customer {
+  padding: 60px 0;
+  background-color: #f0df20;
+}
+.hear_from_our_customer_rwo
+  .card {
+  box-shadow: 0 0 6px #919191 !important;
+}
+.seprate_row_horoscope_prediction:nth-child(odd) {
+  background-color: #f3f2f2;
+}
+.seprate_row_horoscope_prediction
+  .row {
+  padding: 80px 0;
+}
+.seprate_row_horoscope_prediction
+  .row
+  .col-md-9:nth-child(2n) {
+  padding-left: 50px;
+  text-align: left;
+}
+.seprate_row_horoscope_prediction
+  img {
+  box-shadow: 0 0 8px #ccc;
+  width: 100%;
+}
+.seprate_row_horoscope_prediction
+  h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  display: inline-block;
+  padding-bottom: 15px;
+  color: #000;
+  margin-bottom: 10px;
+  position: relative;
+}
+.seprate_row_horoscope_prediction
+  h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.seprate_row_horoscope_prediction
+  p {
+  font-size: 13px;
+  color: #323232;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.seprate_row_horoscope_prediction
+  h2:after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background-color: #f0df20;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.seprate_row_horoscope_prediction:nth-child(2n) {
+  background-color: #fff;
+}
+.seprate_row_horoscope_prediction
+  .row
+  .col-md-9:nth-child(odd) {
+  padding-right: 50px;
+  text-align: left;
+}
+.free_weekly_horoscope_mobile_view {
+  background-color: #f3f2f2;
+  padding: 30px 0;
+}
+.free_weekly_horoscope_mobile_view
+  h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.free_weekly_horoscope_mobile_view
+  .aries_horscope_weekly_row
+  .nav-item {
+  min-width: 30%;
+}
+.free_weekly_horoscope_mobile_view
+  .aries_horscope_weekly_row
+  .nav-item.show
+  .nav-link,
+.free_weekly_horoscope_mobile_view
+  .aries_horscope_weekly_row
+  .nav-link.active {
+  color: initial;
+  background-color: initial;
+  pointer-events: none;
+  border: none;
+  box-shadow: none;
+}
+.free_weekly_horoscope_mobile_view
+  .aries_horscope_weekly_row
+  .nav-link {
+  padding: 5px;
+}
+.aries_horscope_weekly_row {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-top: 20px;
+  padding: 0 10px;
+  flex-wrap: nowrap;
+  border: 0;
+}
+.aries_horscope_weekly_row::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+.title_free_weekly_horocope {
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.box_aries_horoscope_weekly
+  img {
+  box-shadow: 1px 1px 2px #919191;
+  border-radius: 50%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.white_bg_color_seo {
+  background-color: #fff;
+}
+.discription_free_weekly_horoscope {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: #919191;
+}
+.free_weekly_horoscope_mobile_view
+  p {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 1.7;
+}
+.also_check_section {
+  background-color: #f0df20;
+  padding: 30px 0;
+  text-align: center;
+}
+.also_check_section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.box_check_section img {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 100%;
+}
+.box_check_section h6 {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #000;
+}
+.header_chinese_horoscope {
+  background-color: #f0df20;
+}
+.header_contant_chinese {
+  padding: 10px 0;
+}
+.heading_font_large {
+  font-size: 80px;
+  color: #000;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0;
+}
+.right_side_image_chinese
+  img {
+  width: 100%;
+}
+.image_weeklky_horoscope {
+  box-shadow: 0 0 8px #ccc;
+  width: 100%;
+}
+.heading_title_weekly_horoscope {
+  font-size: 24px;
+  margin: 30px 0 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.right_side_image_full_Width {
+  height: 85%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 42px;
+  width: 100%;
+}
+.padding_left_use_right_side {
+  padding-left: 60px;
+}
+.mobile_view_horoscope_element_img {
+  box-shadow: 0 0 8px #919191;
+}
+.mobile_view_horocope_name {
+  font-size: 18px;
+  margin: 10px 0 30px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.right_side_image_chinese
+  img {
+  width: 360px;
+  height: auto;
+}
+.left_side_text_chinese
+  h1 {
+  text-align: left;
+  font-size: 65px;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.left_side_text_chinese
+  h2 {
+  font-size: 40px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.header_contant_chinese {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+}
+.left_align {
+  text-align: left !important;
+}
+.parah_bottom_text_cls
+  h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.parah_bottom_text_cls p {
+  text-align: justify;
+  font-size: 15px;
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .left_side_text_chinese
+    h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
+  .left_side_text_chinese
+    h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  .chinese_horoscope_section {
+    padding-top: 71px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+  .left_side_text_chinese
+    h1 {
+    font-size: 71px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
+  .left_side_text_chinese
+    h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+  .padding_left_use_right_side {
+    padding-left: calc(var(--bs-gutter-x) / 2);
+  }
+  .heading_title_weekly_horoscope {
+    font-size: 18px;
+    margin: 20px 0 40px;
+  }
+  .header_contant_chinese {
+    padding: 10px 0;
+  }
+  .free_aries_horoscope_section {
+    padding: 50px 0 20px;
+  }
+}
+.bread {
+  background-color: #eee;
+}
+ul#breadcrumbs-two {
+  padding: 6px 0;
+}
+#breadcrumbs-two
+  li
+  a {
+  background: #ccc;
+}
+#breadcrumbs-two
+  li
+  a.active {
+  background: #f0df20;
+}
+#breadcrumbs-two
+  li
+  a:after {
+  border-left: 12px solid #ccc;
+}
+
+.footer-top[_ngcontent-serverApp-c94] .fade_class_up[_ngcontent-serverApp-c94] {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+.footer-top[_ngcontent-serverApp-c94]
+  .fade_class_down[_ngcontent-serverApp-c94] {
+  visibility: visible;
+  animation-name: fadeInDown;
+}
+.pointer[_ngcontent-serverApp-c94] {
+  cursor: pointer;
+}
+.fb_hidden {
+  position: absolute;
+  top: -10000px;
+  z-index: 10001;
+}
+.fb_reposition {
+  overflow: hidden;
+  position: relative;
+}
+.fb_invisible {
+  display: none;
+}
+.fb_reset {
+  background: none;
+  border: 0;
+  border-spacing: 0;
+  color: #000;
+  cursor: auto;
+  direction: ltr;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  visibility: visible;
+  white-space: normal;
+  word-spacing: normal;
+}
+.fb_reset > div {
+  overflow: hidden;
+}
+@keyframes fb_transform {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.fb_animate {
+  animation: fb_transform 0.3s forwards;
+}
+.fb_dialog {
+  background: rgba(82, 82, 82, 0.7);
+  position: absolute;
+  top: -10000px;
+  z-index: 10001;
+}
+.fb_dialog_advanced {
+  border-radius: 8px;
+  padding: 10px;
+}
+.fb_dialog_content {
+  background: #fff;
+  color: #373737;
+}
+.fb_dialog_close_icon {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
+    no-repeat scroll 0 0 transparent;
+  cursor: pointer;
+  display: block;
+  height: 15px;
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  width: 15px;
+}
+.fb_dialog_mobile .fb_dialog_close_icon {
+  left: 5px;
+  right: auto;
+  top: 5px;
+}
+.fb_dialog_padding {
+  background-color: transparent;
+  position: absolute;
+  width: 1px;
+  z-index: -1;
+}
+.fb_dialog_close_icon:hover {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
+    no-repeat scroll 0 -15px transparent;
+}
+.fb_dialog_close_icon:active {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
+    no-repeat scroll 0 -30px transparent;
+}
+.fb_dialog_iframe {
+  line-height: 0;
+}
+.fb_dialog_content .dialog_title {
+  background: #6d84b4;
+  border: 1px solid #365899;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+.fb_dialog_content .dialog_title > span {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif)
+    no-repeat 5px 50%;
+  float: left;
+  padding: 5px 0 7px 26px;
+}
+body.fb_hidden {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  top: -10000px;
+  transform: none;
+  width: 100%;
+}
+.fb_dialog.fb_dialog_mobile.loading {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif)
+    white no-repeat 50% 50%;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 10001;
+}
+.fb_dialog.fb_dialog_mobile.loading.centered {
+  background: none;
+  height: auto;
+  min-height: initial;
+  min-width: initial;
+  width: auto;
+}
+.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+  width: 100%;
+}
+.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+  background: none;
+}
+.loading.centered #fb_dialog_loader_close {
+  clear: both;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  padding-top: 20px;
+}
+#fb-root #fb_dialog_ipad_overlay {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+#fb-root #fb_dialog_ipad_overlay.hidden {
+  display: none;
+}
+.fb_dialog.fb_dialog_mobile.loading iframe {
+  visibility: hidden;
+}
+.fb_dialog_mobile .fb_dialog_iframe {
+  position: sticky;
+  top: 0;
+}
+.fb_dialog_content .dialog_header {
+  background: linear-gradient(from(#738aba), to(#2c4987));
+  border-bottom: 1px solid;
+  border-color: #043b87;
+  box-shadow: white 0 1px 1px -1px inset;
+  color: #fff;
+  font: bold 14px Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  text-shadow: rgba(0, 30, 84, 0.296875) 0 -1px 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.fb_dialog_content .dialog_header table {
+  height: 43px;
+  width: 100%;
+}
+.fb_dialog_content .dialog_header td.header_left {
+  font-size: 12px;
+  padding-left: 5px;
+  vertical-align: middle;
+  width: 60px;
+}
+.fb_dialog_content .dialog_header td.header_right {
+  font-size: 12px;
+  padding-right: 5px;
+  vertical-align: middle;
+  width: 60px;
+}
+.fb_dialog_content .touchable_button {
+  background: linear-gradient(from(#4267b2), to(#2a4887));
+  background-clip: padding-box;
+  border: 1px solid #29487d;
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 18px;
+  margin-top: 3px;
+  max-width: 85px;
+  padding: 4px 12px;
+  position: relative;
+}
+.fb_dialog_content .dialog_header .touchable_button input {
+  background: none;
+  border: none;
+  color: #fff;
+  font: bold 12px Helvetica, sans-serif;
+  margin: 2px -12px;
+  padding: 2px 6px 3px 6px;
+  text-shadow: rgba(0, 30, 84, 0.296875) 0 -1px 0;
+}
+.fb_dialog_content .dialog_header .header_center {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+.fb_dialog_content .dialog_content {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif)
+    no-repeat 50% 50%;
+  border: 1px solid #4a4a4a;
+  border-bottom: 0;
+  border-top: 0;
+  height: 150px;
+}
+.fb_dialog_content .dialog_footer {
+  background: #f5f6f7;
+  border: 1px solid #4a4a4a;
+  border-top-color: #ccc;
+  height: 40px;
+}
+#fb_dialog_loader_close {
+  float: left;
+}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+  visibility: hidden;
+}
+#fb_dialog_loader_spinner {
+  animation: rotateSpinner 1.2s linear infinite;
+  background-color: transparent;
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fb_iframe_widget {
+  display: inline-block;
+  position: relative;
+}
+.fb_iframe_widget span {
+  display: inline-block;
+  position: relative;
+  text-align: justify;
+}
+.fb_iframe_widget iframe {
+  position: absolute;
+}
+.fb_iframe_widget_fluid_desktop,
+.fb_iframe_widget_fluid_desktop span,
+.fb_iframe_widget_fluid_desktop iframe {
+  max-width: 100%;
+}
+.fb_iframe_widget_fluid_desktop iframe {
+  min-width: 220px;
+  position: relative;
+}
+.fb_iframe_widget_lift {
+  z-index: 1;
+}
+.fb_iframe_widget_fluid {
+  display: inline;
+}
+.fb_iframe_widget_fluid span {
+  width: 100%;
+}
+.fb_mpn_mobile_landing_page_slide_out {
+  animation-duration: 200ms;
+  animation-name: fb_mpn_landing_page_slide_out;
+  transition-timing-function: ease-in;
+}
+.fb_mpn_mobile_landing_page_slide_out_from_left {
+  animation-duration: 200ms;
+  animation-name: fb_mpn_landing_page_slide_out_from_left;
+  transition-timing-function: ease-in;
+}
+.fb_mpn_mobile_landing_page_slide_up {
+  animation-duration: 500ms;
+  animation-name: fb_mpn_landing_page_slide_up;
+  transition-timing-function: ease-in;
+}
+.fb_mpn_mobile_bounce_in {
+  animation-duration: 300ms;
+  animation-name: fb_mpn_bounce_in;
+  transition-timing-function: ease-in;
+}
+.fb_mpn_mobile_bounce_out {
+  animation-duration: 300ms;
+  animation-name: fb_mpn_bounce_out;
+  transition-timing-function: ease-in;
+}
+.fb_mpn_mobile_bounce_out_v2 {
+  animation-duration: 300ms;
+  animation-name: fb_mpn_fade_out;
+  transition-timing-function: ease-in;
+}
+.fb_customer_chat_bounce_in_v2 {
+  animation-duration: 300ms;
+  animation-name: fb_bounce_in_v2;
+  transition-timing-function: ease-in;
+}
+.fb_customer_chat_bounce_in_from_left {
+  animation-duration: 300ms;
+  animation-name: fb_bounce_in_from_left;
+  transition-timing-function: ease-in;
+}
+.fb_customer_chat_bounce_out_v2 {
+  animation-duration: 300ms;
+  animation-name: fb_bounce_out_v2;
+  transition-timing-function: ease-in;
+}
+.fb_customer_chat_bounce_out_from_left {
+  animation-duration: 300ms;
+  animation-name: fb_bounce_out_from_left;
+  transition-timing-function: ease-in;
+}
+.fb_invisible_flow {
+  display: inherit;
+  height: 0;
+  overflow-x: hidden;
+  width: 0;
+}
+@keyframes fb_mpn_landing_page_slide_out {
+  0% {
+    margin: 0 12px;
+    width: 100% - 24px;
+  }
+  60% {
+    border-radius: 18px;
+  }
+  100% {
+    border-radius: 50%;
+    margin: 0 24px;
+    width: 60px;
+  }
+}
+@keyframes fb_mpn_landing_page_slide_out_from_left {
+  0% {
+    left: 12px;
+    width: 100% - 24px;
+  }
+  60% {
+    border-radius: 18px;
+  }
+  100% {
+    border-radius: 50%;
+    left: 12px;
+    width: 60px;
+  }
+}
+@keyframes fb_mpn_landing_page_slide_up {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 24px;
+    opacity: 1;
+  }
+}
+@keyframes fb_mpn_bounce_in {
+  0% {
+    opacity: 0.5;
+    top: 100%;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes fb_mpn_fade_out {
+  0% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes fb_mpn_bounce_out {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0.5;
+    top: 100%;
+  }
+}
+@keyframes fb_bounce_in_v2 {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+    transform-origin: bottom right;
+  }
+  50% {
+    transform: scale(1.03, 1.03);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: bottom right;
+  }
+}
+@keyframes fb_bounce_in_from_left {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+    transform-origin: bottom left;
+  }
+  50% {
+    transform: scale(1.03, 1.03);
+    transform-origin: bottom left;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: bottom left;
+  }
+}
+@keyframes fb_bounce_out_v2 {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+    transform-origin: bottom right;
+  }
+}
+@keyframes fb_bounce_out_from_left {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: bottom left;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+    transform-origin: bottom left;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0.1;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromBottomDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  97% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.free_kundli_section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.heading_free_kundli {
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  margin: 20px 0;
+  text-align: center;
+}
+.free_kundli_form {
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 6px #919191;
+  padding: 25px;
+  border-radius: 10px;
+}
+.lable_form {
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+input.form-control.pdob,
+input.form-control.pdobtime {
+  border-radius: 0 5px 5px 0 !important;
+  margin-left: -2px;
+  padding: 8px !important;
+}
+.input-group
+  > .form-control,
+.input-group
+  > .form-select {
+  width: 100%;
+}
+.input-group-addon,
+.input-group-btn,
+.input-group
+  .form-control {
+  display: table-cell;
+}
+.input-group-addon {
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input-group {
+  margin-bottom: 8px;
+}
+.input_form input {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+}
+.input_form input:focus,
+.input_form input:hover {
+  outline: none;
+}
+.generate_horoscope_btn {
+  background-color: #f0df20;
+  color: #000;
+  border: #ffdead;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #616161;
+  display: flex;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.generate_horoscope_btn:hover {
+  box-shadow: 0 0 4px #313131;
+}
+.input_form select {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.input_form select:focus,
+.input_form select:hover {
+  outline: none;
+}
+.firstColor {
+  background-color: orange;
+}
+.secondColor {
+  background-color: #9acd32;
+}
+.custom_tabs_kundli {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 50%;
+  padding: 12px 0;
+}
+.row_tabs_kundli {
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #919191;
+}
+.row_tabs_kundli .active {
+  background-color: #ffea00;
+  pointer-events: none;
+}
+.search_box_kundli {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+  font-size: 12px;
+  padding: 10px 40px;
+  color: #313131;
+}
+.search_box_kundli:focus,
+.search_box_kundli:hover {
+  outline: none;
+}
+.justify_content_center_kundli {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 4px #616161;
+  border-radius: 10px;
+}
+.icon_set_search {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 12px;
+  color: #616161;
+}
+.no-data-found {
+  padding: 0 30px !important;
+}
+.position_relative_search {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #0000001a;
+}
+.background_open_kundli {
+  background-color: #fff;
+  box-shadow: 0 0 6px #919191;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+.height_set_kundli {
+  height: 347px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.height_set_kundli_other_pages {
+  height: 438px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.heading_recently_opened {
+  font-size: 14px;
+  color: #000;
+  padding: 15px 0;
+  margin: 0;
+}
+.position_fixed_Set {
+  padding: 0 10px;
+}
+.list_box_kundli {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #0000001a;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.list_box_kundli:focus,
+.list_box_kundli:hover {
+  background-color: #eee4ee;
+}
+.profile_icon_name {
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile_details_kundli {
+  margin-left: 15px;
+}
+.name_details_kundli {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.address_date_birth_kundli,
+.date_time_details_kundli {
+  font-size: 10px;
+  color: #616161;
+  margin-top: 4px;
+}
+.delete_icon_kundli {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.delete_icon_kundli
+  .fa-trash-o {
+  font-size: 13px;
+  opacity: 1;
+  color: red;
+}
+.time_kundli {
+  margin-left: 2px;
+}
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sub_heading_horoscope_matching {
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #616161;
+  margin-bottom: 11px;
+}
+.height_set_kundli::-webkit-scrollbar {
+  width: 6px;
+}
+.height_set_kundli::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 30px;
+}
+.height_set_kundli::-webkit-scrollbar-thumb {
+  background: #e7e7e7;
+  border-radius: 30px;
+}
+.form-control:disabled,
+.form-control:read-only {
+  background: #fff !important;
+}
+@media screen and (min-width: 576px) {
+  .mobile_view_free_kundli {
+    display: none !important;
+  }
+  .desktop_view_free_kundli {
+    display: block;
+  }
+  .mobile_view_chinese_horoscope {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .free_kundli_form {
+    width: 100%;
+  }
+  .heading_free_kundli {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  .input_form input {
+    margin-bottom: 10px;
+  }
+  .justify_content_center_kundli {
+    width: auto !important;
+  }
+  .buttons {
+    margin-bottom: 0;
+    position: unset !important;
+  }
+  .mobile_view_free_kundli {
+    display: block !important;
+  }
+  .desktop_view_free_kundli {
+    display: none !important;
+  }
+  .desktop_view_chinese_horoscope {
+    display: none;
+  }
+}
+/* .chinese_horoscope_section {
+  padding-top: 83px;
+} */
+.mobile_view_chinese_horoscope {
+  padding-top: 70px;
+}
+.header_chinese_horoscope {
+  background-color: #f0df20;
+}
+.header_contant_chinese {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.left_side_text_chinese {
+  padding-top: 30px;
+}
+.left_side_text_chinese
+  h1 {
+  font-size: 65px;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.right_side_image_chinese
+  img {
+  width: 350px;
+}
+.left_side_text_chinese
+  h2 {
+  font-size: 40px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.left_side_text_chinese
+  h1:before {
+  content: "";
+  height: 7px;
+  width: 200px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+.header_chinese_horoscope_mbl_view {
+  background-color: #f0df20;
+}
+.header_contant_chinese_mbl_view {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.right_side_text_chinese_mbl_view
+  img {
+  width: 170px;
+}
+.right_side_text_chinese_mbl_view {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.left_side_text_chinese_mbl_view
+  h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+  position: relative;
+  padding-bottom: 7px;
+}
+.left_side_text_chinese_mbl_view
+  h1:before {
+  content: "";
+  height: 2px;
+  width: 68px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+.left_side_text_chinese_mbl_view
+  h2 {
+  font-size: 16px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.left_side_text_chinese_mbl_view {
+  padding-top: 10px;
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .chinese_horoscope_section {
+    padding-top: 71px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+  .left_side_text_chinese {
+    padding-top: 0;
+  }
+  .height_set_kundli {
+    height: 317px;
+  }
+  .height_set_kundli_other_pages {
+    height: 407px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .buttons {
+    position: unset;
+  }
+}
+.bread {
+  background-color: #eee;
+}
+ul#breadcrumbs-two {
+  padding: 6px 0;
+}
+#breadcrumbs-two
+  li
+  a {
+  background: #ccc;
+}
+#breadcrumbs-two
+  li
+  a.active {
+  background: #f0df20;
+}
+#breadcrumbs-two
+  li
+  a:after {
+  border-left: 12px solid #ccc;
+}
+
+.mat-select {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+}
+.mat-select-trigger {
+  display: inline-table;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+.mat-select-disabled .mat-select-trigger {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.mat-select-value {
+  display: table-cell;
+  max-width: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mat-select-value-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mat-select-arrow-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+  transform: translateY(-50%);
+}
+.mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+  transform: translateY(-25%);
+}
+.mat-form-field-appearance-standard.mat-form-field-has-label
+  .mat-select:not(.mat-select-empty)
+  .mat-select-arrow-wrapper {
+  transform: translateY(-50%);
+}
+.mat-form-field-appearance-standard
+  .mat-select.mat-select-empty
+  .mat-select-arrow-wrapper {
+  transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+._mat-animation-noopable.mat-form-field-appearance-standard
+  .mat-select.mat-select-empty
+  .mat-select-arrow-wrapper {
+  transition: none;
+}
+.mat-select-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+  margin: 0 4px;
+}
+.mat-select-panel-wrap {
+  flex-basis: 100%;
+}
+.mat-select-panel {
+  min-width: 112px;
+  max-width: 280px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 256px;
+  min-width: 100%;
+  border-radius: 4px;
+  outline: 0;
+}
+.cdk-high-contrast-active .mat-select-panel {
+  outline: solid 1px;
+}
+.mat-select-panel .mat-optgroup-label,
+.mat-select-panel .mat-option {
+  font-size: inherit;
+  line-height: 3em;
+  height: 3em;
+}
+.mat-form-field-type-mat-select:not(.mat-form-field-disabled)
+  .mat-form-field-flex {
+  cursor: pointer;
+}
+.mat-form-field-type-mat-select .mat-form-field-label {
+  width: calc(100% - 18px);
+}
+.mat-select-placeholder {
+  transition: color 400ms 133.3333333333ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+._mat-animation-noopable .mat-select-placeholder {
+  transition: none;
+}
+.mat-form-field-hide-placeholder .mat-select-placeholder {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: none;
+  display: block;
+}
+.mat-select-min-line:empty::before {
+  content: " ";
+  white-space: pre;
+  width: 1px;
+}
+
+.mat-option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.mat-option[disabled] {
+  cursor: default;
+}
+[dir="rtl"] .mat-option {
+  text-align: right;
+}
+.mat-option .mat-icon {
+  margin-right: 16px;
+  vertical-align: middle;
+}
+.mat-option .mat-icon svg {
+  vertical-align: top;
+}
+[dir="rtl"] .mat-option .mat-icon {
+  margin-left: 16px;
+  margin-right: 0;
+}
+.mat-option[aria-disabled="true"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.mat-optgroup .mat-option:not(.mat-option-multiple) {
+  padding-left: 32px;
+}
+[dir="rtl"] .mat-optgroup .mat-option:not(.mat-option-multiple) {
+  padding-left: 16px;
+  padding-right: 32px;
+}
+.cdk-high-contrast-active .mat-option {
+  margin: 0 1px;
+}
+.cdk-high-contrast-active .mat-option.mat-active {
+  border: solid 1px currentColor;
+  margin: 0;
+}
+.cdk-high-contrast-active .mat-option[aria-disabled="true"] {
+  opacity: 0.5;
+}
+.mat-option-text {
+  display: inline-block;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mat-option .mat-option-ripple {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.mat-option-pseudo-checkbox {
+  margin-right: 8px;
+}
+[dir="rtl"] .mat-option-pseudo-checkbox {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.mat-autocomplete-panel {
+  min-width: 112px;
+  max-width: 280px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  max-width: none;
+  max-height: 256px;
+  position: relative;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.mat-autocomplete-panel.mat-autocomplete-visible {
+  visibility: visible;
+}
+.mat-autocomplete-panel.mat-autocomplete-hidden {
+  visibility: hidden;
+}
+.mat-autocomplete-panel-above .mat-autocomplete-panel {
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.mat-autocomplete-panel .mat-divider-horizontal {
+  margin-top: -1px;
+}
+.cdk-high-contrast-active .mat-autocomplete-panel {
+  outline: solid 1px;
+}
+mat-autocomplete {
+  display: none;
+}
+
+.right_side_image_chinese
+  img {
+  width: 350px;
+}
+.our_cust[_ngcontent-serverApp-c92] {
+  padding: 30px 0 20px;
+  background-color: #f0df20;
+  text-align: center;
+}
+.our_cust[_ngcontent-serverApp-c92] .card[_ngcontent-serverApp-c92] {
+  margin: 0 10px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c91] {
+  padding: 15px !important;
+}
+@media screen and (max-width: 576px) {
+  .ast_team_box[_ngcontent-serverApp-c91] img[_ngcontent-serverApp-c91] {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .ast_team_box[_ngcontent-serverApp-c91] h4[_ngcontent-serverApp-c91] {
+    font-size: 14px;
+  }
+  .ast_team_box[_ngcontent-serverApp-c91] p[_ngcontent-serverApp-c91] {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .d-flex .col-md-2 {
+    width: 18.666667%;
+  }
+}
+.paddingForBottomShadow .slick-list {
+  padding-bottom: 10px;
+}

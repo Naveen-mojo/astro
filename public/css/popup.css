@@ -1,0 +1,88 @@
+::placeholder {
+    font-weight: 500;
+    color: #525252;
+}
+.iti {
+   margin-left: 44px;
+}
+.pop-btn{
+   background-color: #f0df20;
+   border: none;
+   width: 80%;
+   margin: 48px;
+   padding: 7px 0;
+   border-radius: 10px;
+   font-size: 14px;
+   font-weight: 500;
+   box-shadow: 0 0 2px 2px #ccc;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;margin-top: 30px;
+}
+.pop-inpu{
+   margin-left: 55px;
+   width: 320px;
+   background-color: #fff;
+   border-radius: 10px;
+   padding: 5px 6px;
+   border-color: #fff;
+}
+.pop-lab{
+   font-weight:700;
+   margin-left: 50px;
+   font-size: 13px;
+   color: #525252;
+   border-radius: 10px;
+}
+.pop-p{
+   margin-bottom: 50px;
+   font-size: 13px;
+   text-align: center;
+   color: #525252;
+   font-weight: 600;
+}
+.pop-title{
+   margin-left: 150px;
+   font-weight: 600;
+   color: #313131;
+   font-size: 18px;
+}
+.pop-content{
+   background-color: #eee;
+   border-radius: 10px;
+}
+.pop-dialog{
+   width:480px;
+   height:400px;
+}
+.pop-login{
+   background: transparent !important;
+   border: transparent;
+}
+.pop-register{
+   background: transparent !important;
+   border: transparent;
+}
+.re-msg {
+   margin-left: 55px;
+}
+.codeveri input {
+ margin-left: 20px;
+ text-align: center; 
+ line-height: 80px;
+ font-size: 50px;
+ border: solid 1px #ccc;
+ box-shadow: 0 0 5px #ccc inset;
+ outline: none;
+ width: 10%;
+ transition: all 0.2s ease-in-out;
+ border-radius: 3px;
+}
+.iti--allow-dropdown input[type=tel]{
+   
+   margin-left: 60px;
+}
+.re-msg {
+   margin-left: 55px;
+}

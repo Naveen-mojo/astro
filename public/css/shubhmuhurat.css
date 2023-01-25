@@ -1,0 +1,672 @@
+/* .health_component_section {
+  padding-top: 83px;
+} */
+
+.header_horoscope_section {
+  background-color: #f0df20;
+}
+
+.row_header_horoscope {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.right_heading_smthg h1 {
+  font-size: 65px;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 500;
+}
+
+.right_heading_smthg h1:before {
+  content: "";
+  height: 8px;
+  width: 200px;
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.left_icon_horoscope {
+  width: 300px;
+  height: 300px;
+}
+
+.left_icon_horoscope img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.horoscope_details_section {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.horoscope_details_section h2 {
+  color: #000;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.horoscope_details_section p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.right_side_image_adds {
+  height: 280px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.right_side_image_adds img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 25px;
+}
+
+.right_small_images {
+  height: 160px;
+  margin-bottom: 10px;
+}
+
+.horoscope_details_section
+  ul
+  li {
+  text-align: justify;
+}
+
+.right_medium_images {
+  height: 270px;
+  margin-bottom: 10px;
+}
+
+.w-18 {
+  width: 18%;
+  padding: 0 !important;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px #ccc;
+}
+
+a {
+  text-decoration: underline;
+  color: teal;
+}
+
+.btns_contact_astrologer a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 576px) {
+  .health_component_section {
+    padding-top: 41px;
+  }
+
+  .right_heading_smthg h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+  }
+
+  .right_heading_smthg h1:before {
+    height: 2px;
+    width: 68px;
+  }
+
+  .left_icon_horoscope {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+  }
+
+  .row_header_horoscope {
+    padding: 10px 0;
+  }
+
+  .horoscope_details_section {
+    padding: 20px 0;
+  }
+
+  .horoscope_details_section h2 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  .header_horoscope_section h2 {
+    font-size: 16px;
+  }
+
+  .horoscope_details_section p {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .right_side_image_adds {
+    display: none;
+  }
+
+  .horoscope_details_section ul li {
+    font-size: 13px;
+  }
+
+  .w-18 {
+    width: 35%;
+    float: left;
+    padding: 0;
+  }
+
+  .horoscope_details_section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.bread {
+  background-color: #eee;
+}
+
+ul#breadcrumbs-two {
+  padding: 6px 0;
+}
+
+#breadcrumbs-two li a {
+  background: #ccc;
+}
+
+#breadcrumbs-two
+  li
+  a:after {
+  border-left: 12px solid #ccc;
+}
+
+#breadcrumbs-two
+  li
+  a.active {
+  background: #f0df20;
+}
+
+.footer-top .fade_class_up {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+
+.footer-top .fade_class_down {
+  visibility: visible;
+  animation-name: fadeInDown;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.footer_section {
+  text-align: left;
+  color: #fff;
+}
+
+.footer-cntr {
+  background: #202020 !important;
+  padding: 20px 0;
+}
+
+.footer-tile h3 {
+  color: #ccc;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.h3,
+h3 {
+  font-size: 24px;
+}
+
+.footer-tile p {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: justify;
+  margin-bottom: 0;
+  opacity: 0.7;
+}
+
+.footer-tile ul {
+  padding-left: 0;
+}
+
+.footer-tile li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+.footer-tile li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#editrate i,
+.splftrclasses {
+  text-decoration: underline;
+}
+
+.splftrclasses a {
+  font-weight: 600 !important;
+}
+
+.footer-tile a {
+  color: #ccc;
+  display: inline-block;
+}
+
+.iconbar1 {
+  display: inline-flex;
+}
+
+.iconbar1 a {
+  margin: 2px;
+  display: block;
+  padding: 9px;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #fff;
+  width: 100%;
+}
+
+.cusumer {
+  background: #ddd14a;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.insta {
+  background: #db2f7b;
+}
+
+.linkedin {
+  background: #007bb5;
+}
+
+a.youtube {
+  background: red;
+}
+
+.icon-bar a:hover {
+  background-color: #ccc;
+}
+
+a:focus,
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.pbold {
+  font-weight: 600;
+}
+
+.footer-tile li a:hover {
+  color: #0e716b;
+}
+
+.parah_space {
+  padding-bottom: 0;
+}
+
+.space_top {
+  padding-top: 0;
+  font-size: 12px;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+#socialhideminiapp {
+  padding-bottom: 0;
+  margin-top: 10px;
+}
+
+.copy-cntr {
+  background: #000;
+  padding: 15px 0;
+}
+
+.bot,
+.center,
+.center1,
+.content1,
+.content2,
+.text-center {
+  text-align: center;
+}
+
+.copy-cntr p {
+  color: #fff;
+  margin: 0;
+  font-size: 13px;
+}
+
+.footer-top {
+  padding: 10px 0 30px;
+  text-align: left;
+  background-color: #6d6d6d;
+}
+
+.different_heading {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  font-weight: 300;
+}
+
+.footer-top h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  font-family: Open Sans, sans-serif;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.footer-top h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  background-color: #f0df20;
+  height: 2px;
+}
+
+.footer-top p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #7d7d7d;
+}
+
+.footer-contact p a {
+  color: #fff;
+  border-bottom: 1px dashed #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.d_flex_for_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.footer-links h3 a {
+  padding: 0;
+  border: none;
+}
+
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #fff;
+  margin-left: 2px;
+}
+
+.social_media a {
+  padding: 9px 13px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.social_media i {
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.social_media a:hover {
+  background-color: #ccc;
+}
+
+.social_media a:hover i {
+  color: #23527c;
+}
+
+.footer-bottom {
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #7c7a7a;
+}
+
+.footer-social a {
+  margin: 0 5px;
+  color: #eee;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-social i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.footer-social a:hover i {
+  color: #000;
+  border: 0;
+}
+
+.our_app_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.btns_app_mr_btm {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns_app_mr_btm a {
+  width: 49%;
+}
+
+.btns_app_mr_btm a img {
+  border-radius: 5px;
+}
+
+.btns_app_mr_btm
+  a
+  img:hover {
+  box-shadow: 0 0 4px 1px #ccc;
+  transition: 0.3s ease-in-out;
+}
+
+.btns_app_mr_btm a:hover {
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px 0 20px;
+}
+
+.footer-contact hr {
+  height: 1px !important;
+  width: 100%;
+  color: #fff;
+  margin: 8px 0 0;
+}
+
+.play_store img {
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  border-radius: 3px;
+  height: auto;
+}
+
+.play_store img:hover {
+  box-shadow: 0 2px 10px #312e2e;
+}
+
+.download_our_app .down_hr,
+.download_our_app .top_hr {
+  height: 1px;
+  color: #fff;
+  margin: 0;
+  opacity: 1;
+}
+
+.download_our_app .top_hr {
+  margin-bottom: 1%;
+}
+
+.download_our_app .down_hr {
+  margin-top: 1%;
+}
+
+.download_our_app {
+  background-color: #383838;
+}
+
+.private_confidential {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.row_secure_items h3 {
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.5;
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.row_secure_items h3:after {
+  display: none;
+}
+
+.icon_left_side {
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 12px;
+  width: 50px;
+}
+
+.about_astrotalk_footer {
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  text-align: justify;
+}
+
+.minus_left_mrgn {
+  padding-left: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .row_secure_items {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .private_confidential {
+    width: 25%;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .footer-top h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-top {
+    padding: 10px 0;
+  }
+
+  .icon_left_side {
+    min-width: 50px;
+  }
+
+  .about_astrotalk_footer {
+    margin-bottom: 10px !important;
+  }
+
+  .row_secure_items h3 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 13px !important;
+  }
+
+  .row_secure_items {
+    align-items: flex-start;
+  }
+
+  .footer-top p {
+    font-size: 13px;
+  }
+
+  .footer-top h3 {
+    font-size: 17px;
+  }
+}
+
+.font12 {
+  font-size: 12px;
+}

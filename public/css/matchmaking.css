@@ -1,0 +1,3196 @@
+.commonLoaderCss {
+  background: #7d7d7d;
+  z-index: 100000;
+  position: fixed;
+  width: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loadingCssText {
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+}
+
+.ings > .invalid-feedback {
+  padding: 50px;
+}
+
+.ttloader {
+  background-color: #0000008f;
+  height: 100%;
+  position: fixed;
+  z-index: 99999999999;
+}
+
+.rotating,
+.ttloader {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.rotating {
+  background-image: url(https://aws.astrotalk.com/assets/images/header/icons/pressed6.gif);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  right: 0;
+}
+
+.tool-kit-heading {
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-group.message {
+  text-align: center;
+  color: green;
+}
+
+.error > input {
+  border-bottom: 1px solid red !important;
+}
+
+.mobile-scroll {
+  overflow-y: scroll;
+  max-height: 410px;
+}
+
+.error-msg {
+  background: #ffdcdc;
+  border: 1px solid #fdbdbd;
+  color: red;
+  border-radius: 5px;
+  width: 85%;
+}
+
+.error-msg,
+.success-msg {
+  padding: 3px 5px;
+  text-align: center;
+  font-size: 13px;
+  margin: 0 40px 15px;
+}
+
+.success-msg {
+  background: #dcffe9;
+  border: 1px solid #bffdbd;
+  color: green;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.ings .invalid-feedback {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  font-size: 12px;
+  max-width: 400px;
+}
+
+.password-error {
+  width: 80% !important;
+  font-size: 12px;
+}
+
+.invalid-feedback.block {
+  display: block;
+  width: auto;
+}
+
+.form-controls.is-invalid,
+.was-validated
+  .form-controls:invalid {
+  border-bottom: 1px solid red !important;
+  padding-right: calc(1.5em + 0.75rem);
+}
+
+.btn-check:active
+  + .btn-secondary,
+.btn-check:checked
+  + .btn-secondary,
+.btn-secondary.active,
+.btn-secondary:active,
+.show
+  > .btn-secondary.dropdown-toggle {
+  color: #000;
+}
+
+button.btn {
+  border-radius: 0 20px 20px 0;
+  height: 36px;
+  border-left: 0;
+}
+
+.regsmitbtn {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border: 1px solid #919191;
+}
+
+.lgMainHead {
+  text-align: center !important;
+  padding: 20px 0 5px;
+  font-size: 1.3em !important;
+}
+
+.lgMainHead.m-20 {
+  margin: 20px;
+}
+
+button.resendCode {
+  padding: 0.1em;
+  text-align: center;
+  margin: auto;
+  width: 100% !important;
+  border-radius: 24px;
+  box-shadow: none;
+  background: #fdfdfd;
+  border: 1px solid #4332;
+  color: #4c4c4c;
+}
+
+button.resendCode:disabled {
+  background-color: #cccccc2e;
+  cursor: no-drop;
+}
+
+.hide-pass:before {
+  content: "\f070";
+  color: #9a9a9a;
+}
+
+.show-pass:before {
+  content: "\f06e";
+  color: #198754;
+}
+
+.hide-pass:before,
+.show-pass:before {
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  cursor: pointer;
+  font-family: FontAwesome;
+}
+
+#user_profile
+  .user_profile_btn {
+  background-color: #f0df20;
+  margin-left: 10px;
+  display: block;
+  padding: 0;
+  width: 30px;
+  border-radius: 100% !important;
+  border: none;
+}
+
+#user_profile
+  .user_profile_pic {
+  display: inline-block;
+  width: 23px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #b2a5a5;
+  height: 23px;
+  position: relative;
+  margin-right: 3px;
+}
+
+#user_profile
+  .user_profile_pic
+  img {
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.section_language {
+  z-index: 1;
+  margin-left: 10px;
+  background-color: #f0df20;
+  border-radius: 50%;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  justify-content: center;
+}
+
+.section_language
+  button.btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 10px;
+  color: #000;
+}
+
+.language_drpdown {
+  display: block;
+  position: unset !important;
+  margin-top: 40px !important;
+  top: 0 !important;
+}
+
+.blank_bg {
+  display: none;
+  position: absolute;
+  right: 2px;
+  top: 0;
+}
+
+.uses_flext {
+  display: flex;
+  align-items: center;
+}
+
+.section_language:hover
+  .blank_bg,
+.user_profile:hover
+  .display_set_dropdwn {
+  display: block;
+}
+
+#user_profile
+  .user_profile_drpdwn {
+  display: block;
+  margin-top: 10px;
+  top: 0 !important;
+  position: unset !important;
+}
+
+.display_set_dropdwn {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  right: 0 !important;
+}
+
+.user_profile {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 567px) {
+  #user_profile {
+    display: none;
+  }
+
+  .coming h4 {
+    font-size: 16px;
+  }
+
+  .coming h5 {
+    font-size: 12px;
+  }
+
+  .section_language {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 567px) {
+  #user_profile_mbl_view {
+    display: none;
+  }
+}
+
+#user_profile_mbl_view
+  .user_profile_btn {
+  display: flex;
+  padding: 0;
+}
+
+#user_profile_mbl_view
+  .user_profile_pic {
+  display: inline-block;
+  width: 35px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid #000;
+  height: 35px;
+  position: relative;
+}
+
+#user_profile_mbl_view
+  .user_profile_pic
+  img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#user_profile_mbl_view
+  .user_profile_dropdown {
+  border-top: 2px solid #f0df20 !important;
+  inset: unset !important;
+  top: 8px !important;
+  left: 0 !important;
+  border: none;
+  box-shadow: 0 0 6px #766c6c;
+  text-align: left;
+}
+
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 30px 10px 12px;
+  transition: 0.3s ease-in-out;
+}
+
+.user_profile_btn .fa-user {
+  font-size: 10px;
+}
+
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a:focus,
+#user_profile_mbl_view
+  .user_profile_dropdown
+  li
+  a:hover {
+  background-color: #f8f4c1 !important;
+}
+
+@media screen and (max-width: 992px) {
+  #desktop_view_header {
+    display: none;
+  }
+
+  .mobileselect {
+    padding-right: 0;
+  }
+
+  .resendclass {
+    margin-top: 0;
+    padding: 0 50px 20px;
+  }
+
+  .mobileselect
+    .form-control {
+    padding: 6px;
+  }
+
+  .wallet_amount_mbl_view {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #mobile_view_header {
+    display: none;
+  }
+}
+
+.header_section_mobile_view {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: 0 2px 4px #ccc;
+  top: 0;
+  padding: 0;
+}
+
+.header_section_mobile_view
+  .custom_toggler:focus {
+  box-shadow: none;
+}
+
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link {
+  font-size: 14px;
+  border-bottom: 1px solid #ececec;
+  color: #777;
+  padding: 10px 15px !important;
+  text-transform: capitalize;
+}
+
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:focus,
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  background-color: #f0df20 !important;
+  border-color: #e6e6e6 !important;
+  color: #777 !important;
+  font-weight: 700;
+}
+
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item {
+  font-size: 13px;
+  color: #777;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+  width: 100%;
+  padding: 10px 15px !important;
+  border-left: 3px solid #f9f9f9;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item:focus,
+#mobile_view_header
+  .dropdown-menu
+  li
+  .dropdown-item:hover {
+  background: #f2f2f2 !important;
+  color: #333 !important;
+  border-left: 3px solid #f2f2f2;
+}
+
+#mobile_view_header
+  .header_top_baar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.photo_user_profile img,
+photo_user_profile span {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.photo_user_profile {
+  width: 75px;
+  border-radius: 100%;
+  margin: 0 auto;
+  background-color: #f0df20 !important;
+}
+
+.name_user_profile {
+  text-align: center;
+  color: #466590;
+  white-space: nowrap;
+  overflow-x: hidden;
+  line-height: 20px;
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.email_user_profile {
+  color: #868686;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 4px;
+  text-transform: lowercase;
+}
+
+.user_profile_mbl_view {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+}
+
+.contact_number_user_profile {
+  color: #716f6f;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 4px;
+  text-transform: lowercase;
+}
+
+.wallet_amount_mbl_view {
+  float: right;
+  font-size: 11px;
+  line-height: 2.1;
+  font-weight: 500;
+}
+
+.wallet_amount_mbl_view
+  .fa-rupee-sign {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:focus
+  .wallet_amount_mbl_view
+  .fa-rupee-sign,
+.header_section_mobile_view
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  font-weight: 700;
+}
+
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover:focus,
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover:hover {
+  background-color: #fff !important;
+}
+
+#user_profile
+  .user_profile_dropdown
+  .background_hover_white
+  .bg_white_hover {
+  border-bottom: 1px dotted #ccc;
+}
+
+.width_special_set {
+  width: 230px !important;
+}
+
+#user_profile
+  .user_profile_dropdown
+  li
+  a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+#user_profile
+  .user_profile_dropdown
+  li
+  .padding_additional {
+  padding: 7px 15px !important;
+}
+
+.profile_pic_astrologer_Web
+  img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.profile_pic_astrologer_Web {
+  width: 50px;
+}
+
+.navLinks .nav-link:hover {
+  color: #ac9e02;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: 0.3px 0 #ac9e02;
+}
+
+.navLinks .nav-link {
+  font-weight: 500 !important;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.Absolute-Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.card.coming {
+  box-shadow: 0 4px 18px 0 #f0df20;
+}
+
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 99999999 !important;
+}
+
+.mat-select-arrow {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.was-validated
+  .form-control.ng-valid {
+  border-color: #198754 !important;
+}
+
+.was-validated
+  .form-control.ng-valid,
+.was-validated
+  .form-control:valid {
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.was-validated
+  .form-control:valid {
+  border-color: #ccc;
+  background-image: none;
+}
+
+.was-validated
+  .form-control.ng-invalid {
+  border-color: #dc3545 !important;
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.was-validated
+  .form-control:valid:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.was-validated
+  .form-control.ng-valid:focus {
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.25rem #19875440 !important;
+}
+
+.was-validated
+  .form-control.ng-invalid:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem #dc354540 !important;
+}
+
+.was-validated
+  .form-control:invalid:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.was-validated
+  .form-control:invalid {
+  border-color: #ccc;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.nopic {
+  position: absolute;
+  left: 16.5px;
+  top: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1400px) {
+  .registration_source h5 {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .registration_source {
+    border-radius: 0 !important;
+    padding: 7px 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  .textAreaInput {
+    margin-bottom: 0 !important;
+  }
+
+  .modal-footer {
+    padding: 5px;
+  }
+
+  .btns_language_select.registration_source_modal_item {
+    font-size: 12px !important;
+  }
+
+  .btnRowDiv {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 12px !important;
+  }
+
+  .registration_source h5 {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+
+  .registration_source i {
+    font-size: 21px !important;
+    font-weight: 100 !important;
+    margin-left: 30px !important;
+  }
+
+  .registration_source_modal_item:hover {
+    background-color: #f0df20 !important;
+  }
+}
+
+.registration_source {
+  filter: alpha(opacity=100) !important;
+  opacity: 0.9;
+  position: fixed !important;
+  right: 0;
+  bottom: 81px;
+  width: 20%;
+  background-color: #f0df20;
+  color: #000;
+  text-align: center !important;
+  z-index: 99999;
+  padding: 15px 0;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 0 4px 0 #919191;
+  border: 1px solid #919191;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.registration_source:focus,
+.registration_source:hover {
+  background-color: #ff0;
+}
+
+.registration_source i {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.registration_source h5 {
+  margin: 0;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.registration_source_modal_item {
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.registration_source_modal_item:hover {
+  background-color: #eee;
+}
+
+.registration_source_modal_item.seleted,
+.registration_source_modal_item:focus,
+.selectedBtn {
+  background-color: #f0df20;
+}
+
+.selectedBtn {
+  color: #000;
+}
+
+.textAreaInput {
+  margin-left: 7%;
+  margin-right: 7%;
+  width: 86%;
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+.regsubmitbtn {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.btnRowDiv {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+}
+
+.mobile_registraion_section {
+  padding-top: 78px;
+}
+
+.login_with_phone_number {
+  background-color: #f0df20;
+  border: none;
+  padding: 7px 40px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 10px;
+}
+
+.login_with_phone_number:focus-visible {
+  outline: none;
+}
+
+.mobile_number_registration_popup .modal-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.mobile_number_registration_popup .modal-content {
+  border-radius: 10px;
+}
+
+.mobile_number_registration_popup .modal-content .modal-body {
+  background-color: #eee;
+  border-radius: 10px;
+  position: relative;
+  padding: 0;
+}
+
+.main_heading_mobile_number_registration {
+  text-align: center;
+  font-weight: 600;
+  color: #313131;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+}
+
+.subheading_for_notification {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  padding: 7% 24%;
+  color: #525252;
+  font-weight: 600;
+}
+
+.mobile_number_enter_section {
+  padding: 0 20px;
+}
+
+.mobile_number_enter_section
+  h6 {
+  font-size: 13px;
+  margin: 0;
+  padding: 12px 0;
+  color: #525252;
+}
+
+.box_enter_mobile_number
+  mat-select {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 0 0;
+  box-shadow: unset;
+  border: none;
+  max-width: 100px;
+}
+
+.box_enter_mobile_number
+  input {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 500;
+  width: 100%;
+  box-shadow: unset;
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box_enter_mobile_number
+  input:focus-within {
+  outline: none;
+}
+
+.box_enter_mobile_number
+  select:focus-visible {
+  outline: none;
+}
+
+.box_enter_mobile_number {
+  background-color: #fff;
+  padding: 5px 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.get_otp_btn {
+  background-color: #f0df20;
+  border: none;
+  width: 100%;
+  margin: 30px 0;
+  padding: 7px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 0 2px 2px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.get_otp_btn:hover {
+  box-shadow: 1px 2px 3px #00000080;
+}
+
+.get_otp_btn i {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  top: 10px;
+}
+
+.otp_sent_number {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: teal;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.otp_enter_section {
+  padding: 0 20px;
+}
+
+.otp_enter_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.otp_enter_row input {
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 0 2px #ccc;
+  border-radius: 5px;
+  padding: 0 19px 0 20px;
+}
+
+.otp_enter_row
+  input:focus-visible {
+  outline: none;
+}
+
+.opt_submit_btn {
+  background-color: #f0df20;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.opt_submit_btn:focus-visible {
+  outline: none;
+}
+
+.resend_otp_avialable {
+  font-size: 13px;
+  color: teal;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.recent_otp_sms_call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recent_otp_sms_call
+  .bnts_recent_otp {
+  background-color: #f0df20;
+  border: none;
+  font-size: 11px;
+  font-weight: 500;
+  width: 48%;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent_otp_sms_call
+  .bnts_recent_otp:focus-visible {
+  outline: none;
+}
+
+.country_btn_number_registration {
+  width: 60px;
+  display: block;
+  margin: 0 4px 2px;
+}
+
+.close_mobile_registration_popup {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  font-size: 18px;
+  color: #919191;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .otp_enter_row input {
+    width: 45px;
+    height: 45px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .otp_enter_row input {
+    width: 40px;
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  .subheading_for_notification {
+    padding: 7% 20%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mobile_registraion_section {
+    padding-top: 71px;
+  }
+}
+
+.verify_phone_number_section {
+  display: none !important;
+}
+
+@media screen and (min-width: 576px) {
+  .padding_desktop_view {
+    padding: 0 50px;
+  }
+
+  .padding_first_name_view {
+    padding: 25px 50px;
+  }
+
+  .mobile_number_registration_popup .modal-dialog {
+    width: 480px;
+  }
+}
+
+.disNon,
+.displayNone {
+  display: none;
+}
+
+.backArrowOtp {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  cursor: pointer;
+}
+
+.backArrowOtp:before {
+  color: #919191;
+  font-weight: 100;
+}
+
+.newLoginMat .mat-select-arrow {
+  border-left: 5px solid #0000 !important;
+  border-right: 5px solid #0000 !important;
+}
+
+.was-validated
+  .form-control.newLoginMat.ng-valid {
+  padding: 5px 0 !important;
+}
+
+.errorClass {
+  border: 1px solid red !important;
+}
+
+.errorClassInput {
+  border: 1px solid red;
+}
+
+.errorClassText {
+  font-size: 10px;
+  color: red;
+  margin-left: 1px;
+}
+
+.errorClassTextOtp {
+  font-size: 12px;
+  color: red;
+  margin-left: 1px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.mat-option.mat-active {
+  color: #000000de;
+  background: #0000001f !important;
+}
+
+a.active {
+  color: #f0df20;
+}
+
+.navLinks a {
+  cursor: pointer;
+}
+
+.navLinks .nav-link.lang1 {
+  margin-right: 0;
+  padding-left: 6px;
+  padding-right: 0;
+}
+
+.navLinks .nav-link.lang2 {
+  margin-right: 0;
+  padding-right: 6px;
+}
+
+.langSeparator {
+  padding-top: 6px;
+}
+
+.login_btn_header i {
+  margin-right: 5px;
+}
+
+.free_kundli_section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.lable_form {
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.input_form input {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input_form input:focus,
+.input_form input:hover {
+  outline: none;
+}
+
+.generate_horoscope_btn {
+  background-color: #f0df20;
+  margin-top: 30px !important;
+  width: 285px;
+}
+
+.generate_horoscope_btn:hover {
+  box-shadow: 0 0 4px #313131;
+}
+
+.input_form select {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.input_form select:focus,
+.input_form select:hover {
+  outline: none;
+}
+
+@media screen and (max-width: 576px) {
+  .free_kundli_form {
+    width: 100%;
+  }
+
+  .heading_free_kundli {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .input_form input {
+    margin-bottom: 15px;
+  }
+
+  .justify_content_center_kundli {
+    width: auto !important;
+    padding: 10px !important;
+  }
+
+  .buttons {
+    margin-bottom: 0;
+    position: unset !important;
+  }
+}
+
+.custom_tabs_kundli {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  width: 50%;
+  padding: 12px 0;
+}
+
+.row_tabs_kundli {
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #919191;
+}
+
+.row_tabs_kundli .active {
+  background-color: #ffea00;
+  pointer-events: none;
+}
+
+.search_box_kundli {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+  font-size: 12px;
+  padding: 10px 40px;
+  color: #313131;
+}
+
+.search_box_kundli:focus,
+.search_box_kundli:hover {
+  outline: none;
+}
+
+.justify_content_center_kundli {
+  background-color: #fff;
+  box-shadow: 0 0 4px #616161;
+  padding: 10px 10px 0;
+  border-radius: 10px;
+}
+
+.icon_set_search {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 12px;
+  color: #616161;
+}
+
+.position_relative_search {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #0000001a;
+}
+
+.background_open_kundli {
+  background-color: #fff;
+  box-shadow: 0 0 6px #919191;
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+
+.background_open_kundli.matching {
+  height: 413px !important;
+  overflow-y: auto;
+  padding: 25px;
+  overflow-x: hidden;
+}
+
+.background_open_kundli.savedMatching {
+  padding: 10px 0;
+}
+
+.height_set_kundli {
+  height: 302px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.height_set_kundli_no_sufficient_data {
+  height: 297px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.height_set_kundli_please_login {
+  height: 392px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.heading_recently_opened {
+  font-size: 14px;
+  color: #000;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.list_box_kundli {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #0000001a;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.list_box_kundli:focus,
+.list_box_kundli:hover {
+  background-color: #eee4ee;
+}
+
+.profile_icon_name {
+  background-color: orange;
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_details_kundli {
+  margin-left: 15px;
+  width: 65%;
+}
+
+.name_details_kundli {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.address_date_birth_kundli,
+.date_time_details_kundli {
+  font-size: 10px;
+  color: #616161;
+  margin-top: 4px;
+}
+
+.address_date_birth_kundli {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.delete_icon_kundli {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.delete_icon_kundli
+  .fa-trash-o {
+  font-size: 13px;
+  opacity: 1;
+  color: red;
+}
+
+.time_kundli {
+  margin-left: 2px;
+}
+
+.gender_details_heading {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.generate_horoscope_btn {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  .mobile_view_horoscope_matching {
+    display: block;
+  }
+
+  .desktop_view_horoscope_matching {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .mobile_view_horoscope_matching {
+    display: none;
+  }
+
+  .desktop_view_horoscope_matching {
+    display: block;
+  }
+}
+
+.adjust_margin_btn {
+  margin-top: 0 !important;
+}
+
+@media screen and (max-width: 576px) {
+  .adjust_margin_btn,
+  .margin_from_set {
+    margin-bottom: 10px !important;
+  }
+}
+
+.font_size_increase {
+  font-size: 14px;
+}
+
+.free_kundli_form {
+  background-color: #fff;
+  margin-bottom: 10px !important;
+  box-shadow: 0 0 6px #919191;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.generate_horoscope_btn {
+  background-color: #ffea00;
+  color: #000;
+  border: #ffdead;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #616161;
+  display: flex;
+  margin: 10px auto !important;
+  transition: 0.3s ease-in-out;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub_heading_horoscope_matching {
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #616161;
+  margin-bottom: 11px;
+}
+
+.position_fixed_Set {
+  padding: 0 10px;
+}
+
+.height_set_kundli::-webkit-scrollbar {
+  width: 6px;
+}
+
+.height_set_kundli::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 30px;
+}
+
+.height_set_kundli::-webkit-scrollbar-thumb {
+  background: #e7e7e7;
+  border-radius: 30px;
+}
+
+.background_open_kundli::-webkit-scrollbar {
+  width: 6px;
+}
+
+.background_open_kundli::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 30px;
+}
+
+.background_open_kundli::-webkit-scrollbar-thumb {
+  background: #e7e7e7;
+  border-radius: 30px;
+}
+
+.form-control:disabled,
+.form-control:read-only {
+  background: #fff !important;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.firstColor {
+  background-color: orange;
+}
+
+.secondColor {
+  background-color: #9acd32;
+}
+
+@media screen and (max-width: 576px) {
+  .mobile_view_horoscope_matching {
+    display: block;
+  }
+
+  .desktop_view_chinese_horoscope,
+  .desktop_view_horoscope_matching {
+    display: none;
+  }
+
+  .centered {
+    transform: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .mobile_view_horoscope_matching {
+    display: none;
+  }
+
+  .desktop_view_horoscope_matching {
+    display: block;
+  }
+
+  .mobile_view_chinese_horoscope {
+    display: none;
+  }
+}
+
+/* .chinese_horoscope_section {
+  padding-top: 83px;
+} */
+
+.mobile_view_chinese_horoscope {
+  padding-top: 70px;
+}
+
+.header_chinese_horoscope {
+  background-color: #f0df20;
+}
+
+.header_contant_chinese {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.left_side_text_chinese {
+  padding-top: 30px;
+}
+
+.left_side_text_chinese
+  h1 {
+  font-size: 65px;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.right_side_image_chinese
+  img {
+  width: 350px;
+}
+
+.left_side_text_chinese
+  h2 {
+  font-size: 40px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.left_side_text_chinese
+  h1:before {
+  content: "";
+  height: 7px;
+  width: 200px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.header_chinese_horoscope_mbl_view {
+  background-color: #f0df20;
+}
+
+.header_contant_chinese_mbl_view {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.right_side_text_chinese_mbl_view
+  img {
+  width: 170px;
+}
+
+.right_side_text_chinese_mbl_view {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.left_side_text_chinese_mbl_view
+  h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.left_side_text_chinese_mbl_view
+  h1:before {
+  content: "";
+  height: 2px;
+  width: 68px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.left_side_text_chinese_mbl_view
+  h2 {
+  font-size: 16px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.left_side_text_chinese_mbl_view {
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .chinese_horoscope_section {
+    padding-top: 71px;
+  }
+
+  .left_side_text_chinese {
+    padding-top: 0;
+  }
+
+  .header_contant_chinese {
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .left_side_text_chinese
+    h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .left_side_text_chinese
+    h2 {
+    font-size: 32px;
+  }
+
+  .right_side_image_chinese {
+    width: 300px;
+  }
+
+  .background_open_kundli.matching {
+    padding: 20px;
+  }
+}
+
+.bread {
+  background-color: #eee;
+}
+
+ul#breadcrumbs-two {
+  padding: 6px 0;
+}
+
+#breadcrumbs-two
+  li
+  a {
+  background: #ccc;
+}
+
+#breadcrumbs-two
+  li
+  a.active {
+  background: #f0df20;
+}
+
+#breadcrumbs-two
+  li
+  a:after {
+  border-left: 12px solid #ccc;
+}
+
+.contact_btn i {
+  margin-right: 5px;
+}
+
+.mat-select {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+}
+
+.mat-select-trigger {
+  display: inline-table;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.mat-select-disabled .mat-select-trigger {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.mat-select-value {
+  display: table-cell;
+  max-width: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mat-select-value-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-select-arrow-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+  transform: translateY(-50%);
+}
+
+.mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+  transform: translateY(-25%);
+}
+
+.mat-form-field-appearance-standard.mat-form-field-has-label
+  .mat-select:not(.mat-select-empty)
+  .mat-select-arrow-wrapper {
+  transform: translateY(-50%);
+}
+
+.mat-form-field-appearance-standard
+  .mat-select.mat-select-empty
+  .mat-select-arrow-wrapper {
+  transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+._mat-animation-noopable.mat-form-field-appearance-standard
+  .mat-select.mat-select-empty
+  .mat-select-arrow-wrapper {
+  transition: none;
+}
+
+.mat-select-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+  margin: 0 4px;
+}
+
+.mat-select-panel-wrap {
+  flex-basis: 100%;
+}
+
+.mat-select-panel {
+  min-width: 112px;
+  max-width: 280px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 256px;
+  min-width: 100%;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.cdk-high-contrast-active .mat-select-panel {
+  outline: solid 1px;
+}
+
+.mat-select-panel .mat-optgroup-label,
+.mat-select-panel .mat-option {
+  font-size: inherit;
+  line-height: 3em;
+  height: 3em;
+}
+
+.mat-form-field-type-mat-select:not(.mat-form-field-disabled)
+  .mat-form-field-flex {
+  cursor: pointer;
+}
+
+.mat-form-field-type-mat-select .mat-form-field-label {
+  width: calc(100% - 18px);
+}
+
+.mat-select-placeholder {
+  transition: color 400ms 133.3333333333ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+._mat-animation-noopable .mat-select-placeholder {
+  transition: none;
+}
+
+.mat-form-field-hide-placeholder .mat-select-placeholder {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: none;
+  display: block;
+}
+
+.mat-select-min-line:empty::before {
+  content: " ";
+  white-space: pre;
+  width: 1px;
+}
+
+.mat-option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mat-option[disabled] {
+  cursor: default;
+}
+
+[dir="rtl"] .mat-option {
+  text-align: right;
+}
+
+.mat-option .mat-icon {
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.mat-option .mat-icon svg {
+  vertical-align: top;
+}
+
+[dir="rtl"] .mat-option .mat-icon {
+  margin-left: 16px;
+  margin-right: 0;
+}
+
+.mat-option[aria-disabled="true"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.mat-optgroup .mat-option:not(.mat-option-multiple) {
+  padding-left: 32px;
+}
+
+[dir="rtl"] .mat-optgroup .mat-option:not(.mat-option-multiple) {
+  padding-left: 16px;
+  padding-right: 32px;
+}
+
+.cdk-high-contrast-active .mat-option {
+  margin: 0 1px;
+}
+
+.cdk-high-contrast-active .mat-option.mat-active {
+  border: solid 1px currentColor;
+  margin: 0;
+}
+
+.cdk-high-contrast-active .mat-option[aria-disabled="true"] {
+  opacity: 0.5;
+}
+
+.mat-option-text {
+  display: inline-block;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-option .mat-option-ripple {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.mat-option-pseudo-checkbox {
+  margin-right: 8px;
+}
+
+[dir="rtl"] .mat-option-pseudo-checkbox {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.mat-autocomplete-panel {
+  min-width: 112px;
+  max-width: 280px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  max-width: none;
+  max-height: 256px;
+  position: relative;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.mat-autocomplete-panel.mat-autocomplete-visible {
+  visibility: visible;
+}
+
+.mat-autocomplete-panel.mat-autocomplete-hidden {
+  visibility: hidden;
+}
+
+.mat-autocomplete-panel-above .mat-autocomplete-panel {
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.mat-autocomplete-panel .mat-divider-horizontal {
+  margin-top: -1px;
+}
+
+.cdk-high-contrast-active .mat-autocomplete-panel {
+  outline: solid 1px;
+}
+
+mat-autocomplete {
+  display: none;
+}
+
+.our_cust[_ngcontent-serverApp-c91] {
+  padding: 30px 0 20px;
+  background-color: #f0df20;
+  text-align: center;
+}
+
+.our_cust[_ngcontent-serverApp-c91] .card[_ngcontent-serverApp-c91] {
+  margin: 0 10px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90] {
+  padding: 15px !important;
+}
+
+@media screen and (max-width: 576px) {
+  .ast_team_box[_ngcontent-serverApp-c90] img[_ngcontent-serverApp-c90] {
+    width: 80px !important;
+    height: 80px !important;
+    border: 1px solid #fff !important;
+    margin-bottom: 10px;
+  }
+
+  .ast_team_box[_ngcontent-serverApp-c90] h4[_ngcontent-serverApp-c90] {
+    font-size: 14px;
+    line-height: unset;
+  }
+
+  .ast_team_box[_ngcontent-serverApp-c90] p[_ngcontent-serverApp-c90] {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-flex .col-md-2 {
+    width: 18.666667%;
+  }
+}
+
+.paddingForBottomShadow .slick-list {
+  padding-bottom: 10px;
+}
+
+section#problem-area[_ngcontent-serverApp-c90] {
+  padding: 30px 0;
+  background: #fff !important;
+}
+
+.diff_font_family[_ngcontent-serverApp-c90] {
+  margin-top: 20px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90] {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  border: 10px solid #f4f4f4;
+  text-align: center;
+  padding: 30px 15px;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90] img[_ngcontent-serverApp-c90] {
+  display: inline-block !important;
+  width: 150px;
+  height: 150px;
+  border: 10px solid #fff;
+  background-image: url(https://aws.astrotalk.com/assets/images/astrolger/astro-background-gray.jpg);
+  background-repeat: round;
+  border-radius: 100%;
+  transition: all 0.5s;
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90] h4[_ngcontent-serverApp-c90],
+.ast_team_box[_ngcontent-serverApp-c90] p[_ngcontent-serverApp-c90] {
+  float: left;
+  width: 100%;
+  text-transform: capitalize;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90] h4[_ngcontent-serverApp-c90] {
+  margin: 4px 0 5px;
+  font-weight: 600 !important;
+  color: #616161;
+  letter-spacing: 0.1px;
+  font-size: 18px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90] p[_ngcontent-serverApp-c90] {
+  margin-bottom: 10px;
+  font-family: Open Sans;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.pboldh[_ngcontent-serverApp-c90] h2[_ngcontent-serverApp-c90] {
+  text-transform: uppercase !important;
+  font-size: 30px;
+  font-weight: 700 !important;
+  position: relative !important;
+  color: #313131 !important;
+  margin: 0 !important;
+}
+
+.section-headings[_ngcontent-serverApp-c90] h4[_ngcontent-serverApp-c90] {
+  font-size: 17px;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  color: #383535;
+  margin: 20px 0;
+}
+
+.section-headings[_ngcontent-serverApp-c90] {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 99;
+  position: relative;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90]:focus,
+.ast_team_box[_ngcontent-serverApp-c90]:hover {
+  border: 10px solid #f4f4f4;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -10px #777;
+  -webkit-box-shadow: 0 10px 15px -10px #777;
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+
+.ast_team_box[_ngcontent-serverApp-c90]:hover img[_ngcontent-serverApp-c90] {
+  transition: all 0.5s;
+  box-shadow: 0 0 30px -10px #000;
+  -webkit-box-shadow: 0 0 30px -10px #000;
+}
+
+.parent_image_our_Astrologer[_ngcontent-serverApp-c90] {
+  position: relative;
+}
+
+.parent_image_our_Astrologer[_ngcontent-serverApp-c90]:after {
+  content: "";
+  right: -6px;
+  top: -6px;
+  background-color: #1aa260;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: absolute;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    box-shadow: 0 0 2px 2px #028043;
+    background-color: #028043;
+  }
+}
+
+.footer-top .fade_class_up {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+
+.footer-top
+  .fade_class_down {
+  visibility: visible;
+  animation-name: fadeInDown;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.footer_section {
+  text-align: left;
+  color: #fff;
+}
+
+.footer-cntr {
+  background: #202020 !important;
+  padding: 20px 0;
+}
+
+.footer-tile h3 {
+  color: #ccc;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.h3,
+h3 {
+  font-size: 24px;
+}
+
+.footer-tile p {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: justify;
+  margin-bottom: 0;
+  opacity: 0.7;
+}
+
+.footer-tile ul {
+  padding-left: 0;
+}
+
+.footer-tile li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+.footer-tile
+  li
+  a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#editrate i,
+.splftrclasses {
+  text-decoration: underline;
+}
+
+.splftrclasses a {
+  font-weight: 600 !important;
+}
+
+.footer-tile a {
+  color: #ccc;
+  display: inline-block;
+}
+
+.iconbar1 {
+  display: inline-flex;
+}
+
+.iconbar1 a {
+  margin: 2px;
+  display: block;
+  padding: 9px;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #fff;
+  width: 100%;
+}
+
+.cusumer {
+  background: #ddd14a;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.insta {
+  background: #db2f7b;
+}
+
+.linkedin {
+  background: #007bb5;
+}
+
+a.youtube {
+  background: red;
+}
+
+.icon-bar a:hover {
+  background-color: #ccc;
+}
+
+a:focus,
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.pbold {
+  font-weight: 600;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.footer-tile
+  li
+  a:hover {
+  color: #0e716b;
+}
+
+.parah_space {
+  padding-bottom: 0;
+}
+
+.space_top {
+  padding-top: 0;
+  font-size: 12px;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+#socialhideminiapp {
+  padding-bottom: 0;
+  margin-top: 10px;
+}
+
+.copy-cntr {
+  background: #000;
+  padding: 15px 0;
+}
+
+.bot,
+.center,
+.center1,
+.content1,
+.content2,
+.text-center {
+  text-align: center;
+}
+
+.copy-cntr p {
+  color: #fff;
+  margin: 0;
+  font-size: 13px;
+}
+
+.play_store a {
+  display: block;
+}
+
+.footer-top {
+  padding: 30px 0;
+  text-align: left;
+  background-color: #6d6d6d;
+}
+
+.different_heading {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  font-weight: 300;
+}
+
+.footer-top h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.footer-top h3,
+.footer-top p {
+  font-weight: 300;
+  color: #fff;
+  font-family: Open Sans, sans-serif;
+  margin-bottom: 5px;
+}
+
+.footer-top p {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 2;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact
+  p
+  a {
+  color: #fff;
+  border-bottom: 1px dashed #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.d_flex_for_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contact i {
+  padding-right: 10px;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.footer-links a {
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #fff;
+  margin-left: 3px;
+}
+
+.social_media a {
+  padding: 9px 13px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.social_media i {
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.social_media a:hover {
+  background-color: #ccc;
+}
+
+.social_media
+  a:hover
+  i {
+  color: #23527c;
+}
+
+.footer-bottom {
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #7c7a7a;
+}
+
+.footer-social a {
+  margin: 0 5px;
+  color: #eee;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-social i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.footer-social i:hover {
+  color: #000;
+  border: 0;
+}
+
+.footer-social a:focus,
+.footer-social a:hover {
+  color: #856dc0;
+  border: 0;
+}
+
+.our_app_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.btns_app_mr_btm {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px 0 20px;
+}
+
+.footer-contact hr {
+  height: 1px !important;
+  width: 100%;
+  color: #fff;
+  margin: 8px 0 0;
+}
+
+.play_store img {
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+}
+
+.play_store img:hover {
+  box-shadow: 0 2px 10px #312e2e;
+}
+
+.download_our_app .down_hr,
+.download_our_app .top_hr {
+  height: 1px;
+  color: #fff;
+  margin: 0;
+  opacity: 1;
+}
+
+.download_our_app .top_hr {
+  margin-bottom: 1%;
+}
+
+.download_our_app .down_hr {
+  margin-top: 1%;
+}
+
+.download_our_app {
+  background-color: #383838;
+}
+
+.private_confidential {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.row_secure_items h3 {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+.icon_left_side {
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 12px;
+  width: 50px;
+}
+
+.about_astrotalk_footer {
+  margin-bottom: 30px !important;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.minus_left_mrgn {
+  padding-left: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .footer-top {
+    padding: 20px 0 10px;
+  }
+
+  .footer-social {
+    max-width: 70%;
+  }
+
+  .row_secure_items {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+  .private_confidential {
+    width: 25%;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .icon_left_side {
+    min-width: 50px;
+  }
+
+  .about_astrotalk_footer {
+    margin-bottom: 20px !important;
+  }
+
+  .row_secure_items h3 {
+    margin-left: 0;
+  }
+}
+
+.free_kundli_section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.heading_free_kundli {
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.free_kundli_form {
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 6px #919191;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.lable_form {
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input.form-control.pdob,
+input.form-control.pdobtime {
+  border-radius: 0 5px 5px 0 !important;
+  margin-left: -2px;
+  padding: 8px !important;
+}
+
+.input-group
+  > .form-control,
+.input-group
+  > .form-select {
+  width: 100%;
+}
+
+.input-group-addon,
+.input-group-btn,
+.input-group
+  .form-control {
+  display: table-cell;
+}
+
+.input-group-addon {
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-group {
+  margin-bottom: 8px;
+}
+
+.input_form input {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input_form input:focus,
+.input_form input:hover {
+  outline: none;
+}
+
+.generate_horoscope_btn {
+  background-color: #f0df20;
+  color: #000;
+  border: #ffdead;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #616161;
+  display: flex;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate_horoscope_btn:hover {
+  box-shadow: 0 0 4px #313131;
+}
+
+.input_form select {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.input_form select:focus,
+.input_form select:hover {
+  outline: none;
+}
+
+.firstColor {
+  background-color: orange;
+}
+
+.secondColor {
+  background-color: #9acd32;
+}
+
+.custom_tabs_kundli {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 50%;
+  padding: 12px 0;
+}
+
+.row_tabs_kundli {
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #919191;
+}
+
+.row_tabs_kundli .active {
+  background-color: #ffea00;
+  pointer-events: none;
+}
+
+.search_box_kundli {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+  font-size: 12px;
+  padding: 10px 40px;
+  color: #313131;
+}
+
+.search_box_kundli:focus,
+.search_box_kundli:hover {
+  outline: none;
+}
+
+.justify_content_center_kundli {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 4px #616161;
+  border-radius: 10px;
+}
+
+.icon_set_search {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 12px;
+  color: #616161;
+}
+
+.no-data-found {
+  padding: 0 30px !important;
+}
+
+.position_relative_search {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #0000001a;
+}
+
+.background_open_kundli {
+  background-color: #fff;
+  box-shadow: 0 0 6px #919191;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+.height_set_kundli {
+  height: 347px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.height_set_kundli_other_pages {
+  height: 438px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.heading_recently_opened {
+  font-size: 14px;
+  color: #000;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.position_fixed_Set {
+  padding: 0 10px;
+}
+
+.list_box_kundli {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #0000001a;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.list_box_kundli:focus,
+.list_box_kundli:hover {
+  background-color: #eee4ee;
+}
+
+.profile_icon_name {
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_details_kundli {
+  margin-left: 15px;
+}
+
+.name_details_kundli {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.address_date_birth_kundli,
+.date_time_details_kundli {
+  font-size: 10px;
+  color: #616161;
+  margin-top: 4px;
+}
+
+.delete_icon_kundli {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.delete_icon_kundli
+  .fa-trash-o {
+  font-size: 13px;
+  opacity: 1;
+  color: red;
+}
+
+.time_kundli {
+  margin-left: 2px;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sub_heading_horoscope_matching {
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #616161;
+  margin-bottom: 11px;
+}
+
+.height_set_kundli::-webkit-scrollbar {
+  width: 6px;
+}
+
+.height_set_kundli::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 30px;
+}
+
+.height_set_kundli::-webkit-scrollbar-thumb {
+  background: #e7e7e7;
+  border-radius: 30px;
+}
+
+.form-control:disabled,
+.form-control:read-only {
+  background: #fff !important;
+}
+
+@media screen and (min-width: 576px) {
+  .mobile_view_free_kundli {
+    display: none !important;
+  }
+
+  .desktop_view_free_kundli {
+    display: block;
+  }
+
+  .mobile_view_chinese_horoscope {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .free_kundli_form {
+    width: 100%;
+  }
+
+  .heading_free_kundli {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .input_form input {
+    margin-bottom: 10px;
+  }
+
+  .justify_content_center_kundli {
+    width: auto !important;
+  }
+
+  .buttons {
+    margin-bottom: 0;
+    position: unset !important;
+  }
+
+  .mobile_view_free_kundli {
+    display: block !important;
+  }
+
+  .desktop_view_free_kundli {
+    display: none !important;
+  }
+
+  .desktop_view_chinese_horoscope {
+    display: none;
+  }
+}
+
+/* .chinese_horoscope_section {
+  padding-top: 83px;
+} */
+
+.mobile_view_chinese_horoscope {
+  padding-top: 70px;
+}
+
+.header_chinese_horoscope {
+  background-color: #f0df20;
+}
+
+.header_contant_chinese {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.left_side_text_chinese {
+  padding-top: 30px;
+}
+
+.left_side_text_chinese
+  h1 {
+  font-size: 65px;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.right_side_image_chinese
+  img {
+  width: 350px;
+}
+
+.left_side_text_chinese
+  h2 {
+  font-size: 40px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.left_side_text_chinese
+  h1:before {
+  content: "";
+  height: 7px;
+  width: 200px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.header_chinese_horoscope_mbl_view {
+  background-color: #f0df20;
+}
+
+.header_contant_chinese_mbl_view {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.right_side_text_chinese_mbl_view
+  img {
+  width: 170px;
+}
+
+.right_side_text_chinese_mbl_view {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.left_side_text_chinese_mbl_view
+  h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.left_side_text_chinese_mbl_view
+  h1:before {
+  content: "";
+  height: 2px;
+  width: 68px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.left_side_text_chinese_mbl_view
+  h2 {
+  font-size: 16px;
+  color: #313131;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.left_side_text_chinese_mbl_view {
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .chinese_horoscope_section {
+    padding-top: 71px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+  .left_side_text_chinese {
+    padding-top: 0;
+  }
+
+  .height_set_kundli {
+    height: 329px;
+  }
+
+  .height_set_kundli_other_pages {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .buttons {
+    position: unset;
+  }
+}
+
+.bread {
+  background-color: #eee;
+}
+
+ul#breadcrumbs-two {
+  padding: 6px 0;
+}
+
+#breadcrumbs-two
+  li
+  a {
+  background: #ccc;
+}
+
+#breadcrumbs-two
+  li
+  a.active {
+  background: #f0df20;
+}
+
+#breadcrumbs-two
+  li
+  a:after {
+  border-left: 12px solid #ccc;
+}
+
+.contact_btn i {
+  margin-right: 5px;
+}
