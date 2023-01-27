@@ -591,7 +591,6 @@ export default function AstroProfile() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

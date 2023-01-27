@@ -5,6 +5,7 @@ import Routes from './Routes';
 import OTPModel from './auth/OTPModel';
 import ProfileModal from './componet/ProfileModal';
 import AstroProvider from './context/AstroContext';
+import './assest/css/app.scss';
 
 function App() {
   return (
