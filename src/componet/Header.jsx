@@ -111,7 +111,7 @@ function Header() {
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="blog" target="_blank" className="nav-link">
+                                            <Link to="blog" target="_blank" rel="noreferrer" className="nav-link">
                                                 Blog
                                             </Link>
                                         </li>
@@ -179,7 +179,7 @@ function Header() {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog" target="_blank" className="nav-link">
+                                        <a href="blog" target="_blank" rel="noreferrer" className="nav-link">
                                             Blog
                                         </a>
                                     </li>

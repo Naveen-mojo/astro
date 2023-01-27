@@ -10884,7 +10884,7 @@ div.svelte-1ap4ad2:not(.ref-text):hover {
   left: 0;
 }
 .position_absolute {
-  background: url(https://aws.astrotalk.com/assets/images/maxresdefault.jpg);
+  background: url(../images/maxresdefault.jpg);
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -16068,7 +16068,7 @@ ul#breadcrumbs-two {
   }
   .carousel-item img,
   .carousel_min_height_set {
-    height: 540px !important;
+    height: 400px !important;
   }
 }
 @media (min-width: 1800px) {
@@ -16369,7 +16369,7 @@ ul#breadcrumbs-two {
 }
 @media screen and (min-width: 1200px) {
   .position_absolute {
-    height: 100vh !important;
+    height: 70vh !important;
   }
   .col-half-offset {
     width: 20%;
@@ -16432,7 +16432,7 @@ ul#breadcrumbs-two {
     object-fit: fill;
     overflow: hidden;
     object-position: center;
-    height: 370px;
+    height: 250px;
   }
   .carousel_min_height_set {
     height: 370px;
@@ -16605,23 +16605,23 @@ ul#breadcrumbs-two {
   }
 }
 .icons_saprate_image {
-  /* background-image: url(<?phpechobase_url();?>icon2.4960befe72d8e90c5ab8.webp); */
+   background-image: url(https://astrotalk.com/icon4.666c4836c46d11f27101.webp); 
   display: inline-block;
 }
 .chat_with_astrologer_icon {
-  height: 65px;
-  width: 65px;
-  background-position: 439px 582px;
+    height: 65px;
+    width: 65px;
+    background-position: 439px 713px;
 }
 .talk_with_astrologer_icon {
-  height: 65px;
-  width: 65px;
-  background-position: 528px 585px;
+ height: 65px;
+    width: 65px;
+    background-position: 528px 716px;
 }
 .live_on_astrotv_icon {
   height: 65px;
   width: 65px;
-  background-position: 439px 582px;
+  background-position: 343px 713px;
 }
 .shop_at_astromall_icon {
   height: 65px;
@@ -17575,4 +17575,86 @@ html.lb-disable-scrolling {
 .intl-tel-input.allow-dropdown input[type="tel"] {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+}
+.box_special_offer[_ngcontent-serverApp-c101] {
+    display: flex;
+    background: linear-gradient(90deg,#f0df20,#f9f8e3 30%);
+    border-radius: 20px;
+    padding: 20px 50px 0 60px;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_side_offer_icon[_ngcontent-serverApp-c101] {
+    width: 260px;
+    min-width: 260px;
+    height: 269px;
+    position: relative;
+}
+.left_side_offer_icon[_ngcontent-serverApp-c101] img[_ngcontent-serverApp-c101] {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+img[alt][_ngcontent-serverApp-c101] {
+    font-size: .75em;
+    color: #ddd;
+}
+.right_side_Details_offers[_ngcontent-serverApp-c101] {
+    text-align: right;
+    padding-bottom: 20px;
+}
+.right_side_Details_offers[_ngcontent-serverApp-c101] h1[_ngcontent-serverApp-c101] {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+.right_side_Details_offers[_ngcontent-serverApp-c101] .po-title[_ngcontent-serverApp-c101] {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+    color: #313131;
+}
+.right_side_Details_offers[_ngcontent-serverApp-c101] .po-subtitle[_ngcontent-serverApp-c101] {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    color: #313131;
+}
+.right_side_Details_offers[_ngcontent-serverApp-c101] .po-title[_ngcontent-serverApp-c101] {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+    color: #313131;
+}
+.talk_now_button[_ngcontent-serverApp-c101] {
+    background-color: #f0df20;
+    border: 1px solid #000;
+    font-size: 24px;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+}
+.left_side_offer_icon[_ngcontent-serverApp-c101]:after {
+    content: "Sunny Leone";
+    color: #000;
+    position: absolute;
+    white-space: nowrap;
+    bottom: 10px;
+    font-weight: 600;
+    font-style: italic;
+    right: -100px;
+    font-size: 18px;
+}
+.blog_on_astrotv_icon {
+    height: 65px;
+    width: 65px;
+    background-position: 85px 448px;
 }

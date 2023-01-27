@@ -1,12 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
-import carsousel1 from '../assest/images/b41b9d71-c63a-4110-8e72-72a6b72ea8a5.jpg'
-import carsousel2 from '../assest/images/090608ed-b344-4aa1-bced-d32d72917b4d.png'
-import carsousel3 from '../assest/images/305e75fc-7855-4056-b65d-c8b02dba6df0.jpg'
-import carsousel4 from '../assest/images/4c52134c-821d-430a-8040-29fdd4c95a4f.jpg'
-import carsousel5 from '../assest/images/1edb4db8-ec70-42b4-baa0-b666e9bc8aee.jpg'
-import carsousel6 from '../assest/images/1c212554-6c88-44d8-ab8e-1bc93ba5a098.jpg'
-import carsousel7 from '../assest/images/1d125c9d-6b9c-4b8a-9b42-fec23012375a.jpg'
+import bannerImg from '../assest/images/sunny.webp'
 
 function Home() {
     var settings = {
@@ -34,267 +28,210 @@ function Home() {
         ]
     };
 
-    var topSettings = {
-        dots: false,
-        infinite: true,
-        speed: 100,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
     const profile_detail = (id) => {
 
     }
 
     return (
         <>
-            <app-home-page>
-                <section>
-                    <div className="position_absolute">
-                        <div className="container">
-                            <div className="landing_section">
-                                <div className="main_heading">
-                                    <h1 >astrology prediction by the best astrologers</h1>
+            <div className="position_absolute">
+                <div className="container">
+                    <div className="landing_section">
+                        <div className="main_heading">
+                            <h1 >astrology prediction by the best astrologers</h1>
+                        </div>
+                        <section _ngcontent-serverapp-c101="" className="special_offer_Design">
+                            <div _ngcontent-serverapp-c101="" className="box_special_offer">
+                                <div _ngcontent-serverapp-c101="" className="left_side_offer_icon image-flip"><img _ngcontent-serverapp-c101="" src={bannerImg} alt="sunny-leone" width="400" height="400" /></div>
+                                <div _ngcontent-serverapp-c101="" className="right_side_Details_offers">
+                                    <h1 _ngcontent-serverapp-c101="">
+                                        <span _ngcontent-serverapp-c101="" className="po-title">Got any questions? </span><span _ngcontent-serverapp-c101="" className="po-subtitle">Chat with Astrologer</span><span _ngcontent-serverapp-c101="" className="po-title">FOR FREE </span>
+                                    </h1>
+                                    <a _ngcontent-serverapp-c101="" className="talk_now_button" href="/chat-with-astrologer">Chat now</a>
                                 </div>
-                                <Slider {...topSettings} className="carousel-inner carousel_min_height_set">
-                                    <div className="carousel-item active">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/live">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Free Live Session " title="Free Live Session " src={carsousel1} />
-                                        </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/chat-with-astrologer">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Happy Days" title="Happy Days" src={carsousel2} />
-                                        </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/chat-with-astrologer">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Chat Now & Find Your Kick" title="Chat Now & Find Your Kick" src={carsousel3} />
-                                        </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/chat-with-astrologer">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Chat Now" title="Chat Now" src={carsousel4} />
-                                        </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/talk-to-astrologer">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Talk to Astrologer" title="Talk to Astrologer" src={carsousel5} />
-                                        </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/shop/online-puja/Laghu-Group-Rudrabhishek-Puja-sBmH?token=eyJjYXRlZ29yeU5hbWUiOiJPbmxpbmUgUHVqYSIsInByb2R1Y3ROYW1lIjoiR3JvdXAgUnVkcmFiaGlzaGVrIFB1amEgIn0%3D">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Rudrabhishek Pooja" title="Rudrabhishek Pooja" src={carsousel6} />
-                                        </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a target="_blank" href="https://www.mobilegamingarcade.com/astrotalk.com/shop/online-puja/Group-Mangal-and-Ketu-Puja-xKED">
-                                            <img width={1120} height={460} loading="lazy" className="d-block w-100" alt="Group-Mangal-and-Ketu-Puja" title="Group-Mangal-and-Ketu-Puja" src={carsousel7} />
-                                        </a>
-                                    </div>
-                                </Slider>
-                                <div className="astrolger_services">
-                                    <div className="row">
-                                        <div className="col-6 col-sm-3 mbile_vrsn">
-                                            <a className="box_item" href="chat-with-astrologer">
-                                                <div className="icon"><span className="icons_saprate_image chat_with_astrologer_icon"></span></div>
-                                                <div className="text"><span>Chat with Astrologer</span></div>
-                                            </a>
+                            </div>
+                        </section>
+
+                        <div className="astrolger_services">
+                            <div className="row">
+                                <div className="col-6 col-sm-3 mbile_vrsn">
+                                    <a className="box_item" href="chat-with-astrologer">
+                                        <div className="icon"><span className="icons_saprate_image chat_with_astrologer_icon"></span></div>
+                                        <div className="text"><span>Chat with Astrologer</span></div>
+                                    </a>
+                                </div>
+                                <div className="col-6 col-sm-3 mbile_vrsn">
+                                    <a className="box_item" href="talk-with-astrologer">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image talk_with_astrologer_icon" />
                                         </div>
-                                        <div className="col-6 col-sm-3 mbile_vrsn">
-                                            <a className="box_item" href="talk-with-astrologer">
-                                                <div className="icon">
-                                                    <span className="icons_saprate_image talk_with_astrologer_icon" />
-                                                </div>
-                                                <div className="text">
-                                                    <span >Talk to Astrologer</span></div>
-                                            </a>
-                                        </div>
-                                        <div className="col-6 col-sm-3 mbile_vrsn">
-                                            <a className="box_item" href="chat-with-astrologer">
-                                                <div className="
+                                        <div className="text">
+                                            <span >Talk to Astrologer</span></div>
+                                    </a>
+                                </div>
+                                <div className="col-6 col-sm-3 mbile_vrsn">
+                                    <a className="box_item" href="chat-with-astrologer">
+                                        <div className="
 											icon"><span className="icons_saprate_image live_on_astrotv_icon"></span>
-                                                </div>
-                                                <div className="text">
-                                                    <span >Chat with Astrologer</span></div>
-                                            </a>
                                         </div>
-                                        <div className="col-6 col-sm-3 mbile_vrsn">
-                                            <a className="box_item" href="chat-with-astrologer">
-                                                <div className="
-											icon"><span className="icons_saprate_image live_on_astrotv_icon"></span>
-                                                </div>
-                                                <div className="text">
-                                                    <span >Astrotalk Blog</span></div>
-                                            </a>
+                                        <div className="text">
+                                            <span >Chat with Astrologer</span></div>
+                                    </a>
+                                </div>
+                                <div className="col-6 col-sm-3 mbile_vrsn">
+                                    <a className="box_item" href="chat-with-astrologer">
+                                        <div className="
+											icon"><span className="icons_saprate_image blog_on_astrotv_icon"></span>
                                         </div>
-                                        {/* <div ="" className="col-6 col-sm-3 mbile_vrsn">
+                                        <div className="text">
+                                            <span >Astrotalk Blog</span></div>
+                                    </a>
+                                </div>
+                                {/* <div ="" className="col-6 col-sm-3 mbile_vrsn">
                                             <a ="" className="box_item" href="/shop">
                                                 <div ="" className="icon"><span ="" className="icons_saprate_image shop_at_astromall_icon"></span></div>
                                                 <div ="" className="text"><span ="">Shop at Astromall</span></div>
                                             </a>
                                         </div> */}
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section className="free_services">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 section-headings">
+                            <h2 className="kundli_heading">Free Services</h2>
+                            <h4 className="kundli_subheading">Complimentary astrology services</h4>
+                        </div>
+                    </div>
+                    <div className="diff_font_family">
+                        <div className="slider server-crosal">
+                            <Slider {...settings} className="carousel d-flex">
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="https://www.mobilegamingarcade.com/astrotalk.com/horoscope/daily-horoscope">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image compatibility_icon" />
+                                        </div>
+                                        <div className="title">Horoscope</div>
+                                        <div className="discription">Love could be confusing, but
+                                            only until you haven’t found how compatible you two are for each other.
+                                        </div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
                                 </div>
-                            </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="http://localhost/astrotalk.com/indian-calendar-festivals-2022">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image fastival_icon" />
+                                        </div>
+                                        <div className="title">Festival</div>
+                                        <div className="discription">Festival -- "Its Nothing but an
+                                            Uncountable forms of celebrations". Check Out for more</div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="http://localhost/astrotalk.com/matchmaking">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image match_making_icon" />
+                                        </div>
+                                        <div className="title">Match Making</div>
+                                        <div className="discription">Check Love Compatibility and
+                                            Marriage Prediction online at AstroTalk.Get the best Horoscope and
+                                            kundli matching predictions today!</div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="http://localhost/astrotalk.com/freekundli">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image chinese_horoscope_icon" />
+                                        </div>
+                                        <div className="title">Free Kundli</div>
+                                        <div className="discription">Online Kundli For Future
+                                            Predictions,Get instant &amp; accurate Janam kundli... Check your's now
+                                        </div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="/horoscope/daily-horoscope">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image daily_horoscope_icon" />
+                                        </div>
+                                        <div className="title">Daily Horoscope</div>
+                                        <div className="discription">Get free Aries daily horoscope
+                                            prediction today online from the best astrologer. Read your Aries Zodiac
+                                            Sign horoscope today!</div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="/freekundli">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image free_kundli_icon" />
+                                        </div>
+                                        <div className="title">Free Kundli</div>
+                                        <div className="discription">
+                                            Generate your free online kundli report from Astrotalk. Our Kundli
+                                            software can help you predict the future for yourself by reading the
+                                            birth chart.
+                                        </div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a title="Coming Soon" target="_blank" className="box_section free_service" href="/coming-soon">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image numerology_icon" />
+                                        </div>
+                                        <div className="title">Numerology</div>
+                                        <div className="discription">Numerology is perhaps the
+                                            easiest of the occult arts where numbers reveal the will of God for you.
+                                        </div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a title="Coming Soon" target="_blank" className="box_section free_service" href="/coming-soon">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image panchang_icon" />
+                                        </div>
+                                        <div className="title">Panchang</div>
+                                        <div className="discription">Get information about Tithi,
+                                            Rashi, Nakshatra, Yoga &amp; Karan for any day with sheer accuracy.
+                                        </div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
+                                    <a title="Coming Soon" target="_blank" className="box_section free_service" href="/coming-soon">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image vastu_icon" />
+                                        </div>
+                                        <div className="title">Vastu</div>
+                                        <div className="discription">Let only the right energies
+                                            enter your space.Find the best Vastu tips for your home, office and
+                                            more.</div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                            </Slider>
                         </div>
                     </div>
-                </section>
-            </app-home-page>
-            <app-free-service _nghost-sc163>
-                <section className="free_services">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 section-headings">
-                                <h2 className="kundli_heading">Free Services</h2>
-                                <h4 className="kundli_subheading">Complimentary astrology services</h4>
-                            </div>
-                        </div>
-                        <div className="diff_font_family">
-                            <div className="slider server-crosal">
-                                <Slider {...settings} className="carousel d-flex">
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a className="box_section free_service" href="https://www.mobilegamingarcade.com/astrotalk.com/horoscope/daily-horoscope">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image compatibility_icon" />
-                                            </div>
-                                            <div className="title">Horoscope</div>
-                                            <div className="discription">Love could be confusing, but
-                                                only until you haven’t found how compatible you two are for each other.
-                                            </div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a className="box_section free_service" href="http://localhost/astrotalk.com/indian-calendar-festivals-2022">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image fastival_icon" />
-                                            </div>
-                                            <div className="title">Festival</div>
-                                            <div className="discription">Festival -- "Its Nothing but an
-                                                Uncountable forms of celebrations". Check Out for more</div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a className="box_section free_service" href="http://localhost/astrotalk.com/matchmaking">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image match_making_icon" />
-                                            </div>
-                                            <div className="title">Match Making</div>
-                                            <div className="discription">Check Love Compatibility and
-                                                Marriage Prediction online at AstroTalk.Get the best Horoscope and
-                                                kundli matching predictions today!</div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a className="box_section free_service" href="http://localhost/astrotalk.com/freekundli">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image chinese_horoscope_icon" />
-                                            </div>
-                                            <div className="title">Free Kundli</div>
-                                            <div className="discription">Online Kundli For Future
-                                                Predictions,Get instant &amp; accurate Janam kundli... Check your's now
-                                            </div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a className="box_section free_service" href="/horoscope/daily-horoscope">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image daily_horoscope_icon" />
-                                            </div>
-                                            <div className="title">Daily Horoscope</div>
-                                            <div className="discription">Get free Aries daily horoscope
-                                                prediction today online from the best astrologer. Read your Aries Zodiac
-                                                Sign horoscope today!</div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a className="box_section free_service" href="/freekundli">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image free_kundli_icon" />
-                                            </div>
-                                            <div className="title">Free Kundli</div>
-                                            <div className="discription">
-                                                Generate your free online kundli report from Astrotalk. Our Kundli
-                                                software can help you predict the future for yourself by reading the
-                                                birth chart.
-                                            </div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a title="Coming Soon" target="_blank" className="box_section free_service" href="/coming-soon">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image numerology_icon" />
-                                            </div>
-                                            <div className="title">Numerology</div>
-                                            <div className="discription">Numerology is perhaps the
-                                                easiest of the occult arts where numbers reveal the will of God for you.
-                                            </div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a title="Coming Soon" target="_blank" className="box_section free_service" href="/coming-soon">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image panchang_icon" />
-                                            </div>
-                                            <div className="title">Panchang</div>
-                                            <div className="discription">Get information about Tithi,
-                                                Rashi, Nakshatra, Yoga &amp; Karan for any day with sheer accuracy.
-                                            </div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                    <div className="slide pr-4 col-md-3 col-4">
-                                        <a title="Coming Soon" target="_blank" className="box_section free_service" href="/coming-soon">
-                                            <div className="icon">
-                                                <span className="icons_saprate_image vastu_icon" />
-                                            </div>
-                                            <div className="title">Vastu</div>
-                                            <div className="discription">Let only the right energies
-                                                enter your space.Find the best Vastu tips for your home, office and
-                                                more.</div>
-                                            <div className="readmore_icon">
-                                                <i className="fa fa-arrow-right" /></div>
-                                        </a>
-                                    </div>
-                                </Slider>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-            </app-free-service>
+                </div>
+            </section>
             <section className="trust_score">
                 <div className="container">
                     <div className="row">
@@ -314,426 +251,417 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <app-our-astrologers _nghost-sc164>
-                <section id="problem-area">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="section-headings">
-                                    <div data-wow-delay=".6s" data-wow-duration="1s" className="wow fadeInUp pboldh mobttle">
-                                        <h2 >Our Astrologers</h2>
-                                    </div>
-                                    <h4 data-wow-delay=".2s" data-wow-duration="1s" className="wow fadeInUp">500 + Best Astrologers from India for Online Consultation
-                                    </h4>
+            <section id="problem-area">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="section-headings">
+                                <div data-wow-delay=".6s" data-wow-duration="1s" className="wow fadeInUp pboldh mobttle">
+                                    <h2 >Our Astrologers</h2>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="diff_font_family">
-                            <div className="slider server-crosal">
-                                <Slider {...settings} className="carousel paddingForBottomShadow d-flex">
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" onClick={profile_detail('pinnkyy-agarrwal')}>
-                                            <img loading="lazy" alt="Bhushhan" src="https://aws.astrotalk.com/consultant_pic/395.jpg" />
-                                            <h4 >pinnky agarrwal</h4>
-                                            <p >Western Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" onClick={profile_detail('rajkumar-sharma')}>
-                                            <img loading="lazy" alt="Bhushhan" src="https://aws.astrotalk.com/consultant_pic/p-3460.jpg" />
-                                            <h4 >Rajkumar Sharma</h4>
-                                            <p >Tarot Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/praveen">
-                                            <img loading="lazy" alt="Praveen" src="https://aws.astrotalk.com/consultant_pic/p-2228.jpg" />
-                                            <h4 >Praveen</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/sushil">
-                                            <img loading="lazy" alt="Sushil" src="https://aws.astrotalk.com/consultant_pic/p-2427.jpg" />
-                                            <h4 >Sushil</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/anand">
-                                            <img loading="lazy" alt="Anand" src="https://aws.astrotalk.com/consultant_pic/p-3657.jpg" />
-                                            <h4 >Anand</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/vineett">
-                                            <img loading="lazy" alt="Vineett" src="https://aws.astrotalk.com/consultant_pic/p-3460.jpg" />
-                                            <h4 >Vineett</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/mukessh">
-                                            <img loading="lazy" alt="Mukessh" src="https://aws.astrotalk.com/consultant_pic/p-3487.jpg" />
-                                            <h4 >Mukessh</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/meha">
-                                            <img loading="lazy" alt="Meha" src="https://aws.astrotalk.com/consultant_pic/p-4130.jpg" />
-                                            <h4 >Meha</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/anandg">
-                                            <img loading="lazy" alt="AnandG" src="https://aws.astrotalk.com/consultant_pic/1865.jpg" />
-                                            <h4 >AnandG</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/shivaam">
-                                            <img loading="lazy" alt="Shivaam" src="https://aws.astrotalk.com/consultant_pic/p-2762.jpg" />
-                                            <h4 >Shivaam</h4>
-                                            <p >KP Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/awadhesh">
-                                            <img loading="lazy" alt="Awadhesh" src="https://aws.astrotalk.com/consultant_pic/395.jpg" />
-                                            <h4 >Awadhesh</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/ajayk">
-                                            <img loading="lazy" alt="AjayK" src="https://aws.astrotalk.com/consultant_pic/p-2002.jpg" />
-                                            <h4 >AjayK</h4>
-                                            <p >Vedic Astrology</p>
-                                        </a>
-                                    </div>
-                                    <div className="slide mx-2 col-md-2 col-6">
-                                        <a target="_blank" className="ast_team_box" href="/best-astrologer/assign-astrologer">
-                                            <img loading="lazy" alt="Assign Astrologer" src="https://aws.astrotalk.com/consultant_pic/2.jpg" />
-                                            <h4 >Assign Astrologer</h4>
-                                            <p >Vedic</p>
-                                        </a>
-                                    </div>
-
-                                </Slider>
+                                <h4 data-wow-delay=".2s" data-wow-duration="1s" className="wow fadeInUp">500 + Best Astrologers from India for Online Consultation
+                                </h4>
                             </div>
                         </div>
                     </div>
-                </section>
-
-            </app-our-astrologers>
-            <app-our-customers>
-                <section className="our_cust">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 section-headings">
-                                <h2 className="our_customer_heading">HEAR FROM OUR CUSTOMERS</h2>
-                                <h4 className="our_customer_subheading">Top Astrologers. 24 * 7 customer
-                                    support. Happy to help</h4>
-                            </div>
-                        </div>
-                        <div className="testimonial">
-                            <div className="slider server-crosal">
-                                <Slider {...settings} className="carousel d-flex">
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Reetika_Verma" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/Reetikaverma.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Reetika Verma</div>
-                                                <div className="card_sub_title">Delhi, India</div>
-                                                <div className="card-text">
-                                                    Thanks AstroTalk for being available at my difficult time and
-                                                    motivating me to get through that phase. I am finally doing good
-                                                    now after Navgrah Pooja performed by them. The complete
-                                                    process was very smooth. I'll recommend it to my friends.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Dale_Stricklin" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/deependerdeol.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Dale Stricklin</div>
-                                                <div className="card_sub_title">Sydney,
-                                                    Australia</div>
-                                                <div className="card-text">
-                                                    There is no comparison of AstroTalk when it comes to getting
-                                                    a free horoscope and checking horoscope online in the
-                                                    Astrology industry. They have revolutionized everything with
-                                                    excellent customer service by having a controlled
-                                                    marketplace for best astrologers from India.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Gurdeep_Chawla" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/gurdeepchawla.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Gurdeep Chawla
-                                                </div>
-                                                <div className="card_sub_title">Muscat, Oman
-                                                </div>
-                                                <div className="card-text">
-                                                    I really love the service of AstroTalk.Astrologers are
-                                                    really skilled and co - operative. Customer support team
-                                                    is very active and friendly. I get all answers and have
-                                                    a good
-                                                    conversation with astrologers at a decent price. And the
-                                                    predictions are also very accurate.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Abhiuday_Chandra" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/abhiudaychandra.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Abhiuday
-                                                    Chandra</div>
-                                                <div className="card_sub_title">Germany
-                                                </div>
-                                                <div className="card-text">
-                                                    Have been using this for 6 months now. I am an
-                                                    ardent follower of Astrology and getting such a user
-                                                    friendly application in Astrotalk has just made it
-                                                    very easy for me to contact any
-                                                    good astrologer at anytime and release my stress.
-                                                    Astrologers do counsel very well.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Juilee_Patankar" height={150} width={150} src="../../../assets/images/photos/webp/julieepatankar.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Juilee
-                                                    Patankar</div>
-                                                <div className="card_sub_title">New
-                                                    Jersey, USA</div>
-                                                <div className="card-text">
-                                                    Brilliant app. Asked queries from 5 experts, got
-                                                    answer within 4 - 5 hours every time and the
-                                                    answer were detailed which no other app provides
-                                                    in this cost. Predictions were quite
-                                                    accurate. And they were available to clear any
-                                                    follow up doubts also.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Kirti_Patil" height={150} width={150} src="../../../assets/images/photos/webp/kirti.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">
-                                                    Kirti Patil</div>
-                                                <div className="card_sub_title">
-                                                    Kolkata, India</div>
-                                                <div className="card-text">
-                                                    Astrology reports are very detailed and
-                                                    accurate. Had ordered an annual report from
-                                                    3 different astrologers and the insights I
-                                                    got were really good. AstroTalk has the best
-                                                    astrologers
-                                                    from India and they provide best astrology
-                                                    predictions. Totally worth the money.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Nisha_Koranga" height={150} width={150} src="../../../assets/images/photos/webp/nisha.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">
-                                                    Nisha Koranga</div>
-                                                <div className="card_sub_title">Bangalore, India
-                                                </div>
-                                                <div className="card-text">
-                                                    Had a wonderful session with couple of
-                                                    astrologers and it was quite satisfying.
-                                                    They listened to me carefully and
-                                                    answered very patiently. Customer
-                                                    support makes life very comfortable
-                                                    as they are always there to support.
-                                                    Best experience on any service app from
-                                                    India till date.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Pinki_Agarwalla" height={150} width={150} src="../../../assets/images/photos/webp/Pinkiagarwalla.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Pinnkyy Agarrwal
-                                                </div>
-                                                <div className="card_sub_title">Mumbai, India
-                                                </div>
-                                                <div className="card-text">
-                                                    Tried it out of desperation during
-                                                    bad phase of my life and it really
-                                                    helped as the astrologer listened to
-                                                    my problem like a friend and then
-                                                    assured me that everything will be
-                                                    fine and
-                                                    gave remedies. And when the things
-                                                    are good now, I use it regularly as
-                                                    they made me a believer.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="" height={150} width={150} src="../../../assets/images/photos/webp/poojatiwari.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Pooja Tiwari
-                                                </div>
-                                                <div className="card_sub_title">Pune,
-                                                    India</div>
-                                                <div className="card-text">
-                                                    Brilliant user experience.From
-                                                    the interface to app to ease of
-                                                    asking a query to speaking to
-                                                    well spoken and experience
-                                                    astrologers. It was a delight.
-                                                    Have used many astrology apps
-                                                    but
-                                                    this is something like Uber
-                                                    experience. Great work
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slide pr-4 col-md-4 col-12">
-                                        <div className="card d-flex margin_left_right">
-                                            <div className="card-image">
-                                                <img alt="Prabha Rani" height={150} width={150} src="../../../assets/images/photos/webp/prabharani.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
-                                            </div>
-                                            <div className="text_area">
-                                                <div className="card-title">Prabha
-                                                    Rani</div>
-                                                <div className="card_sub_title">
-                                                    London, UK</div>
-                                                <div className="card-text">
-                                                    AstroTalk is really helpful
-                                                    for me in seeking astrology
-                                                    advice from England at any
-                                                    time. Thanks Guys, I am
-                                                    really happy with the
-                                                    service and support I get
-                                                    from customer support and
-                                                    Astrologers. Everyone is so
-                                                    friendly and helpful.Very
-                                                    good experience with the app
-                                                    so far.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Slider>
-                            </div>
+                    <div className="diff_font_family">
+                        <div className="slider server-crosal">
+                            <Slider {...settings} className="carousel paddingForBottomShadow d-flex">
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" onClick={profile_detail('pinnkyy-agarrwal')}>
+                                        <img loading="lazy" alt="Bhushhan" src="https://aws.astrotalk.com/consultant_pic/395.jpg" />
+                                        <h4 >pinnky agarrwal</h4>
+                                        <p >Western Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" onClick={profile_detail('rajkumar-sharma')}>
+                                        <img loading="lazy" alt="Bhushhan" src="https://aws.astrotalk.com/consultant_pic/p-3460.jpg" />
+                                        <h4 >Rajkumar Sharma</h4>
+                                        <p >Tarot Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/praveen">
+                                        <img loading="lazy" alt="Praveen" src="https://aws.astrotalk.com/consultant_pic/p-2228.jpg" />
+                                        <h4 >Praveen</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/sushil">
+                                        <img loading="lazy" alt="Sushil" src="https://aws.astrotalk.com/consultant_pic/p-2427.jpg" />
+                                        <h4 >Sushil</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/anand">
+                                        <img loading="lazy" alt="Anand" src="https://aws.astrotalk.com/consultant_pic/p-3657.jpg" />
+                                        <h4 >Anand</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/vineett">
+                                        <img loading="lazy" alt="Vineett" src="https://aws.astrotalk.com/consultant_pic/p-3460.jpg" />
+                                        <h4 >Vineett</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/mukessh">
+                                        <img loading="lazy" alt="Mukessh" src="https://aws.astrotalk.com/consultant_pic/p-3487.jpg" />
+                                        <h4 >Mukessh</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/meha">
+                                        <img loading="lazy" alt="Meha" src="https://aws.astrotalk.com/consultant_pic/p-4130.jpg" />
+                                        <h4 >Meha</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/anandg">
+                                        <img loading="lazy" alt="AnandG" src="https://aws.astrotalk.com/consultant_pic/1865.jpg" />
+                                        <h4 >AnandG</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/shivaam">
+                                        <img loading="lazy" alt="Shivaam" src="https://aws.astrotalk.com/consultant_pic/p-2762.jpg" />
+                                        <h4 >Shivaam</h4>
+                                        <p >KP Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/awadhesh">
+                                        <img loading="lazy" alt="Awadhesh" src="https://aws.astrotalk.com/consultant_pic/395.jpg" />
+                                        <h4 >Awadhesh</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/ajayk">
+                                        <img loading="lazy" alt="AjayK" src="https://aws.astrotalk.com/consultant_pic/p-2002.jpg" />
+                                        <h4 >AjayK</h4>
+                                        <p >Vedic Astrology</p>
+                                    </a>
+                                </div>
+                                <div className="slide mx-2 col-md-2 col-6">
+                                    <a target="_blank" className="ast_team_box" href="/best-astrologer/assign-astrologer">
+                                        <img loading="lazy" alt="Assign Astrologer" src="https://aws.astrotalk.com/consultant_pic/2.jpg" />
+                                        <h4 >Assign Astrologer</h4>
+                                        <p >Vedic</p>
+                                    </a>
+                                </div>
+                            </Slider>
                         </div>
                     </div>
-                </section>
-            </app-our-customers>
-            <app-blog>
-                <section className="latest_from_blog_chinese ng-star-inserted">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 section-headings">
-                                <h2 className="heading_seo_content_headline_chinese_horoscope">LATEST FROM
-                                    BLOG</h2>
-                                <h4 className="subheading_seo_content_headline_chinese_horoscope">Top
-                                    Astrologers. 24 * 7 customer support. Happy to help</h4>
-                            </div>
+                </div>
+            </section>
+            <section className="our_cust">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 section-headings">
+                            <h2 className="our_customer_heading">HEAR FROM OUR CUSTOMERS</h2>
+                            <h4 className="our_customer_subheading">Top Astrologers. 24 * 7 customer
+                                support. Happy to help</h4>
                         </div>
-                        <Slider {...settings}>
-
-                            <div>
-                                <a target="_blank" className="blog_box_content" href="https://www.mobilegamingarcade.com/astrotalk.com/astrology-blog/know-your-lucky" title="Know Your Lucky ">
-                                    <div className="blog_img_content">
-                                        <img loading="lazy" alt="Know Your Lucky Numbers For 2022 As Per Numerology" src="https://www.mobilegamingarcade.com/astrotalk.com/uploads/BlogImage/2021/10/1634207717.jpg" />
-                                    </div>
-                                    {/* <div ="" className="views_blog_box"><i ="" className="fa fa-eye"></i><span ="">2050</span></div> */}
-                                    <div className="description_blog">
-                                        <div className="title_blog"> Know
-                                            Your Lucky </div>
-                                    </div>
-                                    <div className="row_view_and_date">
-                                        <div className="author_name_home_page">Pinnkyy Agarrwal</div>
-                                        <div className="date_description_blog">2021-10-14</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a target="_blank" className="blog_box_content" href="https://www.mobilegamingarcade.com/astrotalk.com/astrology-blog/navratri-2021-9-days-and-9-colours" title="Navratri 2021: 9 Days & 9 Colours">
-                                    <div className="blog_img_content">
-                                        <img loading="lazy" alt="Know Your Lucky Numbers For 2022 As Per Numerology" src="https://www.mobilegamingarcade.com/astrotalk.com/uploads/BlogImage/2021/10/1634211174.jpg" />
-                                    </div>
-                                    {/* <div className="views_blog_box"><i className="fa fa-eye"></i><span>2050</span></div> */}
-                                    <div className="description_blog">
-                                        <div className="title_blog">
-                                            Navratri 2021: 9 Days &amp; 9 Colours</div>
-                                    </div>
-                                    <div className="row_view_and_date">
-                                        <div className="author_name_home_page">Pinnkyy Agarrwal</div>
-                                        <div className="date_description_blog">2021-10-14</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a target="_blank" className="blog_box_content" href="https://www.mobilegamingarcade.com/astrotalk.com/astrology-blog/navratri-2021-9-days-and-9-colours-you-must-wear-to-please-devi-durga" title="10 Modern Lessons That You Can Learn From Maa Durga This Navratri">
-                                    <div className="blog_img_content">
-                                        <img loading="lazy" alt="Know Your Lucky Numbers For 2022 As Per Numerology" src="https://www.mobilegamingarcade.com/astrotalk.com/uploads/BlogImage/2021/10/1634207813.jpg" />
-                                    </div>
-                                    {/* <div ="" className="views_blog_box"><i ="" className="fa fa-eye"></i><span ="">2050</span></div> */}
-                                    <div className="description_blog">
-                                        <div className="title_blog"> 10
-                                            Modern Lessons That You Can Learn From Maa Durga This
-                                            Navratri</div>
-                                    </div>
-                                    <div className="row_view_and_date">
-                                        <div className="author_name_home_page">Pinnkyy Agarrwal</div>
-                                        <div className="date_description_blog">2021-10-14</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </Slider>
                     </div>
-                </section>
+                    <div className="testimonial">
+                        <div className="slider server-crosal">
+                            <Slider {...settings} className="carousel d-flex">
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Reetika_Verma" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/Reetikaverma.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Reetika Verma</div>
+                                            <div className="card_sub_title">Delhi, India</div>
+                                            <div className="card-text">
+                                                Thanks AstroTalk for being available at my difficult time and
+                                                motivating me to get through that phase. I am finally doing good
+                                                now after Navgrah Pooja performed by them. The complete
+                                                process was very smooth. I'll recommend it to my friends.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Dale_Stricklin" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/deependerdeol.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Dale Stricklin</div>
+                                            <div className="card_sub_title">Sydney,
+                                                Australia</div>
+                                            <div className="card-text">
+                                                There is no comparison of AstroTalk when it comes to getting
+                                                a free horoscope and checking horoscope online in the
+                                                Astrology industry. They have revolutionized everything with
+                                                excellent customer service by having a controlled
+                                                marketplace for best astrologers from India.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Gurdeep_Chawla" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/gurdeepchawla.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Gurdeep Chawla
+                                            </div>
+                                            <div className="card_sub_title">Muscat, Oman
+                                            </div>
+                                            <div className="card-text">
+                                                I really love the service of AstroTalk.Astrologers are
+                                                really skilled and co - operative. Customer support team
+                                                is very active and friendly. I get all answers and have
+                                                a good
+                                                conversation with astrologers at a decent price. And the
+                                                predictions are also very accurate.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Abhiuday_Chandra" height={150} width={150} src="https://www.mobilegamingarcade.com/astrotalk.com//assets/images/photos/webp/abhiudaychandra.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Abhiuday
+                                                Chandra</div>
+                                            <div className="card_sub_title">Germany
+                                            </div>
+                                            <div className="card-text">
+                                                Have been using this for 6 months now. I am an
+                                                ardent follower of Astrology and getting such a user
+                                                friendly application in Astrotalk has just made it
+                                                very easy for me to contact any
+                                                good astrologer at anytime and release my stress.
+                                                Astrologers do counsel very well.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Juilee_Patankar" height={150} width={150} src="../../../assets/images/photos/webp/julieepatankar.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Juilee
+                                                Patankar</div>
+                                            <div className="card_sub_title">New
+                                                Jersey, USA</div>
+                                            <div className="card-text">
+                                                Brilliant app. Asked queries from 5 experts, got
+                                                answer within 4 - 5 hours every time and the
+                                                answer were detailed which no other app provides
+                                                in this cost. Predictions were quite
+                                                accurate. And they were available to clear any
+                                                follow up doubts also.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Kirti_Patil" height={150} width={150} src="../../../assets/images/photos/webp/kirti.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">
+                                                Kirti Patil</div>
+                                            <div className="card_sub_title">
+                                                Kolkata, India</div>
+                                            <div className="card-text">
+                                                Astrology reports are very detailed and
+                                                accurate. Had ordered an annual report from
+                                                3 different astrologers and the insights I
+                                                got were really good. AstroTalk has the best
+                                                astrologers
+                                                from India and they provide best astrology
+                                                predictions. Totally worth the money.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Nisha_Koranga" height={150} width={150} src="../../../assets/images/photos/webp/nisha.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">
+                                                Nisha Koranga</div>
+                                            <div className="card_sub_title">Bangalore, India
+                                            </div>
+                                            <div className="card-text">
+                                                Had a wonderful session with couple of
+                                                astrologers and it was quite satisfying.
+                                                They listened to me carefully and
+                                                answered very patiently. Customer
+                                                support makes life very comfortable
+                                                as they are always there to support.
+                                                Best experience on any service app from
+                                                India till date.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Pinki_Agarwalla" height={150} width={150} src="../../../assets/images/photos/webp/Pinkiagarwalla.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Pinnkyy Agarrwal
+                                            </div>
+                                            <div className="card_sub_title">Mumbai, India
+                                            </div>
+                                            <div className="card-text">
+                                                Tried it out of desperation during
+                                                bad phase of my life and it really
+                                                helped as the astrologer listened to
+                                                my problem like a friend and then
+                                                assured me that everything will be
+                                                fine and
+                                                gave remedies. And when the things
+                                                are good now, I use it regularly as
+                                                they made me a believer.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="" height={150} width={150} src="../../../assets/images/photos/webp/poojatiwari.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Pooja Tiwari
+                                            </div>
+                                            <div className="card_sub_title">Pune,
+                                                India</div>
+                                            <div className="card-text">
+                                                Brilliant user experience.From
+                                                the interface to app to ease of
+                                                asking a query to speaking to
+                                                well spoken and experience
+                                                astrologers. It was a delight.
+                                                Have used many astrology apps
+                                                but
+                                                this is something like Uber
+                                                experience. Great work
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide pr-4 col-md-4 col-12">
+                                    <div className="card d-flex margin_left_right">
+                                        <div className="card-image">
+                                            <img alt="Prabha Rani" height={150} width={150} src="../../../assets/images/photos/webp/prabharani.webp" loading="lazy" className="img-fluid d-flex mx-auto" />
+                                        </div>
+                                        <div className="text_area">
+                                            <div className="card-title">Prabha
+                                                Rani</div>
+                                            <div className="card_sub_title">
+                                                London, UK</div>
+                                            <div className="card-text">
+                                                AstroTalk is really helpful
+                                                for me in seeking astrology
+                                                advice from England at any
+                                                time. Thanks Guys, I am
+                                                really happy with the
+                                                service and support I get
+                                                from customer support and
+                                                Astrologers. Everyone is so
+                                                friendly and helpful.Very
+                                                good experience with the app
+                                                so far.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Slider>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="latest_from_blog_chinese ng-star-inserted">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 section-headings">
+                            <h2 className="heading_seo_content_headline_chinese_horoscope">LATEST FROM
+                                BLOG</h2>
+                            <h4 className="subheading_seo_content_headline_chinese_horoscope">Top
+                                Astrologers. 24 * 7 customer support. Happy to help</h4>
+                        </div>
+                    </div>
+                    <Slider {...settings}>
 
-            </app-blog>
+                        <div>
+                            <a target="_blank" className="blog_box_content" href="https://www.mobilegamingarcade.com/astrotalk.com/astrology-blog/know-your-lucky" title="Know Your Lucky ">
+                                <div className="blog_img_content">
+                                    <img loading="lazy" alt="Know Your Lucky Numbers For 2022 As Per Numerology" src="https://www.mobilegamingarcade.com/astrotalk.com/uploads/BlogImage/2021/10/1634207717.jpg" />
+                                </div>
+                                {/* <div ="" className="views_blog_box"><i ="" className="fa fa-eye"></i><span ="">2050</span></div> */}
+                                <div className="description_blog">
+                                    <div className="title_blog"> Know
+                                        Your Lucky </div>
+                                </div>
+                                <div className="row_view_and_date">
+                                    <div className="author_name_home_page">Pinnkyy Agarrwal</div>
+                                    <div className="date_description_blog">2021-10-14</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a target="_blank" className="blog_box_content" href="https://www.mobilegamingarcade.com/astrotalk.com/astrology-blog/navratri-2021-9-days-and-9-colours" title="Navratri 2021: 9 Days & 9 Colours">
+                                <div className="blog_img_content">
+                                    <img loading="lazy" alt="Know Your Lucky Numbers For 2022 As Per Numerology" src="https://www.mobilegamingarcade.com/astrotalk.com/uploads/BlogImage/2021/10/1634211174.jpg" />
+                                </div>
+                                {/* <div className="views_blog_box"><i className="fa fa-eye"></i><span>2050</span></div> */}
+                                <div className="description_blog">
+                                    <div className="title_blog">
+                                        Navratri 2021: 9 Days &amp; 9 Colours</div>
+                                </div>
+                                <div className="row_view_and_date">
+                                    <div className="author_name_home_page">Pinnkyy Agarrwal</div>
+                                    <div className="date_description_blog">2021-10-14</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a target="_blank" className="blog_box_content" href="https://www.mobilegamingarcade.com/astrotalk.com/astrology-blog/navratri-2021-9-days-and-9-colours-you-must-wear-to-please-devi-durga" title="10 Modern Lessons That You Can Learn From Maa Durga This Navratri">
+                                <div className="blog_img_content">
+                                    <img loading="lazy" alt="Know Your Lucky Numbers For 2022 As Per Numerology" src="https://www.mobilegamingarcade.com/astrotalk.com/uploads/BlogImage/2021/10/1634207813.jpg" />
+                                </div>
+                                {/* <div ="" className="views_blog_box"><i ="" className="fa fa-eye"></i><span ="">2050</span></div> */}
+                                <div className="description_blog">
+                                    <div className="title_blog"> 10
+                                        Modern Lessons That You Can Learn From Maa Durga This
+                                        Navratri</div>
+                                </div>
+                                <div className="row_view_and_date">
+                                    <div className="author_name_home_page">Pinnkyy Agarrwal</div>
+                                    <div className="date_description_blog">2021-10-14</div>
+                                </div>
+                            </a>
+                        </div>
+                    </Slider>
+                </div>
+            </section>
             <section className="faqs_about_astrology">
                 <div className="container">
                     <h2 className="heading_faqs_about_astrology">

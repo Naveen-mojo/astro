@@ -4,6 +4,7 @@ import LoginPopup from './auth/LoginPopup';
 import Routes from './Routes';
 import OTPModel from './auth/OTPModel';
 import ProfileModal from './componet/ProfileModal';
+import AstroProvider from './context/AstroContext';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
         <LoginPopup />
         <ProfileModal />
         <OTPModel />
-        <Routes />
+        <AstroProvider>
+          <Routes />
+        </AstroProvider>
       </AuthProvider>
     </>
   );
