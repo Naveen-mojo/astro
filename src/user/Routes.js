@@ -9,6 +9,10 @@ import ShubhMuhurat from "./pages/ShubhMuhurat";
 import ChatWithAstrologer from "./pages/ChatWithAstrologer";
 import TalkWithAstrologer from "./pages/TalkWithAstrologer";
 import AstroProfile from "./pages/AstroProfile";
+import Payment from "./pages/Payment";
+import AddWallet from "./pages/AddWallet";
+import PaymentSuccess from './componet/PaymentSuccess';
+import PaymentCancle from './componet/PaymentCancle';
 
 function Routes() {
     return useRoutes([
@@ -23,6 +27,10 @@ function Routes() {
                 { path: "chat-with-astrologer", element: <ChatWithAstrologer /> },
                 { path: "talk-with-astrologer", element: <TalkWithAstrologer /> },
                 { path: "astro-profile/:id", element: <AstroProfile /> },
+                { path: "add-money-wallet", element: <AddWallet /> },
+                { path: "payment/:id", element: <Payment /> },
+                { path: "success", element: <PaymentSuccess /> },
+                { path: "cancel", element: <PaymentCancle /> },
                 { path: "*", element: <PageNotFound /> },
             ],
         },

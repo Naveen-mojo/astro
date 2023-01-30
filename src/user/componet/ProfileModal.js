@@ -1,8 +1,86 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { apiEndPoint } from "../../enviroment";
+import axios from "axios";
 
 export default function ProfileModal() {
   const { user } = useContext(AuthContext);
+  const [userDetails, setUserDetails] = useState([])
+
+  useEffect(() => {
+    var config = {
+      method: 'get',
+      url: `${apiEndPoint}auth/user/?userId=${user.id}`,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+
+    axios(config)
+      .then(function (response) {
+        setUserDetails(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [])
+
+
+  const [userData, setUserData] = useState({
+    firstname: userDetails.firstname,
+    lastname: userDetails.lastname,
+    placebirth: userDetails.placebirth,
+    datebirth: userDetails.datebirth,
+    timebirth: userDetails.timebirth,
+    currentaddress: userDetails.currentaddress,
+    city: userDetails.city,
+    pincode: userDetails.pincode,
+  })
+
+  const getUserData = (event) => {
+    const { name, value } = event.target
+    setUserData((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value
+      }
+    })
+  }
+
+
+  const profileModel = (event) => {
+    event.preventDefault();
+    var data = {
+      firstname: userData.firstname,
+      lastname: userData.lastname,
+      placebirth: userData.placebirth,
+      datebirth: userData.datebirth,
+      timebirth: userData.timebirth,
+      currentaddress: userData.currentaddress,
+      city: userData.city,
+      pincode: userData.pincode,
+    };
+
+    var config = {
+      method: 'patch',
+      url: `${apiEndPoint}auth/update/${user.id}`,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    document.getElementById("close-modal").click()
+  }
+
+
   return (
     <>
       {/* Modal */}
@@ -25,12 +103,13 @@ export default function ProfileModal() {
                 className="close"
                 data-dismiss="modal"
                 aria-label="Close"
+                id="close-modal"
               >
                 <span aria-hidden="true">×</span>
               </button>
             </div>
             <div className="modal-body">
-              <form id="editProfile" className="form-horizontal">
+              <form onSubmit={profileModel} id="editProfile" className="form-horizontal">
                 <div className="row">
                   <div className="col-12 col-md-12">
                     <div className="card-body bg-light">
@@ -42,9 +121,10 @@ export default function ProfileModal() {
                               <input
                                 placeholder="First Name"
                                 type="text"
-                                name="firstName"
+                                name="firstname"
+                                onChange={getUserData}
                                 className="form-control profilefield"
-                                defaultValue={user.username}
+                                defaultValue={userDetails?.firstname}
                               />
                             </div>
                           </div>
@@ -54,8 +134,10 @@ export default function ProfileModal() {
                               <input
                                 placeholder="Last Name"
                                 type="text"
-                                name="lastName"
+                                name="lastname"
+                                onChange={getUserData}
                                 className="form-control profilefield"
+                                defaultValue={userDetails?.lastname}
                               />
                             </div>
                           </div>
@@ -68,9 +150,11 @@ export default function ProfileModal() {
                               <label>Date of Birth</label>
                               <input
                                 placeholder="Date of Birth"
-                                type="text"
-                                name="dateBirth"
+                                type="date"
+                                name="datebirth"
+                                onChange={getUserData}
                                 className="form-control profilefield"
+                                defaultValue="2023-10-21"
                               />
                             </div>
                           </div>
@@ -79,9 +163,11 @@ export default function ProfileModal() {
                               <label>Time of Birth</label>
                               <input
                                 placeholder="Time of Birth"
-                                type="text"
-                                name="timeBirth"
+                                type="time"
+                                name="timebirth"
+                                onChange={getUserData}
                                 className="form-control profilefield"
+                                defaultValue={userDetails?.timebirth}
                               />
                             </div>
                           </div>
@@ -95,8 +181,10 @@ export default function ProfileModal() {
                               <input
                                 placeholder="Place of Birth"
                                 type="text"
-                                name="placeBirth"
+                                name="placebirth"
+                                onChange={getUserData}
                                 className="form-control profilefield"
+                                defaultValue={userDetails?.placebirth}
                               />
                             </div>
                           </div>
@@ -106,8 +194,10 @@ export default function ProfileModal() {
                               <input
                                 placeholder="Current Address"
                                 type="text"
-                                name="address"
+                                name="currentaddress"
+                                onChange={getUserData}
                                 className="form-control profilefield"
+                                defaultValue={userDetails?.currentaddress}
                               />
                             </div>
                           </div>
@@ -121,8 +211,10 @@ export default function ProfileModal() {
                               <input
                                 placeholder="City, State, Country"
                                 type="text"
-                                name="country"
+                                name="city"
+                                onChange={getUserData}
                                 className="form-control profilefield"
+                                defaultValue={userDetails?.city}
                               />
                             </div>
                           </div>
@@ -132,8 +224,10 @@ export default function ProfileModal() {
                               <input
                                 placeholder="pincode"
                                 type="text"
+                                onChange={getUserData}
                                 name="pincode"
                                 className="form-control profilefield"
+                                defaultValue={userDetails?.pincode}
                               />
                             </div>
                           </div>

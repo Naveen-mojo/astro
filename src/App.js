@@ -6,20 +6,35 @@ import OTPModel from './user/auth/OTPModel';
 import ProfileModal from './user/componet/ProfileModal';
 import AstroProvider from './context/AstroContext';
 import './user/assest/css/app.scss';
+import { useLocation } from 'react-router-dom';
+import AdminAuthProvider from './astrologer/context/AuthContext'
+import AdminRoutes from './astrologer/Routes'
 
 function App() {
-  return (
-    <>
-      <AuthProvider>
-        <LoginPopup />
-        <ProfileModal />
-        <OTPModel />
-        <AstroProvider>
-          <Routes />
-        </AstroProvider>
-      </AuthProvider>
-    </>
-  );
+  const location = useLocation();
+  const route = location.pathname.split('/')[1];
+  if (route === 'astro') {
+    return (
+      <>
+        <AdminAuthProvider>
+          <AdminRoutes />
+        </AdminAuthProvider>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <AuthProvider>
+          <LoginPopup />
+          <ProfileModal />
+          <OTPModel />
+          <AstroProvider>
+            <Routes />
+          </AstroProvider>
+        </AuthProvider>
+      </>
+    );
+  }
 }
 
 export default App;
