@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
-import { apiEndPoint } from '../enviroment';
+import { apiEndPoint } from '../../enviroment';
 import Message from './Message';
 import { io } from "socket.io-client";
 import { useLocation } from "react-router-dom";

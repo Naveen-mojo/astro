@@ -1,11 +1,11 @@
 import './App.css';
 import AuthProvider from './context/AuthContext';
-import LoginPopup from './auth/LoginPopup';
-import Routes from './Routes';
-import OTPModel from './auth/OTPModel';
-import ProfileModal from './componet/ProfileModal';
+import LoginPopup from './user/auth/LoginPopup';
+import Routes from './user/Routes';
+import OTPModel from './user/auth/OTPModel';
+import ProfileModal from './user/componet/ProfileModal';
 import AstroProvider from './context/AstroContext';
-import './assest/css/app.scss';
+import './user/assest/css/app.scss';
 
 function App() {
   return (

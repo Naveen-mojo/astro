@@ -2,8 +2,8 @@ import React, { useState, useContext, useEffect } from 'react'
 import 'intl-tel-input/build/css/intlTelInput.css';
 import ReactIntlTelInput from 'react-intl-tel-input-v2';
 import axios from 'axios';
-import { AuthContext } from '../context/AuthContext';
-import { apiEndPoint } from '../enviroment';
+import { AuthContext } from '../../context/AuthContext';
+import { apiEndPoint } from '../../enviroment';
 
 function LoginPopup() {
     const [loading, setLoading] = useState(null)

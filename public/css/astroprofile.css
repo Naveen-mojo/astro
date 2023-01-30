@@ -2689,7 +2689,7 @@ textarea::placeholder {
   bottom: calc(2 * 16px + 36px);
   right: 16px;
   width: 50%;
-  height: 742px;
+  /* height: 742px; */
   background-color: #fff;
   border-radius: 16px;
 }
@@ -2719,7 +2719,7 @@ textarea::placeholder {
   line-height: calc(16px + 16px / 2);
   color: #888;
   text-align: center;
-  height: 58vh;
+  height: 51vh;
   overflow: hidden;
 }
 .chatbox-popup .chatbox-popup__footer {

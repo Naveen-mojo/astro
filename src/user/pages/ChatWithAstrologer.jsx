@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import Slider from "react-slick";
 import verifiedImg from "../assest/images/Chat_with_astrologers.jpeg";
 import { Link } from "react-router-dom";
-import { AstroContext } from "../context/AstroContext";
+import { AstroContext } from "../../context/AstroContext";
 
 function ChatWithAstrologer() {
     const { user } = useContext(AuthContext);
