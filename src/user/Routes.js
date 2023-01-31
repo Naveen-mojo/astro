@@ -13,6 +13,7 @@ import Payment from "./pages/Payment";
 import AddWallet from "./pages/AddWallet";
 import PaymentSuccess from './componet/PaymentSuccess';
 import PaymentCancle from './componet/PaymentCancle';
+import Compatibility from "./pages/Compatibility";
 
 function Routes() {
     return useRoutes([
@@ -27,6 +28,7 @@ function Routes() {
                 { path: "chat-with-astrologer", element: <ChatWithAstrologer /> },
                 { path: "talk-with-astrologer", element: <TalkWithAstrologer /> },
                 { path: "astro-profile/:id", element: <AstroProfile /> },
+                { path: "compatibility/:id", element: <Compatibility /> },
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
                 { path: "success", element: <PaymentSuccess /> },

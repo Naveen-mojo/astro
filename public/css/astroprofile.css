@@ -2,12 +2,14 @@ img.ng-lazyloaded {
   width: 300px;
   height: 250px;
 }
+
 .commonLoaderCss[_ngcontent-serverApp-c86] {
   background: #7d7d7d;
   z-index: 100000;
   position: fixed;
   width: 100%;
 }
+
 .loadingContainer[_ngcontent-serverApp-c86] {
   display: flex;
   flex-direction: column;
@@ -22,7 +24,7 @@ img.ng-lazyloaded {
   text-align: center;
 }
 
-.ings[_ngcontent-serverApp-c86] > .invalid-feedback[_ngcontent-serverApp-c86] {
+.ings[_ngcontent-serverApp-c86]>.invalid-feedback[_ngcontent-serverApp-c86] {
   padding: 50px;
 }
 
@@ -61,7 +63,7 @@ img.ng-lazyloaded {
   color: green;
 }
 
-.error > input {
+.error>input {
   border-bottom: 1px solid red !important;
 }
 
@@ -122,11 +124,11 @@ img.ng-lazyloaded {
   padding-right: calc(1.5em + 0.75rem);
 }
 
-.btn-check:active + .btn-secondary,
-.btn-check:checked + .btn-secondary,
+.btn-check:active+.btn-secondary,
+.btn-check:checked+.btn-secondary,
 .btn-secondary.active,
 .btn-secondary:active,
-.show > .btn-secondary.dropdown-toggle {
+.show>.btn-secondary.dropdown-toggle {
   color: #000;
 }
 
@@ -222,6 +224,7 @@ button.resendCode:disabled {
   right: 0;
   bottom: 0;
 }
+
 .section_language {
   z-index: 1;
   margin-left: 10px;
@@ -275,12 +278,14 @@ button.resendCode:disabled {
   top: 0 !important;
   position: unset !important;
 }
+
 .display_set_dropdwn {
   display: none;
   position: absolute;
   z-index: 999;
   right: 0 !important;
 }
+
 .user_profile {
   cursor: pointer;
 }
@@ -507,24 +512,13 @@ photo_user_profile span {
   font-weight: 300;
 }
 
-.header_section_mobile_view
-  .navbar-nav
-  .nav-item
-  .nav-link:focus
-  .wallet_amount_mbl_view
-  .fa-rupee-sign,
+.header_section_mobile_view .navbar-nav .nav-item .nav-link:focus .wallet_amount_mbl_view .fa-rupee-sign,
 .header_section_mobile_view .navbar-nav .nav-item .nav-link:hover {
   font-weight: 700;
 }
 
-#user_profile
-  .user_profile_dropdown
-  .background_hover_white
-  .bg_white_hover:focus,
-#user_profile
-  .user_profile_dropdown
-  .background_hover_white
-  .bg_white_hover:hover {
+#user_profile .user_profile_dropdown .background_hover_white .bg_white_hover:focus,
+#user_profile .user_profile_dropdown .background_hover_white .bg_white_hover:hover {
   background-color: #fff !important;
 }
 
@@ -1628,6 +1622,7 @@ a.active {
 }
 
 @media screen and (max-width: 576px) {
+
   .call_details,
   .chat_details {
     font-size: 14px;
@@ -1796,6 +1791,7 @@ a.active {
 }
 
 @media screen and (max-width: 992px) {
+
   .desktop_view_astrologer_profile,
   .hide_mobile_view {
     display: none;
@@ -1814,6 +1810,7 @@ a.active {
 }
 
 @media screen and (max-width: 576px) {
+
   .ng-image-slider-container .next,
   .ng-image-slider-container .prev {
     right: 10px !important;
@@ -2268,9 +2265,11 @@ a.active {
   align-items: center;
   justify-content: center;
 }
+
 .desktop_view_astrologer_profile {
   display: block !important;
 }
+
 .timming_astrologer.active {
   color: #323232;
   margin-bottom: 8px;
@@ -2404,7 +2403,7 @@ a.active {
   text-align: center;
 }
 
-.ings > .invalid-feedback {
+.ings>.invalid-feedback {
   padding: 50px;
 }
 
@@ -2599,12 +2598,15 @@ span#unread-notification {
   margin-top: -10px;
   border-radius: 12px;
 }
+
 .v-call-modal {
   top: 115px;
 }
+
 .vcall-footer {
   background-color: #f0df20;
 }
+
 .options__button,
 .videos__group {
   background-color: #6d6d6d;
@@ -2616,11 +2618,13 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #f6f7f9;
 }
+
 h1 {
   margin: 0;
   font-size: 16px;
   line-height: 1;
 }
+
 button {
   color: inherit;
   background-color: transparent;
@@ -2628,6 +2632,7 @@ button {
   outline: 0 !important;
   cursor: pointer;
 }
+
 button.chatbox-open {
   position: fixed;
   bottom: 0;
@@ -2644,6 +2649,7 @@ button.chatbox-open {
   cursor: pointer;
   margin: 16px;
 }
+
 button.chatbox-close {
   position: fixed;
   bottom: 0;
@@ -2661,6 +2667,7 @@ button.chatbox-close {
   display: none;
   margin: 16px calc(2 * 16px + 52px) 16px 16px;
 }
+
 textarea {
   box-sizing: border-box;
   width: 100%;
@@ -2677,9 +2684,11 @@ textarea {
   resize: none;
   overflow: hidden;
 }
+
 textarea::placeholder {
   color: #888;
 }
+
 .chatbox-popup {
   display: flex;
   position: absolute;
@@ -2706,12 +2715,14 @@ textarea::placeholder {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
+
 .chatbox-popup .chatbox-popup__header .chatbox-popup__avatar {
   margin-top: -32px;
   background-color: #0360a5;
   border: 5px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
+
 .chatbox-popup .chatbox-popup__main {
   box-sizing: border-box;
   width: 100%;
@@ -2722,6 +2733,7 @@ textarea::placeholder {
   height: 51vh;
   overflow: hidden;
 }
+
 .chatbox-popup .chatbox-popup__footer {
   box-sizing: border-box;
   display: flex;
@@ -2733,6 +2745,7 @@ textarea::placeholder {
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
 }
+
 .chatbox-panel {
   display: flex;
   position: absolute;
@@ -2745,6 +2758,7 @@ textarea::placeholder {
   width: 377px;
   background-color: #fff;
 }
+
 .chatbox-panel .chatbox-panel__header {
   box-sizing: border-box;
   display: flex;
@@ -2756,6 +2770,7 @@ textarea::placeholder {
   justify-content: space-around;
   flex: 0 0 auto;
 }
+
 .chatbox-panel .chatbox-panel__main {
   box-sizing: border-box;
   width: 100%;
@@ -2765,6 +2780,7 @@ textarea::placeholder {
   text-align: center;
   flex: 1 1 auto;
 }
+
 .chatbox-panel .chatbox-panel__footer {
   box-sizing: border-box;
   display: flex;
@@ -2775,12 +2791,15 @@ textarea::placeholder {
   justify-content: space-around;
   flex: 0 0 auto;
 }
+
 .vmWidth {
   --bs-modal-width: 70% !important;
 }
+
 .input-group-text {
   font-size: 1.5rem !important;
 }
+
 @media (max-width: 768px) {
   .chatbox-popup {
     display: flex;
@@ -2794,5 +2813,606 @@ textarea::placeholder {
     height: 655px;
     background-color: #fff;
     border-radius: 16px;
+  }
+}
+
+
+
+/* Zodiac Compatibility */
+
+
+
+
+
+
+.header_chinese_horoscope {
+  background-color: #f0df20;
+
+}
+
+.flex_use_compatibility {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  height: 308px;
+}
+
+.left_side_text_chinese {
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.left_side_text_chinese h1 {
+  font-size: 46px;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 600
+}
+
+.left_side_text_chinese h1:before {
+  content: "";
+  height: 7px;
+  width: 200px;
+  position: absolute;
+  background-color: #fff;
+  bottom: 0
+}
+
+.left_side_text_chinese h2 {
+  font-size: 35px;
+  color: #454545;
+  margin-bottom: 10px
+}
+
+.right_side_compatibility {
+  text-align: center
+}
+
+.header_images_two_cross {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.header_images_two_cross img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: #0000;
+  margin-left: 5px
+}
+
+.compatibility_link {
+  background-color: #fff;
+  color: #000;
+  margin: 10px 0 20px;
+  display: inline-flex;
+  font-size: 22px;
+  border-radius: 25px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  box-shadow: 1px 1px 4px #919191;
+  text-decoration: none
+}
+
+.four_different_percent_compatibility {
+  padding: 40px 0 20px;
+  text-align: left
+}
+
+.compatibility_percent_section {
+  margin-bottom: 30px
+}
+
+.relationship_tips_section h2 {
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 30px;
+  font-weight: 650;
+  letter-spacing: 2px
+}
+
+.position_relative_progree_bar {
+  position: relative;
+  width: 65%;
+  margin-bottom: 40px
+}
+
+.position_relative_progree_bar:before {
+  content: "Love";
+  position: absolute;
+  font-size: 17px;
+  color: #000;
+  bottom: 30px;
+  left: 0
+}
+
+.position_relative_progree_bar:after {
+  content: "70%";
+  position: absolute;
+  font-size: 17px;
+  color: #000;
+  bottom: 30px;
+  right: 0
+}
+
+.background_progress_bar {
+  background-color: initial;
+  border: 1px solid #616161;
+  border-radius: 10px;
+  margin-top: 60px
+}
+
+.background_progress_bar .progress-bar {
+  background-color: #f0df20;
+  border-radius: 10px
+}
+
+.text_align {
+  text-align: justify;
+  color: #616161
+}
+
+.compatibility_percent_section h2 {
+  font-size: 21px;
+  color: #313131;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 600
+}
+
+.sexual_progress_bar:before {
+  content: "Sexual"
+}
+
+.friendship_progress_bar:before {
+  content: "Friendship"
+}
+
+.communication_progress_bar:before {
+  content: "Communication"
+}
+
+.bar:after {
+  content: attr(data-after-content) "%"
+}
+
+.four_different_percent_compatibility a {
+  display: block
+}
+
+.four_different_percent_compatibility img {
+  height: 470px;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: top
+}
+
+.filter_compatiable {
+  border: 2px solid #f0df20;
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 20px
+}
+
+.filter_compatiable h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #313131
+}
+
+.filter_compatiable p {
+  font-size: 14px;
+  text-align: center;
+  color: #616161;
+  line-height: 1.5;
+  margin-bottom: 20px
+}
+
+.two_filter_compatiable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.two_filter_compatiable .your_sign_filter {
+  width: 49%
+}
+
+.your_sign_filter select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  width: 100%;
+  font-size: 14px;
+  color: #313131;
+  cursor: pointer
+}
+
+.your_sign_filter select:focus {
+  outline: none
+}
+
+.your_sign_filter h6 {
+  font-size: 12px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #919191;
+  font-weight: 400;
+  margin-bottom: 10px
+}
+
+.submit_btn_compatible {
+  background-color: #f0df20;
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+  padding: 7px 0;
+  border-radius: 25px;
+  color: #313131;
+  font-size: 14px;
+  transition: .3s ease-in-out
+}
+
+.submit_btn_compatible:focus,
+.submit_btn_compatible:hover {
+  box-shadow: 0 0 4px 1px #ccc
+}
+
+.free_aries_horoscope_section {
+  background-color: #f0df20;
+  padding: 20px 0
+}
+
+.heading_want_know_aries_virgo_match {
+  text-align: center;
+  color: #4e4e4e;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: 500
+}
+
+.btns_contact_astrologer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 52%;
+  margin: 0 auto
+}
+
+.bnt_astrologer_contact {
+  background-color: #fff;
+  border: none;
+  color: #313131;
+  font-size: 16px;
+  box-shadow: 1px 1px 4px #919191;
+  border-radius: 30px;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  transition: all .5s ease;
+  text-decoration: none
+}
+
+.bnt_astrologer_contact:hover {
+  background-color: #616161;
+  color: #fff;
+  transition: all .5s ease;
+  text-decoration: none
+}
+
+.bnt_astrologer_contact:focus {
+  text-decoration: none
+}
+
+.bnt_astrologer_contact i {
+  color: #f0df20;
+  font-size: 26px;
+  margin-right: 10px
+}
+
+.check_compatibility_with_other_signs {
+  padding: 40px 0;
+  background-color: #eee
+}
+
+.check_compatibility_with_other_signs h2 {
+  text-align: center;
+  color: #313131;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.check_compatibility_with_other_signs h4 {
+  text-align: center;
+  font-size: 18px;
+  color: #616161;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block
+}
+
+.check_compatibility_with_other_signs h4:after,
+.check_compatibility_with_other_signs h4:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #383838;
+  top: 55%
+}
+
+.check_compatibility_with_other_signs h4:before {
+  left: -80px
+}
+
+.check_compatibility_with_other_signs h4:after {
+  right: -80px
+}
+
+.mouse_pointer {
+  cursor: pointer;
+  display: block
+}
+
+.mouse_pointer img {
+  transition: .3s ease-in-out
+}
+
+.mouse_pointer:hover.mouse_pointer img {
+  box-shadow: 0 0 6px 2px #ccc
+}
+
+.aries_compatibility_with_other_image_section img {
+  width: 50%;
+  display: inline-block;
+  border: 3px solid #f0df20;
+  border-radius: 50%;
+  padding: 5px
+}
+
+.aries_virgo {
+  color: #000;
+  margin-top: 10px;
+  display: inline-flex;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 #eee;
+  margin-bottom: 30px;
+  transition: .3s ease-in-out
+}
+
+.aries_virgo:focus,
+.aries_virgo:hover {
+  text-decoration: none;
+  color: initial;
+  box-shadow: 0 0 6px 2px #ccc
+}
+
+.adjust-link {
+  position: relative;
+  margin: 30px 0
+}
+
+.adjust-link:after,
+.adjust-link:hover.adjust-link:after {
+  content: "";
+  transition: .3s ease-in-out
+}
+
+.adjust-link:hover.adjust-link:after {
+  background-color: #ffffff4d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+  .header_chinese_horoscope {
+    margin-top: 83px
+  }
+
+  .btns_contact_astrologer {
+    width: 60%
+  }
+
+  .header_images_two_cross img {
+    width: 170px;
+    min-width: 170px;
+    height: 170px
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+  .header_chinese_horoscope {
+    margin-top: 63px
+  }
+
+  .btns_contact_astrologer {
+    width: 100%
+  }
+
+  .four_different_percent_compatibility img {
+    height: auto
+  }
+
+  .compatibility_link {
+    font-size: 12px
+  }
+
+  .header_images_two_cross img {
+    width: 100px;
+    height: 100px
+  }
+
+  .left_side_text_chinese h1 {
+    font-size: 35px;
+    margin-bottom: 20px
+  }
+
+  .left_side_text_chinese h2 {
+    font-size: 20px
+  }
+
+  .flex_use_compatibility {
+    height: 200px
+  }
+}
+
+@media screen and (max-width:576px) {
+  .header_chinese_horoscope {
+    margin-top: 41px
+  }
+
+  .flex_use_compatibility {
+    height: 140px;
+    padding: 10px 0
+  }
+
+  .left_side_text_chinese h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px
+  }
+
+  .left_side_text_chinese h1:before {
+    height: 2px;
+    width: 68px
+  }
+
+  .left_side_text_chinese h2 {
+    font-size: 16px;
+    margin-bottom: 3px
+  }
+
+  .header_images_two_cross img {
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    border: 1px solid #000
+  }
+
+  .compatibility_link {
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 8px 0;
+    margin-bottom: 20px
+  }
+
+  .four_different_percent_compatibility {
+    padding: 20px 0 0;
+    text-align: left
+  }
+
+  .compatibility_percent_section h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0
+  }
+
+  .position_relative_progree_bar {
+    margin-bottom: 10px
+  }
+
+  .btns_contact_astrologer {
+    width: 100%
+  }
+
+  .btns_contact_astrologer a {
+    width: 49%
+  }
+
+  .check_compatibility_with_other_signs h2 {
+    font-size: 16px;
+    margin-bottom: 3px;
+    letter-spacing: normal
+  }
+
+  .check_compatibility_with_other_signs h4:after,
+  .check_compatibility_with_other_signs h4:before {
+    display: none
+  }
+
+  .background_progress_bar {
+    margin-top: 30px;
+    height: 12px
+  }
+
+  .compatibility_percent_section {
+    margin-bottom: 15px
+  }
+
+  .position_relative_progree_bar:after,
+  .position_relative_progree_bar:before {
+    font-size: 15px;
+    bottom: 15px
+  }
+
+  .text_align {
+    font-size: 13px
+  }
+
+  .free_aries_horoscope_section {
+    padding: 20px 0
+  }
+
+  .heading_want_know_aries_virgo_match {
+    font-size: 16px;
+    margin-bottom: 0;
+    letter-spacing: 0
+  }
+
+  .check_compatibility_with_other_signs {
+    padding: 20px 0 0
+  }
+
+  .check_compatibility_with_other_signs h4 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 0
+  }
+
+  .four_different_percent_compatibility img {
+    margin: 0 0 20px
+  }
+
+  .bnt_astrologer_contact {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px
+  }
+
+  .bnt_astrologer_contact i {
+    font-size: 18px;
+    margin-right: 7px
   }
 }
