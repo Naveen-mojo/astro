@@ -2720,7 +2720,7 @@ textarea::placeholder {
   color: #888;
   text-align: center;
   height: 51vh;
-  overflow: hidden;
+  overflow: auto;
 }
 .chatbox-popup .chatbox-popup__footer {
   box-sizing: border-box;

@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 import ReactIntlTelInput from 'react-intl-tel-input-v2';
 import moment from "moment";
 import { apiEndPoint } from "../../enviroment";
-// import Multiselect from 'multiselect-react-dropdown';
+import Select from 'react-select';
 
 export default function Profile() {
     const [profileData, setProfileData] = useState("");
@@ -27,10 +27,6 @@ export default function Profile() {
             });
         // eslint-disable-next-line
     }, []);
-
-    const primaryskills = ["Vastu", "KP", "Nandi"];
-
-    const languages = ["Hindi", "English"];
 
     const {
         profileImage,
@@ -80,7 +76,11 @@ export default function Profile() {
     const [fileInfo, setFileInfo] = useState('')
     const [response, setresponse] = useState('')
     const [error, seterror] = useState('')
-    console.info(response, error)
+
+    // set value for default selection
+    const [pSkill, setPSkill] = useState([]);
+    const [skll, setSkll] = useState([]);
+    const [lang, setLang] = useState([]);
 
     useEffect(() => {
         if (profileData) {
@@ -123,9 +123,6 @@ export default function Profile() {
         setUploadImage(URL.createObjectURL(e.target.files[0]));
         setFileInfo(e.target.files[0]);
     };
-
-
-    // console.log("primaryskills", state.primaryskills)
 
     const updateProfile = (event) => {
         event.preventDefault();
@@ -188,6 +185,67 @@ export default function Profile() {
         const number = event.dialCode + " " + event.phone
         setNumber(number);
     };
+
+
+    const ps = [
+        {
+            value: 1,
+            label: "Vastu"
+        },
+        {
+            value: 2,
+            label: "KP"
+        },
+        {
+            value: 3,
+            label: "Nandi"
+        },
+    ];
+
+    const sk = [
+        {
+            value: 1,
+            label: "Vastu"
+        },
+        {
+            value: 2,
+            label: "KP"
+        },
+        {
+            value: 3,
+            label: "Nandi"
+        },
+    ];
+
+    const lan = [
+        {
+            value: 1,
+            label: "Hindi"
+        },
+        {
+            value: 2,
+            label: "English"
+        }
+    ];
+
+    // handle onChange event of the dropdown 
+    const handleChangePS = (e) => {
+        setPSkill(Array.isArray(e) ? e.map(x => x.label) : []);
+    }
+    const handleChangeSkills = (e) => {
+        setSkll(Array.isArray(e) ? e.map(x => x.label) : []);
+    }
+    const handleChangeLang = (e) => {
+        setLang(Array.isArray(e) ? e.map(x => x.label) : []);
+    }
+
+    const pss = state.skills.map((val, i) => {
+        return { value: i + 1, lable: val }
+    })
+
+    console.log(pss)
+
+    // {value: 'one', label: 'One'}
 
     return (
         <>
@@ -267,7 +325,7 @@ export default function Profile() {
                                     </div>
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="form-group">
+                                    {/* <div className="form-group">
                                         <label htmlFor="number">Mobile Number</label>
                                         <div>
                                             <ReactIntlTelInput
@@ -275,10 +333,11 @@ export default function Profile() {
                                                 intlTelOpts={intlTelOpts}
                                                 // value={value}
                                                 onChange={onChange}
-                                            // onReady={onReady}
+                                                // onReady={onReady}
+                                                defaultValue={contactNumber}
                                             />
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <h5 className="my-4">Personal Details</h5>
 
                                     <div className="form-group">
@@ -309,22 +368,41 @@ export default function Profile() {
                                     </div>
 
                                     <label>Primary Skills</label>
-                                    {/* <Multiselect
-                                        options={primaryskills}
-                                        preSelectedValues={primarySkills}
-                                        selectedValues={primarySkills}
-                                        name="primaryskills"
-                                        onChange={updateValue}
-                                        isObject={false}
+                                    <Select
+                                        className="dropdown"
+                                        placeholder="Select Option"
+                                        // value={ps.filter(obj => pSkill.includes(obj.label))} // set selected values
+                                        options={ps} // set list of the data
+                                        onChange={handleChangePS} // assign onChange function
+                                        isMulti
+                                        isClearable
+                                        defaultValue={[{ value: 1, label: "vastu" }, { value: 2, label: "Nandi" }]}
                                     />
 
-                                    <label>Skills</label>
-                                    <Multiselect options={primaryskills} isObject={false} selectedValues={skill}
-                                        onChange={updateValue} name="skills" />
+                                    <label className='my-2'>Skills</label>
+                                    <Select
+                                        className="dropdown"
+                                        placeholder="Select Option"
+                                        // value={sk.filter(obj => skll.includes(obj.label))} // set selected values
+                                        options={sk} // set list of the data
+                                        onChange={handleChangeSkills} // assign onChange function
+                                        isMulti
+                                        isClearable
+                                        defaultValue={[{ value: 1, label: "vastu" }, { value: 2, label: "Nandi" }]}
+                                    />
 
-                                    <label>Language</label>
-                                    <Multiselect options={languages} isObject={false} selectedValues={language}
-                                        onChange={updateValue} name="language" /> */}
+                                    <label className='my-2'>Language</label>
+                                    <Select
+                                        className="dropdown"
+                                        placeholder="Select Option"
+                                        // value={lan.filter(obj => lang.includes(obj.label))} // set selected values
+                                        options={lan} // set list of the data
+                                        onChange={handleChangeLang} // assign onChange function
+                                        isMulti
+                                        isClearable
+                                        defaultValue={[{ value: 1, label: "English" }, { value: 2, label: "Hindi" }]}
+
+                                    />
 
                                     <div className="form-group">
                                         <label htmlFor="experience">Experience </label>

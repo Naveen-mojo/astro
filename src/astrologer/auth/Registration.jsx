@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ReactIntlTelInput from 'react-intl-tel-input-v2';
 import { Link } from 'react-router-dom';
-// import Multiselect from 'multiselect-react-dropdown';
-import {apiEndPoint} from '../../enviroment';
-
+import { apiEndPoint } from '../../enviroment';
+import moment from 'moment'
+import Select from 'react-select';
 
 export default function Registration() {
     useEffect(() => {
@@ -41,9 +41,6 @@ export default function Registration() {
         otp: '',
         gender: '',
         birthdate: '',
-        primaryskills: [],
-        skills: [],
-        language: [],
         experience: '',
         dailyhours: '',
         platform: '',
@@ -58,9 +55,13 @@ export default function Registration() {
 
     const [profileimg, setprofileimg] = useState('')
     const [number, setNumber] = useState('')
-    const [code, setcode] = useState('')
     const [termscondition, settermscondition] = useState('')
     const [result, setresult] = useState('')
+
+    // set value for default selection
+    const [primarySkill, setPrimarySkill] = useState([]);
+    const [skill, setSkill] = useState([]);
+    const [lang, setLang] = useState([]);
 
     const getValue = (event) => {
         const { name, value } = event.target;
@@ -83,20 +84,19 @@ export default function Registration() {
         formdata.append("shortName", '');
         formdata.append("gender", state.gender);
         formdata.append("DOB", state.birthdate);
-        formdata.append("primarySkills", JSON.stringify(state.primaryskills));
+        formdata.append("primarySkills", JSON.stringify(primarySkill));
         formdata.append("hours", state.dailyhours);
         formdata.append("isPlatform", state.platform);
         formdata.append("monthlyEarning", state.monthlyEarning);
         formdata.append("nameOfPlatform", state.platformName);
-        formdata.append("skill", JSON.stringify(state.skills));
+        formdata.append("skill", JSON.stringify(skill));
         formdata.append("description", state.about);
         formdata.append("cityName", state.city);
         formdata.append("onBoard", state.onboard);
         formdata.append("exp", state.experience);
-        formdata.append("language", JSON.stringify(state.language));
+        formdata.append("language", JSON.stringify(lang));
         formdata.append("chatRate", '');
         formdata.append("callRate", "");
-        formdata.append("contactExt", code);
         formdata.append("contactNumber", number);
         formdata.append("galleryImage", "");
         formdata.append("isActive", "1");
@@ -122,14 +122,44 @@ export default function Registration() {
     }
 
     const primaryskills = [
-        "Vastu",
-        "KP",
-        "Nandi"
+        {
+            value: 1,
+            label: "Vastu"
+        },
+        {
+            value: 2,
+            label: "KP"
+        },
+        {
+            value: 3,
+            label: "Nandi"
+        },
+    ];
+
+    const skills = [
+        {
+            value: 1,
+            label: "Vastu"
+        },
+        {
+            value: 2,
+            label: "KP"
+        },
+        {
+            value: 3,
+            label: "Nandi"
+        },
     ];
 
     const language = [
-        "Hindi",
-        "English"
+        {
+            value: 1,
+            label: "Hindi"
+        },
+        {
+            value: 2,
+            label: "English"
+        }
     ];
 
     const inputProps = {
@@ -145,6 +175,17 @@ export default function Registration() {
         setNumber(number);
     };
 
+    // handle onChange event of the dropdown 
+    const handleChangePS = (e) => {
+        setPrimarySkill(Array.isArray(e) ? e.map(x => x.label) : []);
+    }
+    const handleChangeSkills = (e) => {
+        setSkill(Array.isArray(e) ? e.map(x => x.label) : []);
+    }
+    const handleChangeLang = (e) => {
+        setLang(Array.isArray(e) ? e.map(x => x.label) : []);
+    }
+
     return (
         <>
             <section className='registration-sec'>
@@ -153,15 +194,15 @@ export default function Registration() {
                     <form onSubmit={formSubmit}>
                         <div className="step step-1 active">
                             <div className="form-group">
-                                <label htmlFor="name">Name</label>
+                                <label htmlFor="name">Name <span className='text-danger'>*</span>  </label>
                                 <input type="text" id="name" name="name" onChange={getValue} placeholder='Name' />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="email">Email</label>
+                                <label htmlFor="email">Email <span className='text-danger'>*</span> </label>
                                 <input type="text" id="email" name="email" onChange={getValue} placeholder='Email' />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="number">Mobile Number</label>
+                                <label htmlFor="number">Mobile Number <span className='text-danger'>*</span> </label>
                                 <div>
                                     <ReactIntlTelInput
                                         inputProps={inputProps}
@@ -175,7 +216,7 @@ export default function Registration() {
                                 <div className='text-sm text-primary text-right cursor-pointer' style={{ width: "55%" }}>Verify Number</div>
 
                                 <div className="form-group">
-                                    <label htmlFor="otp">OTP</label>
+                                    <label htmlFor="otp">OTP <span className='text-danger'>*</span> </label>
                                     <input type="text" id="otp" name="otp" onChange={getValue} placeholder='Enter OTP' />
                                 </div>
                             </div>
@@ -196,6 +237,7 @@ export default function Registration() {
                             <div className="form-group">
                                 <label htmlFor="gender">Gender</label>
                                 <select name='gender' onChange={getValue} className='form-control form-control-sm'>
+                                    <option defaultChecked>Select Gender</option>
                                     <option value='male'>Male</option>
                                     <option value='female'>Female</option>
                                     <option value='custom'>Custom</option>
@@ -203,18 +245,41 @@ export default function Registration() {
                             </div>
                             <div className="form-group">
                                 <label>DOB</label>
-                                <input type="datetime-local" onChange={getValue} name='birthdate' max="2022-10-28T00:00" className='form-control' />
+                                <input type="date" onChange={getValue} name='birthdate' max={moment(new Date()).format("YYYY-MM-DD")} className='form-control' />
                             </div>
 
-                            {/* <label className='my-2'>Primary Skills</label>
-                            <Multiselect isObject={false} options={primaryskills} name='primaryskills' onChange={getValue} value={state.primaryskills} />
-
+                            <label className='my-2'>Primary Skills</label>
+                            <Select
+                                className="dropdown"
+                                placeholder="Select Option"
+                                value={primaryskills.filter(obj => primarySkill.includes(obj.label))} // set selected values
+                                options={primaryskills} // set list of the data
+                                onChange={handleChangePS} // assign onChange function
+                                isMulti
+                                isClearable
+                            />
 
                             <label className='my-2'>Skills</label>
-                            <Multiselect isObject={false} options={primaryskills} name='skills' onChange={getValue} value={state.skills} />
+                            <Select
+                                className="dropdown"
+                                placeholder="Select Option"
+                                value={skills.filter(obj => skill.includes(obj.label))} // set selected values
+                                options={skills} // set list of the data
+                                onChange={handleChangeSkills} // assign onChange function
+                                isMulti
+                                isClearable
+                            />
 
                             <label className='my-2'>Language</label>
-                            <Multiselect isObject={false} options={language} name='language' onChange={getValue} value={state.language} /> */}
+                            <Select
+                                className="dropdown"
+                                placeholder="Select Option"
+                                value={language.filter(obj => lang.includes(obj.label))} // set selected values
+                                options={language} // set list of the data
+                                onChange={handleChangeLang} // assign onChange function
+                                isMulti
+                                isClearable
+                            />
 
                             <div className="form-group">
                                 <label htmlFor="experience">Experience </label>

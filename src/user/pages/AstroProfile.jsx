@@ -5,7 +5,6 @@ import { apiEndPoint } from '../../enviroment';
 import Message from './Message';
 import { io } from "socket.io-client";
 import { useLocation } from "react-router-dom";
-// import Conversation from "../../component/conversation/Conversation";
 import VideoCall from './videocall/VideoCall'
 
 
@@ -19,6 +18,11 @@ export default function AstroProfile() {
     const socket = useRef();
     const { user } = useContext(AuthContext);
     const scrollRef = useRef();
+
+    // chat usestate
+
+    const [startChat, setStartChat] = useState('')
+    const [endChat, setEndChat] = useState('')
 
     const getId = useLocation()
     const astroId = getId.pathname.split('/')[2]
@@ -41,7 +45,7 @@ export default function AstroProfile() {
 
 
     useEffect(() => {
-        socket.current = io("wss://astro-socket.onrender.com/");
+        socket.current = io("http://localhost:8900");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,
@@ -69,7 +73,7 @@ export default function AstroProfile() {
     useEffect(() => {
         const getConversations = async () => {
             try {
-                const res = await axios.get(`${apiEndPoint}conversation` + user?.id);
+                const res = await axios.get(`${apiEndPoint}conversation/` + user?.id);
                 setConversations(res.data);
             } catch (err) {
                 console.log(err);
@@ -81,7 +85,7 @@ export default function AstroProfile() {
     useEffect(() => {
         const getMessages = async () => {
             try {
-                const res = await axios.get(`${apiEndPoint}message` + currentChat?._id);
+                const res = await axios.get(`${apiEndPoint}message/` + currentChat?._id);
                 setMessages(res.data);
             } catch (err) {
                 console.log(err);
@@ -109,7 +113,7 @@ export default function AstroProfile() {
         });
 
         try {
-            const res = await axios.post(`${apiEndPoint}message/add`, message);
+            const res = await axios.post(`${apiEndPoint}message/add/`, message);
             setMessages([...messages, res.data]);
             setNewMessage("");
         } catch (err) {
@@ -148,11 +152,17 @@ export default function AstroProfile() {
     const openChat = () => {
         document.getElementById('open-chat').style.display = 'flex';
         document.getElementById('close-chat').style.display = 'flex';
+        setStartChat(new Date())
+        setTimeout(() => {
+            chatDeduction()
+        }, 2000)
     }
 
     const closeChat = () => {
         document.getElementById('open-chat').style.display = 'none';
         document.getElementById('close-chat').style.display = 'none';
+        setEndChat(new Date())
+        chatDeduction()
     }
 
     const getChat = () => {
@@ -163,6 +173,32 @@ export default function AstroProfile() {
         ))
     }
 
+    const chatDeduction = () => {
+        var data = JSON.stringify({
+            "userId": user.id,
+            "astrologerId": astroId,
+            "startTime": startChat,
+            "endTime": endChat
+        });
+
+        var config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: `${apiEndPoint}chat/add`,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: data
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 
     return (
         <>
@@ -241,7 +277,7 @@ export default function AstroProfile() {
 
                                                                 <>
                                                                     {
-                                                                        profiledata.status === 1 ?
+                                                                        profiledata.status === 0 ?
 
                                                                             <div className="chatbox-open" onClick={openChat}>
                                                                                 {
@@ -310,7 +346,7 @@ export default function AstroProfile() {
                                                             user.wallet >= profiledata.callRate ?
                                                                 <>
                                                                     {
-                                                                        profiledata.status === 1 ?
+                                                                        profiledata.status === 0 ?
 
                                                                             <div className="start_btn" >
 

@@ -31,12 +31,17 @@ const AuthProvider = ({ children }) => {
     //     toast(msg);
     // };
 
+    const moneyDedection = () =>{
+        
+    }
+
+
     const loginUser = (e) => {
         e.preventDefault();
         setLoadingButton(true);
         const config = {
             method: "post",
-            url: `${apiEndPoint}astro/signin`,
+            url: `${apiEndPoint}auth/astro/signin`,
             headers: {
                 "Content-Type": "application/json",
             },
@@ -71,7 +76,7 @@ const AuthProvider = ({ children }) => {
     const updateToken = () => {
         const config = {
             method: "post",
-            url: `${apiEndPoint}astro/refreshtoken`,
+            url: `${apiEndPoint}auth/astro/refreshtoken`,
             headers: {
                 "Content-Type": "application/json",
             },
