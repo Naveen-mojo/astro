@@ -110,7 +110,7 @@ function Home() {
                         <div className="slider server-crosal">
                             <Slider {...settings} className="carousel d-flex">
                                 <div className="slide pr-4 col-md-3 col-4">
-                                    <a className="box_section free_service" href="/compatibility/jkmn">
+                                    <a className="box_section free_service" href="/compatibility/aries/aries">
                                         <div className="icon">
                                             <span className="icons_saprate_image fastival_icon" />
                                         </div>

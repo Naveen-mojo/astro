@@ -1,318 +1,215 @@
-import React, {useEffect, useState}  from 'react';
-import { apiEndPoint } from '../../enviroment';
+import React, { useEffect, useState } from 'react';
+import { createSearchParams, useNavigate, useParams } from "react-router-dom";
+import { apiEndPoint, imgUrl } from '../../enviroment';
+import { CompatiblePair } from './CompatibilityChild';
 import axios from 'axios';
 
 export default function Compatibility() {
-    const [zodiac, setZodaic] =useState([]);
-    const [selfSign,SetSelfSign]  = useState(1);
-    const [partnerSign,SetPartnerSign]  = useState(1);
-    useEffect(()=>{
-        const config = {
-            method: 'get',
-            url: `${apiEndPoint}zodiac/all`,
-        }
-        axios(config)
-        .then( (resp) => {
-            console.log(resp.data)
-            setZodaic(resp.data)
-        }).catch(error=>{console.log(error)})
-    },[]);
 
-    console.log("Sign:", zodiac.length)
- const selfSignHandler = (sign)=>{
-    console.log(sign.target.value)
-    SetSelfSign(sign.target.value)
- }
- const partnerSignHandler=(sign)=>{
-    console.log(sign)
-    SetPartnerSign(sign.target.value)
- }
-    return(<>
-     <app-compatibility-detail _nghost-sc170>
-        <div _ngcontent-sc170 className="header_chinese_horoscope">
-          <div _ngcontent-sc170 className="container">
-            <div _ngcontent-sc170 className="flex_use_compatibility">
-              <div _ngcontent-sc170 className="left_side_text_chinese">
-                <h1 _ngcontent-sc170 className="heading_font_small">Zodiac Compatibility</h1>
-                <h2 _ngcontent-sc170>Love, sex, friendship &amp; more</h2>
+  const params = useParams();
+  const [loading, setLoading] = useState(true)
+  const [zodiac, setZodaic] = useState([]);
+  const [selfSign, SetSelfSign] = useState(1);
+  const [partnerSign, SetPartnerSign] = useState(1);
+
+  // Fetch all zodaics
+  useEffect(() => {
+    const config = {
+      method: 'get',
+      url: `${apiEndPoint}zodiac/all`,
+    }
+    axios(config)
+      .then((resp) => {
+        console.log("Response:", resp.data)
+        setZodaic(resp.data)
+
+        resp.data.map(row => {
+          if (row.signSlug == params.fromId) {
+            SetSelfSign(row.c_id);
+          } else if (row.signSlug == params.toId) {
+            SetPartnerSign(row.c_id);
+          } else {
+            return false;
+          }
+
+        })
+
+        console.log(params)
+
+        setLoading(false);
+      }).catch(error => { console.log(error) })
+  }, []);
+
+
+
+
+
+  const [zodiacData, setZodaicData] = useState({
+    selfId: selfSign,
+    partnerId: partnerSign,
+    description: '',
+    slug: '',
+    selfImage: `${imgUrl}horoscope/horoscope-01.webp`,
+    partnerImage: `${imgUrl}horoscope/horoscope-01.webp`
+  });
+  const fetchZodiacPair = (pairUrl = `${apiEndPoint}zodiacpair/id/${selfSign}/partner/${partnerSign}`) => {
+
+    const pairConfig = {
+      method: "get",
+      url: pairUrl
+    }
+    axios(pairConfig)
+      .then((res) => {
+        let ImageY = zodiac[res.data.yourSign - 1] ? `${imgUrl}horoscope/${zodiac[res.data.yourSign - 1].zodiacImage}` : zodiacData.selfImage
+        let ImageP = zodiac[res.data.partnerSign - 1] ? `${imgUrl}horoscope/${zodiac[res.data.partnerSign - 1].zodiacImage}` : zodiacData.partnerImage
+        setZodaicData({
+          selfId: res.data.yourSign,
+          partnerId: res.data.partnerSign,
+          description: res.data.description,
+          slug: res.data.slug,
+          selfImage: ImageY,
+          partnerImage: ImageP,
+        })
+      })
+
+  }
+
+
+  const changeZodiac = (slug) => {
+    try {
+      // simulate api call
+      setTimeout(() => fetchZodiacPair(slug), 100)
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  const SelfSignHandler = (sign) => {
+    if (sign.target.name == 'zodiacSignX') {
+      // const { name, value } = sign.target;
+      // SetSelfSign({ [name]: value })
+      SetSelfSign(sign.target.value);
+
+    } else if (sign.target.name == 'zodiacSignY') {
+      SetPartnerSign(sign.target.value);
+    }
+  }
+
+  const navigate = useNavigate();
+  const submitPairHandler = (e) => {
+    e.preventDefault();
+    console.log(zodiac[selfSign - 1].signSlug)
+    changeZodiac(`${apiEndPoint}zodiacpair/id/${selfSign}/partner/${partnerSign}`)
+    navigate(`/compatibility/${zodiac[selfSign - 1].signSlug}/${zodiac[partnerSign - 1].signSlug}`);
+  }
+
+  const childHandler = (e) => {
+    SetSelfSign(e.target.getAttribute('data-x'));
+    SetPartnerSign(e.target.getAttribute('data-y'));
+    // `${apiEndPoint}zodiacpair/id/${e.target.getAttribute('data-x')}/partner/${e.target.getAttribute('data-y')}`
+    changeZodiac(`${apiEndPoint}zodiacpair/id/${e.target.getAttribute('data-x')}/partner/${e.target.getAttribute('data-y')}`);
+    navigate(`/compatibility/${e.target.getAttribute('data-slug')}`)
+  }
+  useEffect(() => {
+    fetchZodiacPair();
+  }, [loading]);
+
+  if (loading) return '<h1>Data Loading.....</h1>';
+
+  return (<>
+    <app-compatibility-detail _nghost-sc170>
+      <div _ngcontent-sc170 className="header_chinese_horoscope">
+        <div _ngcontent-sc170 className="container">
+          <div _ngcontent-sc170 className="flex_use_compatibility">
+            <div _ngcontent-sc170 className="left_side_text_chinese">
+              <h1 _ngcontent-sc170 className="heading_font_small">Zodiac Compatibility</h1>
+              <h2 _ngcontent-sc170>Love, sex, friendship &amp; more</h2>
+            </div>
+            <div _ngcontent-sc170 className="right_side_compatibility">
+              <div _ngcontent-sc170 className="header_images_two_cross">
+                <img _ngcontent-sc170 alt="zodiac" src={zodiacData.selfImage} width={196} height={196} /><img _ngcontent-sc170 width={68} height={68} alt="zodiac" src={zodiacData.partnerImage} />
               </div>
-              <div _ngcontent-sc170 className="right_side_compatibility">
-                <div _ngcontent-sc170 className="header_images_two_cross">
-                  <img _ngcontent-sc170 alt="zodiac" src="https://d1gcna0o0ldu5v.cloudfront.net/fit-in/196x196/assets/images/horoscope_page/horoscope-01.webp" width={196} height={196} /><img _ngcontent-sc170 width={68} height={68} alt="zodiac" src="https://d1gcna0o0ldu5v.cloudfront.net/fit-in/196x196/assets/images/horoscope_page/horoscope-01.webp" />
+              <div _ngcontent-sc170 className="compatibility_link mb-0"> {zodiac[zodiacData.selfId - 1] ? zodiac[zodiacData.selfId - 1].zodiacSign : ''} &amp; {zodiac[zodiacData.partnerId - 1] ? zodiac[zodiacData.partnerId - 1].zodiacSign : ''} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section _ngcontent-sc170 className="text-center">
+        <div _ngcontent-sc170 className="bread">
+          <div _ngcontent-sc170 className="container">
+            {/**/}
+          </div>
+        </div>
+        <div _ngcontent-sc170 className="four_different_percent_compatibility">
+          <div _ngcontent-sc170 className="container">
+            <div _ngcontent-sc170 className="row">
+              <div _ngcontent-sc170 className="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+                {/**/}
+                <div >
+                  {zodiacData.description ? <div dangerouslySetInnerHTML={{ __html: zodiacData.description }} /> : ''}
                 </div>
-                <div _ngcontent-sc170 className="compatibility_link mb-0"> Aries &amp; Aries </div>
+                {/**/}
+              </div>
+              <div className="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+                <form onSubmit={submitPairHandler} data-slug={zodiacData.slug}>
+                  <div className="col-12">
+                    <div className="filter_compatiable">
+                      <h2>are you compatible ?</h2>
+                      <p>Choose your and your partner's zodiac sign to check
+                        compatibility</p>
+                      <div className="two_filter_compatiable">
+                        <div className="your_sign_filter">
+                          <h6>your sign</h6>
+                          <select name="zodiacSignX" id="zodiacSignX" onChange={SelfSignHandler} selectedindex={-1} value={selfSign} className="ng-untouched ng-pristine ng-valid">
+                            {zodiac.length ? zodiac.map((option, index) => <option key={index} value={option.c_id}>{option.zodiacSign}</option>) : ''}
+
+
+                          </select>
+                        </div>
+                        <div className="your_sign_filter">
+                          <h6>partner's sign</h6>
+                          <select name="zodiacSignY" id="zodiacSignY" onChange={SelfSignHandler} selectedindex={-1} value={partnerSign} className="ng-untouched ng-pristine ng-valid">
+                            {zodiac.length ? zodiac.map((option, index) => <option key={index} value={option.c_id}>{option.zodiacSign}</option>) : ''}
+                          </select>
+                        </div>
+                      </div>
+                      <button className="submit_btn_compatible">Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div className="col-12"><a className="adjust-link" href="/talk-to-astrologer"><img loading="lazy" height={500} width={356} alt="Add" /></a>
+                </div>
+                {/**/}
               </div>
             </div>
           </div>
         </div>
-        <section _ngcontent-sc170 className="text-center">
-          <div _ngcontent-sc170 className="bread">
-            <div _ngcontent-sc170 className="container">
-              {/**/}
+        <div _ngcontent-sc170 className="free_aries_horoscope_section">
+          <div _ngcontent-sc170 className="container">
+            <h3 _ngcontent-sc170 className="heading_want_know_aries_virgo_match"> Want to know more about
+              Aries and Aries Compatibility? </h3>
+            {/**/}
+            {/**/}
+            <div _ngcontent-sc170 className="btns_contact_astrologer"><a _ngcontent-sc170 href="/talk-to-astrologer"><button _ngcontent-sc170 type="button" className="bnt_astrologer_contact"><i _ngcontent-sc170 className="fa fa-phone" /><span _ngcontent-sc170>Talk to Astrologer</span></button></a><a _ngcontent-sc170 href="/chat-with-astrologer"><button _ngcontent-sc170 type="button" className="bnt_astrologer_contact"><i _ngcontent-sc170 className="fa fa-comment-o" /><span _ngcontent-sc170>Chat with
+              Astrologer</span></button></a>
             </div>
           </div>
-          <div _ngcontent-sc170 className="four_different_percent_compatibility">
-            <div _ngcontent-sc170 className="container">
-              <div _ngcontent-sc170 className="row">
-                <div _ngcontent-sc170 className="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
-                  {/**/}
-                  <div _ngcontent-sc170>
-                    <div _ngcontent-sc170 className="compatibility_percent_section">
-                      <h2 _ngcontent-sc170>LOVE COMPATIBILITY</h2>
-                      <div _ngcontent-sc170 className="position_relative_progree_bar bar" data-after-content={74}>
-                        <div _ngcontent-sc170 className="progress background_progress_bar">
-                          <div _ngcontent-sc170 role="progressbar" aria-valuenow={70} aria-valuemin={0} aria-valuemax={100} className="progress-bar" style={{width: '74%'}}>
-                            <span _ngcontent-sc170 className="sr-only">70% Complete</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div _ngcontent-sc170 className="text_align">An Aries person entertains a
-                        free-willed personality. When two Aries are in a relationship, they tend
-                        to create for themselves a space in which they can breathe easy; in the
-                        absence of doubts to choke them. An Aries, as a lover, is very loyal and
-                        wants the other person to trust that loyal-ness of them. In an
-                        Aries-Aries love match, both individuals are ruled by the planet Mars.
-                        This sameness allows them to easily understand each other and their
-                        wanting for the independent kind of love. Hence, in a nutshell, an Aries
-                        and Aries couple is better at forging a long-term balanced kind of love.
-                      </div>
-                    </div>
-                    <div _ngcontent-sc170 className="compatibility_percent_section">
-                      <h2 _ngcontent-sc170>SEXUAL COMPATIBILITY</h2>
-                      <div _ngcontent-sc170 className="position_relative_progree_bar sexual_progress_bar bar" data-after-content={90}>
-                        <div _ngcontent-sc170 className="progress background_progress_bar">
-                          <div _ngcontent-sc170 role="progressbar" aria-valuenow={70} aria-valuemin={0} aria-valuemax={100} className="progress-bar" style={{width: '90%'}}>
-                            <span _ngcontent-sc170 className="sr-only">70% Complete</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div _ngcontent-sc170 className="text_align">We wrote an article where we
-                        ranked the most horny zodiac signs of all in astrology. And if you read
-                        that for yourself, you would know that Aries occupied the second spot
-                        only after Scorpio. Being the first zodiac sign in astrology, Aries
-                        usually seek to be number one across all domains and sex is no
-                        exception. Well, these people can’t win at everything of course, but sex
-                        is surely a game they know how to play, and win invariably. So an Aries
-                        and Aries sharing the same bed? May God bless and save the bed.
-                      </div>
-                    </div>
-                    <div _ngcontent-sc170 className="compatibility_percent_section">
-                      <h2 _ngcontent-sc170>FRIENDSHIP COMPATIBILITY</h2>
-                      <div _ngcontent-sc170 className="position_relative_progree_bar friendship_progress_bar bar" data-after-content={82}>
-                        <div _ngcontent-sc170 className="progress background_progress_bar">
-                          <div _ngcontent-sc170 role="progressbar" aria-valuenow={70} aria-valuemin={0} aria-valuemax={100} className="progress-bar" style={{width: '82%'}}>
-                            <span _ngcontent-sc170 className="sr-only">70% Complete</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div _ngcontent-sc170 className="text_align">If not a lover, it’s highly
-                        possible that you might find a friend in Aries. So what is Aries and
-                        Aries friendship compatibility like? Well, if we have to define it in a
-                        word, it would be - competitive. The Aries, as we have mentioned, is
-                        very ambitious and headstrong about their goals. These people usually
-                        can't see anyone else taking the front seat in their presence. Thus
-                        competitiveness, even in a relationship, is inevitable. However, when
-                        the Aries is not busy competing, you would find them indulging in mutual
-                        interests. You can trust the Aries and Aries couple to stand by each
-                        other when no one else would.
-                      </div>
-                    </div>
-                    <div _ngcontent-sc170 className="compatibility_percent_section">
-                      <h2 _ngcontent-sc170>COMMUNICATION COMPATIBILITY</h2>
-                      <div _ngcontent-sc170 className="position_relative_progree_bar communication_progress_bar bar" data-after-content={45}>
-                        <div _ngcontent-sc170 className="progress background_progress_bar">
-                          <div _ngcontent-sc170 role="progressbar" aria-valuenow={70} aria-valuemin={0} aria-valuemax={100} className="progress-bar" style={{width: '45%'}}>
-                            <span _ngcontent-sc170 className="sr-only">70% Complete</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div _ngcontent-sc170 className="text_align">We, surely, have introduced you
-                        to the competitive nature of the Aries. Well, that is exactly what stops
-                        the Aries from backing down in a conversation. Aries and Aries, when
-                        conversing, only listen to reply and won't usually back down until they
-                        have proved their point. They usually want their point of view to win
-                        acceptance among others, which surely is not happening when the other
-                        person in the chatter is also an Aries. So to make things less
-                        argumentative between the Aries and Aries couple, it is better that you
-                        two practice the art of analysing what others tell you from multiple
-                        perspectives before speaking anything new.
-                      </div>
-                    </div>
-                    <div _ngcontent-sc170 className="compatibility_percent_section">
-                      <h2 _ngcontent-sc170>RELATIONSHIP TIPS</h2>
-                      <div _ngcontent-sc170 className="text_align">Two Aries individuals together
-                        can create a world filled with lots of love and sensuality. However,
-                        this relationship, at times, is also prone to selfishness from either
-                        side. If you see such signs plundering the Aries and Aries
-                        compatibility, then it’s in the best interest to be mature about the
-                        situation and talk things out. Because lurking around doubts and
-                        discomfort that the fire energy of the two signs brings will only
-                        destroy what you share before you even know.
-                      </div>
-                    </div>
-                  </div>
-                  {/**/}
-                </div>
-                <div _ngcontent-sc170 className="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
-                  <div _ngcontent-sc170 className="col-12">
-                    <div _ngcontent-sc170 className="filter_compatiable">
-                      <h2 _ngcontent-sc170>are you compatible ?</h2>
-                      <p _ngcontent-sc170>Choose your and your partner's zodiac sign to check
-                        compatibility</p>
-                      <div _ngcontent-sc170 className="two_filter_compatiable">
-                        <div _ngcontent-sc170 className="your_sign_filter">
-                          <h6 _ngcontent-sc170>your sign</h6>
-                          <select _ngcontent-sc170 name="zodiacSignX" onChange={selfSignHandler} selectedindex={-1} value={selfSign}  className="ng-untouched ng-pristine ng-valid">
-                            {zodiac.length?zodiac.map((option,index )=> <option key={index} value={option.c_id}>{option.zodiacSign}</option>):''}
-                          
-                          
-                          </select>
-                        </div>
-                        <div _ngcontent-sc170 className="your_sign_filter">
-                          <h6 _ngcontent-sc170>partner's sign</h6>
-                          <select _ngcontent-sc170 name="zodiacSignY" onChange={partnerSignHandler} selectedindex={-1} value={partnerSign}  className="ng-untouched ng-pristine ng-valid">
-                          {zodiac.length?zodiac.map((option,index )=> <option key={index} value={option.c_id}>{option.zodiacSign}</option>):''}
-                          </select>
-                        </div>
-                      </div>
-                      <button _ngcontent-sc170 className="submit_btn_compatible disabled_btn">Submit
-                      </button>
-                    </div>
-                  </div>
-                  {/**/}
-                  {/**/}
-                  {/**/}
-                  <div _ngcontent-sc170 className="col-12"><a _ngcontent-sc170 className="adjust-link" href="/talk-to-astrologer"><img _ngcontent-sc170 loading="lazy" height={500} width={356} alt="Add" /></a>
-                  </div>
-                  {/**/}
-                </div>
-              </div>
+        </div>
+        <div _ngcontent-sc170 className="check_compatibility_with_other_signs">
+          <div _ngcontent-sc170 className="container">
+            <h2 _ngcontent-sc170>ARIES COMPATIBILITY WITH OTHER SIGNS</h2>
+            <h4 _ngcontent-sc170>Check your relationship compatibility</h4>
+            <div _ngcontent-sc170 className="row">
+
+              <CompatiblePair allZodiac={zodiac} img={imgUrl} yourSign={zodiacData.selfId} childClick={childHandler} />
+
+
+
             </div>
+
           </div>
-          <div _ngcontent-sc170 className="free_aries_horoscope_section">
-            <div _ngcontent-sc170 className="container">
-              <h3 _ngcontent-sc170 className="heading_want_know_aries_virgo_match"> Want to know more about
-                Aries and Aries Compatibility? </h3>
-              {/**/}
-              {/**/}
-              <div _ngcontent-sc170 className="btns_contact_astrologer"><a _ngcontent-sc170 href="/talk-to-astrologer"><button _ngcontent-sc170 type="button" className="bnt_astrologer_contact"><i _ngcontent-sc170 className="fa fa-phone" /><span _ngcontent-sc170>Talk to Astrologer</span></button></a><a _ngcontent-sc170 href="/chat-with-astrologer"><button _ngcontent-sc170 type="button" className="bnt_astrologer_contact"><i _ngcontent-sc170 className="fa fa-comment-o" /><span _ngcontent-sc170>Chat with
-                      Astrologer</span></button></a>
-              </div>
-            </div>
-          </div>
-          <div _ngcontent-sc170 className="check_compatibility_with_other_signs">
-            <div _ngcontent-sc170 className="container">
-              <h2 _ngcontent-sc170>ARIES COMPATIBILITY WITH OTHER SIGNS</h2>
-              <h4 _ngcontent-sc170>Check your relationship compatibility</h4>
-              <div _ngcontent-sc170 className="row">
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/aries"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/aries">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Aries
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/taurus"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/taurus">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Taurus
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/gemini"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/gemini">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Gemini
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/cancer"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/cancer">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Cancer
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/leo"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/leo">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Leo
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/virgo"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/virgo">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Virgo
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/libra"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/libra">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Libra
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/scorpio"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}<img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                      {/**/}
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/scorpio">Aries
-                    &amp; <br _ngcontent-sc170 />
-                    {/**/} Scorpio
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/sagittarius"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                     <img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                    
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/sagittarius">Aries &amp; <br _ngcontent-sc170 />
-                     Sagittarius
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/capricorn"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" /><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                    
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/capricorn">Aries &amp; <br _ngcontent-sc170 />
-                     Capricorn
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/aquarius"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" /><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                    
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/aquarius">Aries &amp; <br _ngcontent-sc170 />
-                    Aquarius
-                  </a>
-                </div>
-                <div _ngcontent-sc170 className="col-md-4 col-lg-3 col-6">
-                  <div _ngcontent-sc170 className="aries_compatibility_with_other_image_section"><a _ngcontent-sc170 className="mouse_pointer" href="/compatibility/aries/pisces"><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" /><img _ngcontent-sc170 alt="zodiac" height={50} width={50} loading="lazy" />
-                   
-                      
-                    </a></div><a _ngcontent-sc170 className="compatibility_link aries_virgo" href="/compatibility/aries/pisces">Aries
-                    &amp; <br _ngcontent-sc170 />
-                 Pisces
-                  </a>
-                </div>
-              
-              </div>
-           
-            </div>
-          </div>
+        </div>
         {/*   <app-main-blog _ngcontent-sc170 _nghost-sc162>
             <app-desktop-blog _ngcontent-sc162 _nghost-sc160>
               <section _ngcontent-sc160 className="latest_from_blog_chinese">
@@ -499,7 +396,7 @@ export default function Compatibility() {
             </app-desktop-blog>
            
           </app-main-blog> */}
-     {/*      <app-main-free-service _ngcontent-sc170 _nghost-sc165>
+        {/*      <app-main-free-service _ngcontent-sc170 _nghost-sc165>
             <app-desktop-free-service _ngcontent-sc165 _nghost-sc163>
               <section _ngcontent-sc163 className="free_services">
                 <div _ngcontent-sc163 className="container">
@@ -596,7 +493,7 @@ export default function Compatibility() {
             </app-desktop-free-service>
           
           </app-main-free-service> */}
-         {/*  <app-main-our-astrologer _ngcontent-sc170 _nghost-sc168>
+        {/*  <app-main-our-astrologer _ngcontent-sc170 _nghost-sc168>
             <app-desktop-our-astrologer _ngcontent-sc168 _nghost-sc166>
               <section _ngcontent-sc166 className="problem-area">
                 <div _ngcontent-sc166 className="container">
@@ -708,9 +605,9 @@ export default function Compatibility() {
             </app-desktop-our-astrologer>
            
           </app-main-our-astrologer> */}
-        </section>
-        
-      </app-compatibility-detail>
-    
-    </>)
+      </section>
+
+    </app-compatibility-detail>
+
+  </>)
 }

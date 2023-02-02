@@ -28,7 +28,7 @@ function Routes() {
                 { path: "chat-with-astrologer", element: <ChatWithAstrologer /> },
                 { path: "talk-with-astrologer", element: <TalkWithAstrologer /> },
                 { path: "astro-profile/:id", element: <AstroProfile /> },
-                { path: "compatibility/:id", element: <Compatibility /> },
+                { path: "compatibility/:fromId/:toId", element: <Compatibility /> },
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
                 { path: "success", element: <PaymentSuccess /> },
