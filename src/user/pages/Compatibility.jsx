@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createSearchParams, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { apiEndPoint, imgUrl } from '../../enviroment';
 import { CompatiblePair } from './CompatibilityChild';
 import axios from 'axios';
@@ -98,7 +98,6 @@ export default function Compatibility() {
   const navigate = useNavigate();
   const submitPairHandler = (e) => {
     e.preventDefault();
-    console.log(zodiac[selfSign - 1].signSlug)
     changeZodiac(`${apiEndPoint}zodiacpair/id/${selfSign}/partner/${partnerSign}`)
     navigate(`/compatibility/${zodiac[selfSign - 1].signSlug}/${zodiac[partnerSign - 1].signSlug}`);
   }

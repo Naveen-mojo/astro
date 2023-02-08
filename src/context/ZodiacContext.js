@@ -1,23 +1,21 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { useEffect, useState, createContext } from "react";
 import axios from 'axios'
 import { apiEndPoint } from '../enviroment'
+const ZodiacContext = createContext();
 
+export { ZodiacContext }
+const ZodiacProvider = ({ children }) => {
 
-const AstroContext = createContext()
-
-export { AstroContext }
-
-const AstroProvider = ({ children }) => {
-
-    const [astro, setastro] = useState([])
+    const [zodiac, setZodiac] = useState([])
     const [loading, setloading] = useState(false)
 
     useEffect(() => {
         const getAstro = async () => {
             setloading(true)
             try {
-                const res = await axios.get(`${apiEndPoint}astro`);
-                setastro(res.data);
+                const res = await axios.get(`${apiEndPoint}zodiac/all`);
+
+                setZodiac(res.data);
                 setloading(false)
             } catch (err) {
                 console.log(err);
@@ -28,13 +26,13 @@ const AstroProvider = ({ children }) => {
     }, []);
 
     const contextData = {
-        astro: astro,
+        zodiac: zodiac,
         loading: loading
     }
 
     return (
-        <AstroContext.Provider value={contextData}>{children}</AstroContext.Provider>
+        <ZodiacContext.Provider value={contextData}>{children}</ZodiacContext.Provider>
     )
 }
 
-export default AstroProvider;
+export default ZodiacProvider;

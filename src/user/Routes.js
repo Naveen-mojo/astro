@@ -14,6 +14,7 @@ import AddWallet from "./pages/AddWallet";
 import PaymentSuccess from './componet/PaymentSuccess';
 import PaymentCancle from './componet/PaymentCancle';
 import Compatibility from "./pages/Compatibility";
+import TodaysDetail from "./pages/horoscope/TodaysDetail";
 
 function Routes() {
     return useRoutes([
@@ -29,6 +30,9 @@ function Routes() {
                 { path: "talk-with-astrologer", element: <TalkWithAstrologer /> },
                 { path: "astro-profile/:id", element: <AstroProfile /> },
                 { path: "compatibility/:fromId/:toId", element: <Compatibility /> },
+                { path: "horoscope/:zodiacType/:zodiacSign", element: <TodaysDetail /> },
+                // fetch api data
+                // { path: "horoscope/:zodiacTypeId/:zodiacId", element: <TodaysDetail /> },
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
                 { path: "success", element: <PaymentSuccess /> },

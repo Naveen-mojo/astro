@@ -1,0 +1,200 @@
+.header_contant_chinese {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    height: 308px;
+}
+
+.right_side_image_chinese img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.bread {
+    background-color: #eee;
+}
+
+.select_your_sign select {
+    width: 60%;
+    padding: 8px 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #919191;
+    cursor: pointer;
+}
+
+.select_your_sign label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #313131;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.horoscope_items_aries {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.horoscope_items_aries a {
+    text-decoration: unset;
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: #555;
+    padding-left: 10px;
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.horoscope_internal_weekly_section {
+    padding: 30px 0;
+}
+
+.horoscope_internal_weekly_section h2 {
+    text-align: center;
+    color: #313131;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.birthRange {
+    color: #313164;
+    font-style: italic;
+    text-align: left;
+}
+
+.parah_aries_horocope {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.free_aries_horoscope_section_add {
+    background-color: #f0df20;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.heading_want_know_aries_virgo_match {
+    text-align: center;
+    color: #4e4e4e;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.btns_contact_astrologer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.free_aries_horoscope_section {
+    background-color: #f3f2f2;
+    padding-top: 50px;
+}
+
+.aries_compatibility_with_other_signs {
+    background-color: #f0df20;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.free_aries_horoscope_section .cursor {
+    transition: .3s ease-in-out;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.heading_know_your_chinese_horoscope {
+    text-align: center;
+    color: #313131;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.cursor {
+    cursor: pointer;
+    text-decoration: unset;
+    display: block;
+}
+
+.image_weekly_horoscope {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: .3s ease-in-out;
+}
+
+.aries_compatibility_with_other_signs {
+    background-color: #f0df20;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.aries_compatibility_with_other_image_section {
+    margin-top: 40px;
+}
+
+.mouse_pointer {
+    cursor: pointer;
+    display: block;
+}
+
+.mouse_pointer img {
+    transition: .3s ease-in-out;
+}
+
+.aries_compatibility_with_other_image_section img {
+    width: 50%;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.aries_virgo {
+    background-color: #fff;
+    color: #454545;
+    margin-top: 10px;
+    display: inline-flex;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    box-shadow: 1px 1px 4px #919191;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.image_weekly_horoscope {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: .3s ease-in-out;
+}
+
+.heading_title_weekly_horoscope {
+    font-size: 18px;
+    margin: 20px 0 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #454545;
+    text-align: center;
+}
