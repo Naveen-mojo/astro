@@ -6,6 +6,7 @@ import Message from './Message';
 import { io } from "socket.io-client";
 import { useLocation } from "react-router-dom";
 import VideoCall from './videocall/VideoCall'
+import Swal from 'sweetalert2'
 
 
 export default function AstroProfile() {
@@ -122,40 +123,37 @@ export default function AstroProfile() {
     };
 
 
-    // const addConversations = () => {
-    //     var data = JSON.stringify({
-    //         "senderId": astroId,
-    //         "receiverId": user.id
-    //     });
-    //     var config = {
-    //         method: 'post',
-    //         url: `${apiEnviroment.conversationEnviroment}add`,
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         data: data
-    //     };
+    const addConversations = () => {
+        var data = JSON.stringify({
+            "senderId": astroId,
+            "receiverId": user.id
+        });
+        var config = {
+            method: 'post',
+            url: `${apiEndPoint}conversation/add`,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: data
+        };
 
-    //     axios(config)
-    //         .then(function (response) {
-    //             console.log(response.data);
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //         });
-    // };
+        axios(config)
+            .then(function (response) {
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
 
-    // useEffect(() => {
-    //     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-    // }, [messages]);
+    useEffect(() => {
+        scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
 
     const openChat = () => {
         document.getElementById('open-chat').style.display = 'flex';
         document.getElementById('close-chat').style.display = 'flex';
         setStartChat(new Date())
-        setTimeout(() => {
-            chatDeduction()
-        }, 2000)
     }
 
     const closeChat = () => {
@@ -165,8 +163,12 @@ export default function AstroProfile() {
         chatDeduction()
     }
 
-    const getChat = () => {
+    const chatTimeDifferceMs = (endChat - startChat) / 1000
+    const chatDiffrence = chatTimeDifferceMs / 60
+    const chatRs = Math.ceil(chatDiffrence) * profiledata.chatRate;
+    console.log(chatRs);
 
+    const getChat = () => {
         conversations.map((c, index) => (
             c.members.includes(astroId) ?
                 setCurrentChat(conversations[index]) : ''
@@ -198,6 +200,46 @@ export default function AstroProfile() {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    const confirmButton = () => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn-success p-2 confirm-btn',
+                cancelButton: 'btn-danger p-2 confirm-btn'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "you want to talk this astrologer",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, Confirm',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true,
+            allowOutsideClick: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire(
+                    'success',
+                    addConversations(),
+                    setTimeout(() => {
+                        openChat()
+                    }, 3000)
+                )
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    'Your imaginary file is safe :)',
+                    'error'
+                )
+            }
+        })
     }
 
     return (
@@ -279,7 +321,7 @@ export default function AstroProfile() {
                                                                     {
                                                                         profiledata.status === 0 ?
 
-                                                                            <div className="chatbox-open" onClick={openChat}>
+                                                                            <div className="chatbox-open" onClick={confirmButton}>
                                                                                 {
                                                                                     <span onClick={getChat}>Start Chat</span>
                                                                                 }

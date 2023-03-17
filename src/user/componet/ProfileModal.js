@@ -10,7 +10,7 @@ export default function ProfileModal() {
   useEffect(() => {
     var config = {
       method: 'get',
-      url: `${apiEndPoint}auth/user/?userId=${user.id}`,
+      url: `${apiEndPoint}auth/user/?userId=${user?.id}`,
       headers: {
         'Content-Type': 'application/json'
       }
