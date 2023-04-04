@@ -11,8 +11,10 @@ import TalkWithAstrologer from "./pages/TalkWithAstrologer";
 import AstroProfile from "./pages/AstroProfile";
 import Payment from "./pages/Payment";
 import AddWallet from "./pages/AddWallet";
-import PaymentSuccess from './componet/PaymentSuccess';
-import PaymentCancle from './componet/PaymentCancle';
+import StripeContainer from './pages/stripe/StripeContainer';
+import PaymentHistroy from "./pages/PaymentHistroy";
+import UserHistroy from "./pages/UserHistroy";
+import ProfileAndAccount from "./pages/ProfileAndAccount";
 
 function Routes() {
     return useRoutes([
@@ -29,8 +31,10 @@ function Routes() {
                 { path: "astro-profile/:id", element: <AstroProfile /> },
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
-                { path: "success", element: <PaymentSuccess /> },
-                { path: "cancel", element: <PaymentCancle /> },
+                { path: "pay-with-card/:id", element: <StripeContainer /> },
+                { path: "payment-history", element: <PaymentHistroy /> },
+                { path: "user-history", element: <UserHistroy /> },
+                { path: "profile-and-account", element: <ProfileAndAccount /> },
                 { path: "*", element: <PageNotFound /> },
             ],
         },

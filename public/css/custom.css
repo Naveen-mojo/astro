@@ -17658,3 +17658,8 @@ img[alt][_ngcontent-serverApp-c101] {
     width: 65px;
     background-position: 85px 448px;
 }
+.review_border_radius {
+  border: 1px solid #0003;
+  border-radius: 10px;
+  padding: 10px 10px 0;
+}

@@ -47,6 +47,8 @@ function Header() {
                                                                 <div className="dropdown-item">{user.number}</div>
                                                                 <button className="dropdown-item" type="button" data-toggle="modal" data-target="#profileModal">Profile &amp; account</button>
                                                                 <div className="dropdown-divider" />
+                                                                <Link className="dropdown-item" to="/payment-history">Payment Histroy</Link>
+                                                                <div className="dropdown-divider" />
                                                                 <div onClick={logoutUser} className="dropdown-item cursor-pointer">Logout</div>
                                                             </div>
                                                         </div>

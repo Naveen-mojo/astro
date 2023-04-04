@@ -9,6 +9,8 @@ import './user/assest/css/app.scss';
 import { useLocation } from 'react-router-dom';
 import AdminAuthProvider from './astrologer/context/AuthContext'
 import AdminRoutes from './astrologer/Routes'
+import WalletProvider from './context/WalletContext';
+
 
 function App() {
   const location = useLocation();
@@ -29,7 +31,9 @@ function App() {
           <ProfileModal />
           <OTPModel />
           <AstroProvider>
-            <Routes />
+            <WalletProvider>
+              <Routes />
+            </WalletProvider>
           </AstroProvider>
         </AuthProvider>
       </>
