@@ -30,7 +30,7 @@ export default function Login() {
                             <div className="input-group-prepend">
                                 <div className="input-group-text"><i className="fa fa-unlock-alt"></i></div>
                             </div>
-                            <input type="text" className="form-control" name='password' id="inlineFormInputGroupUsername2" placeholder="password" />
+                            <input type="password" className="form-control" name='password' id="inlineFormInputGroupUsername2" placeholder="password" />
                         </div>
                         <div className='d-flex my-4'>
                             <div className='flex-grow-1 text-left text-sm h6'>

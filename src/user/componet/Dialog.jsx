@@ -23,7 +23,7 @@ export default function RechargeDialog(props) {
     };
 
     React.useEffect(() => {
-        return setOpen(props.openDialog)
+        setOpen(props.openDialog)
     }, [props.openDialog])
 
     return (
@@ -35,10 +35,10 @@ export default function RechargeDialog(props) {
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle>{"Recharge Your Wallet"}</DialogTitle>
+                <DialogTitle>{props.title_modal}</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
-                        Please Recharge your wallet! wallet amount is less than astrologer per minutes charge so topup your wallet then talk to astrologer.
+                        {props.description_modal}
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

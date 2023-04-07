@@ -139,6 +139,8 @@ export default function Messenger() {
         updateProfile()
     }, [status])
 
+    console.log("arrivalMessage", arrivalMessage)
+
 
     return (
         <>

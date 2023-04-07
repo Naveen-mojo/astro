@@ -1,16 +1,21 @@
 import React, { useContext } from 'react'
 import { WalletContext } from '../../context/WalletContext'
 import moment from 'moment';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
-export default function UserHistroy() {
+export default function Account() {
     const { wallet } = useContext(WalletContext);
-    console.log(wallet)
-
     return (
-        <>
-            <div className='container my-5'>
-                <div className='row'>
-                    <div className='col-md-12'>
+        <Card sx={{ maxWidth: 1345 }}>
+            <CardActionArea>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        Account Details
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
                         <table className="table table-hover table-responsive">
                             <thead className='text-right'>
                                 <tr>
@@ -43,9 +48,9 @@ export default function UserHistroy() {
                             </tbody>
                         </table>
                         <div className='text-right text-bold h5'>Toal Balance = {wallet.total}</div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    );
 }

@@ -10,7 +10,7 @@ import Swal from "sweetalert2";
 import FeedBackForm from "./FeedBackForm";
 import { WalletContext } from "../../context/WalletContext";
 import Rating from "@mui/material/Rating";
-import RechargeDialog from '../componet/RechargeDialog'
+import RechargeDialog from '../componet/Dialog'
 import moment from "moment";
 
 
@@ -173,9 +173,9 @@ export default function AstroProfile() {
     const closeChat = () => {
         document.getElementById("open-chat").style.display = "none";
         document.getElementById("close-chat").style.display = "none";
-        setEndChat(new Date());
         chatDeduction();
         setOpen(true);
+        setEndChat(new Date());
     };
 
     const chatTimeDifferceMs = (endChat - startChat) / 1000;
@@ -316,9 +316,35 @@ export default function AstroProfile() {
         getComments()
     }, [])
 
+
+    if (openDialog) {
+        setTimeout(() => {
+            setOpenDialog(false)
+        }, 5000);
+    }
+
+    const description_modal = 'Please Recharge your wallet! wallet amount is less than astrologer per minutes charge so topup your wallet then talk to astrologer.'
+    const title_modal = 'Recharge Your Wallet'
+
+    const description_modal_login = 'Please Login to open more option and you can also chat and videocall options are enabled after login.'
+    const title_modal_login = 'Please Login'
+
+    const description_modal_busy = 'Astrologer busy with someone else you can wait or chat with other astrologer.'
+    const title_modal_busy = 'Astrologer Busy'
+
     return (
         <>
-            <RechargeDialog openDialog={openDialog} />
+            {user && (profiledata.status === 0 && profiledata.status !== null ) ?
+                <RechargeDialog openDialog={openDialog} description_modal={description_modal} title_modal={title_modal} />
+                :
+                ''
+            }
+            {
+                user ? '' : <RechargeDialog openDialog={openDialog} description_modal={description_modal_login} title_modal={title_modal_login} />
+            }
+            {
+                user && (profiledata.status === 1 || profiledata.status === null) ? <RechargeDialog openDialog={openDialog} description_modal={description_modal_busy} title_modal={title_modal_busy} /> : ''
+            }
             <section className="astrologer_profile_Section desktop_view_astrologer_profile">
                 <div className="container">
                     <ul id="breadcrumbs-two">
@@ -409,7 +435,7 @@ export default function AstroProfile() {
                                             {user === null ? (
                                                 <div
                                                     onClick={() => {
-                                                        alert("Please Login!");
+                                                        setOpenDialog(true);
                                                     }}
                                                     className="start_btn"
                                                 >
@@ -432,7 +458,7 @@ export default function AstroProfile() {
                                                             ) : (
                                                                 <div
                                                                     onClick={() => {
-                                                                        alert("Astrologer is Busy With Someone");
+                                                                        setOpenDialog(true);
                                                                     }}
                                                                     className="start_btn"
                                                                 >
@@ -492,7 +518,7 @@ export default function AstroProfile() {
                                                 <div
                                                     className="start_btn"
                                                     id="button-call"
-                                                    onClick={() => alert("Please login!")}
+                                                    onClick={() => setOpenDialog(true)}
                                                 >
                                                     {/* <button="" className="strt" id="button-call">Start Call</button=> */}
                                                     <div className="strt">Start Call</div>
@@ -524,7 +550,7 @@ export default function AstroProfile() {
                                                             ) : (
                                                                 <div
                                                                     onClick={() => {
-                                                                        alert("Astrologer is Busy With Someone");
+                                                                        setOpenDialog(true);
                                                                     }}
                                                                     className="start_btn"
                                                                 >

@@ -2,6 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { apiEndPoint } from "../../enviroment";
 import axios from "axios";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+
 
 export default function ProfileModal() {
   const { user } = useContext(AuthContext);
@@ -83,32 +88,13 @@ export default function ProfileModal() {
 
   return (
     <>
-      {/* Modal */}
-      <div
-        className="modal fade"
-        id="profileModal"
-        tabIndex={-1}
-        role="dialog"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="modal-header bg-warning">
-              <h5 className="modal-title" id="exampleModalLongTitle">
-                Account Information
-              </h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-                id="close-modal"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div className="modal-body">
+      <Card sx={{ maxWidth: 1345 }}>
+        <CardActionArea>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              User Profile
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
               <form onSubmit={profileModel} id="editProfile" className="form-horizontal">
                 <div className="row">
                   <div className="col-12 col-md-12">
@@ -249,10 +235,11 @@ export default function ProfileModal() {
                   </div>
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+
     </>
   );
 }

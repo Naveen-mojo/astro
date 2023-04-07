@@ -1,10 +1,15 @@
 import React, { useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
+// import Notification from '../component/Notification'
 import logo from '../assest/images/logo.png'
 import { AuthContext } from '../context/AuthContext';
 import VideoCall from '../pages/videocall/VideoCall';
-import {apiEndPoint} from '../../enviroment';
+import { apiEndPoint } from '../../enviroment';
 var axios = require('axios');
+
 
 function Layout() {
 
@@ -49,9 +54,14 @@ function Layout() {
                                     {/* <div className="navLinks"><Link className="nav-link" to="free-kundli">Free
                                         Kundli</Link></div>
                                     <div className="navLinks"><Link className="nav-link" to="match-making">Match
-                                        Making</Link></div>
-                                    <div className="navLinks"><Link className="nav-link" to="shubh-muhurat">Shubh
-                                        Muhurat</Link></div> */}
+                                        Making</Link></div> */}
+                                    {/* <Notification /> */}
+
+                                    <Stack spacing={4} direction="row" sx={{ color: 'action.active', margin: "8px 25px 0px 10px" }}>
+                                        <Badge color="secondary" badgeContent={10}>
+                                            <MailIcon />
+                                        </Badge>
+                                    </Stack>
                                     {
                                         user ? <h4 className="contact_btn btnn btn">{user.username}</h4> : <div className="contact_btn btnn btn">
                                             <Link to='login' className="">

@@ -45,9 +45,7 @@ function Header() {
                                                         <div className="dropdown-menu dropdown-menu-right py-0 nav-user-dropdown" aria-labelledby="navbarDropdownUser">
                                                             <div className="bg-white rounded-soft py-2">
                                                                 <div className="dropdown-item">{user.number}</div>
-                                                                <button className="dropdown-item" type="button" data-toggle="modal" data-target="#profileModal">Profile &amp; account</button>
-                                                                <div className="dropdown-divider" />
-                                                                <Link className="dropdown-item" to="/payment-history">Payment Histroy</Link>
+                                                                <Link to="/profile-and-account" className="dropdown-item" type="button">Profile &amp; account</Link>
                                                                 <div className="dropdown-divider" />
                                                                 <div onClick={logoutUser} className="dropdown-item cursor-pointer">Logout</div>
                                                             </div>

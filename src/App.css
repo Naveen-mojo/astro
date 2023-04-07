@@ -39,3 +39,6 @@ label {
   margin: 65px auto;
   width: 800px;
 }
+.css-1eqdgzv-MuiPaper-root-MuiSnackbarContent-root{
+  background-color: green !important;
+}

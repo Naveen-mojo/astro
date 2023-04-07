@@ -12,8 +12,6 @@ import AstroProfile from "./pages/AstroProfile";
 import Payment from "./pages/Payment";
 import AddWallet from "./pages/AddWallet";
 import StripeContainer from './pages/stripe/StripeContainer';
-import PaymentHistroy from "./pages/PaymentHistroy";
-import UserHistroy from "./pages/UserHistroy";
 import ProfileAndAccount from "./pages/ProfileAndAccount";
 
 function Routes() {
@@ -32,8 +30,6 @@ function Routes() {
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
                 { path: "pay-with-card/:id", element: <StripeContainer /> },
-                { path: "payment-history", element: <PaymentHistroy /> },
-                { path: "user-history", element: <UserHistroy /> },
                 { path: "profile-and-account", element: <ProfileAndAccount /> },
                 { path: "*", element: <PageNotFound /> },
             ],

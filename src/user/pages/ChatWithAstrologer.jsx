@@ -8,6 +8,7 @@ import { WalletContext } from "../../context/WalletContext";
 import Button from '@mui/material/Button';
 import axios from "axios";
 import { apiEndPoint } from "../../enviroment";
+import RechargeDialog from '../componet/Dialog'
 
 function ChatWithAstrologer() {
     const { user } = useContext(AuthContext);
@@ -16,7 +17,7 @@ function ChatWithAstrologer() {
     const [search, setSearch] = useState("")
     const [astrologer, setAstrologer] = useState([])
     const [error, setError] = useState("")
-
+    const [openDialog, setOpenDialog] = React.useState(false);
 
     var settings = {
         dots: true,
@@ -67,8 +68,19 @@ function ChatWithAstrologer() {
         setAstrologer(astro)
     }, [astro])
 
+    if (openDialog) {
+        setTimeout(() => {
+            setOpenDialog(false)
+        }, 5000);
+    }
+
+    const description_modal = 'Please Login to open more option and you can also chat and videocall options are enabled after login.'
+    const title_modal = 'Please Login'
+
     return (
         <>
+            <RechargeDialog openDialog={openDialog} description_modal={description_modal} title_modal={title_modal} />
+
             <section className="chat_with_astrologers">
                 <div className="container">
                     <form className="mbl_view_padding ng-untouched ng-pristine ng-valid">
@@ -106,7 +118,7 @@ function ChatWithAstrologer() {
                             <div className="col-md-6 pd0">
                                 <div className="recharge_btn">
                                     {
-                                        user ? <Link to='/add-money-wallet'>Recharge</Link> : <Button variant="outlined" color="success" onClick={() => { alert("Please Login") }} >Recharge</Button>
+                                        user ? <Link to='/add-money-wallet'>Recharge</Link> : <Button variant="outlined" color="success" onClick={() => { setOpenDialog(true) }} >Recharge</Button>
                                     }
                                     <button className="filter_short_by_desktop_view">
                                         <i className="fa fa-filter" /> Filter
@@ -285,7 +297,7 @@ function ChatWithAstrologer() {
                                                         </div>
                                                     </div>
                                                 </Link> :
-                                                    <div className="chat_button" onClick={() => { alert('Please Login!') }}>
+                                                    <div className="chat_button" onClick={() => { setOpenDialog(true) }}>
                                                         <div className="btn_cht busy-status cursor-pointer">
                                                             Chat
                                                         </div>

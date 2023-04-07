@@ -3,7 +3,6 @@ import AuthProvider from './context/AuthContext';
 import LoginPopup from './user/auth/LoginPopup';
 import Routes from './user/Routes';
 import OTPModel from './user/auth/OTPModel';
-import ProfileModal from './user/componet/ProfileModal';
 import AstroProvider from './context/AstroContext';
 import './user/assest/css/app.scss';
 import { useLocation } from 'react-router-dom';
@@ -28,7 +27,6 @@ function App() {
       <>
         <AuthProvider>
           <LoginPopup />
-          <ProfileModal />
           <OTPModel />
           <AstroProvider>
             <WalletProvider>
