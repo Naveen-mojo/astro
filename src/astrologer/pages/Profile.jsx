@@ -142,7 +142,7 @@ export default function Profile() {
 
         var formdata = new FormData();
 
-        formdata.append("profileImage", fileInfo);
+        formdata.append("profileImage", fileInfo ? fileInfo : profileImg);
         formdata.append("astrologerName", state.name);
         formdata.append("email", state.email);
         formdata.append("shortName", '');
@@ -164,10 +164,11 @@ export default function Profile() {
         formdata.append("contactExt", code);
         formdata.append("contactNumber", number);
         formdata.append("galleryImage", "");
-        formdata.append("isActive", "1");
+        formdata.append("isActive", profileData.isActive);
         formdata.append("interviewTime", state.interview);
         formdata.append("incomeSource", state.income);
         formdata.append("isLoggedin", "1");
+        formdata.append("status", "0"); 
         formdata.append("password", state.password ? state.password : "");
 
         const config = {
@@ -575,12 +576,15 @@ export default function Profile() {
                                             <input
                                                 type="password"
                                                 id="password"
+                                                required
                                                 name="password"
                                                 defaultValue={password}
                                                 placeholder="Change Password"
                                                 onChange={updateValue}
                                             />
+                                            <hint className="text-sm">Re-Enter Your Password to update Data.</hint>
                                         </div>
+                                        
                                         <div className="form-group">
                                             <label htmlFor="about">About</label>
                                             <textarea

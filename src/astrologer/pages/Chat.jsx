@@ -6,8 +6,7 @@ import { io } from "socket.io-client";
 import { apiEndPoint } from "../../enviroment";
 import Conversation from "./Conversation";
 
-
-export default function Messenger() {
+export default function Messenger(props) {
     const [conversations, setConversations] = useState([]);
     const [currentChat, setCurrentChat] = useState(null);
     const [messages, setMessages] = useState([]);
@@ -139,8 +138,9 @@ export default function Messenger() {
         updateProfile()
     }, [status])
 
-    console.log("arrivalMessage", arrivalMessage)
-
+    useEffect(() => {
+        props.onNotification(arrivalMessage, status)
+    }, [arrivalMessage, status])
 
     return (
         <>

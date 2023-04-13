@@ -2,6 +2,10 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import logo from "../assest/images/logo.png";
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import Logout from '@mui/icons-material/Logout';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 function Header() {
     const { user, logoutUser } = useContext(AuthContext);
@@ -44,10 +48,22 @@ function Header() {
                                                         </a>
                                                         <div className="dropdown-menu dropdown-menu-right py-0 nav-user-dropdown" aria-labelledby="navbarDropdownUser">
                                                             <div className="bg-white rounded-soft py-2">
-                                                                <div className="dropdown-item">{user.number}</div>
-                                                                <Link to="/profile-and-account" className="dropdown-item" type="button">Profile &amp; account</Link>
+                                                                <div className="dropdown-item">
+                                                                    <ListItemIcon>
+                                                                        <ArrowCircleRightOutlinedIcon fontSize="small" />
+                                                                    </ListItemIcon>
+                                                                    {user.number}</div>
+                                                                <Link to="/profile-and-account" className="dropdown-item" type="button">
+                                                                    <ListItemIcon>
+                                                                        <AccountCircleOutlinedIcon fontSize="small" />
+                                                                    </ListItemIcon>
+                                                                    Profile &amp; account</Link>
                                                                 <div className="dropdown-divider" />
-                                                                <div onClick={logoutUser} className="dropdown-item cursor-pointer">Logout</div>
+                                                                <div onClick={logoutUser} className="dropdown-item cursor-pointer">
+                                                                    <ListItemIcon>
+                                                                        <Logout fontSize="small" />
+                                                                    </ListItemIcon>
+                                                                    Logout</div>
                                                             </div>
                                                         </div>
                                                     </li>

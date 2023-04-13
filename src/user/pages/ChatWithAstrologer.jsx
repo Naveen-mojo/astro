@@ -48,7 +48,7 @@ function ChatWithAstrologer() {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: `${apiEndPoint}astro/search/${search}`,
+            url: `${apiEndPoint}astro/search?astrologerName=${search}`,
         };
 
         axios.request(config)
@@ -157,7 +157,7 @@ function ChatWithAstrologer() {
 
                     <div className="row astrolgers_list">
                         {astrologer?.map((curValue) => {
-                            const { astrologerName, _id, skill, language, exp, profileImage } = curValue;
+                            const { astrologerName, _id, skill, language, exp, profileImage, chatRate } = curValue;
                             return (
                                 <div
                                     className="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-3"
@@ -270,7 +270,7 @@ function ChatWithAstrologer() {
                                                 <div className="astrologers_prices_chat">
                                                     <span className="bold_class">
                                                         <span>₹ </span>
-                                                        30
+                                                        {chatRate}
                                                     </span>
                                                     &nbsp;
                                                 </div>

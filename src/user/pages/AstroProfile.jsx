@@ -12,8 +12,7 @@ import { WalletContext } from "../../context/WalletContext";
 import Rating from "@mui/material/Rating";
 import RechargeDialog from '../componet/Dialog'
 import moment from "moment";
-
-
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function AstroProfile() {
     const [conversations, setConversations] = useState([]);
@@ -30,6 +29,9 @@ export default function AstroProfile() {
     const [comments, setComments] = React.useState([]);
     const [rating, setRating] = React.useState([]);
     const [lodingComments, setLodingComments] = React.useState(false);
+    const [page, setpage] = useState(1);
+    const [items, setItems] = useState([]);
+    const [hasMore, sethasMore] = useState(true);
 
     // Feedback usestate
     const [open, setOpen] = React.useState(false);
@@ -50,7 +52,6 @@ export default function AstroProfile() {
 
         axios(config)
             .then(function (response) {
-                console.log(response.data);
                 setprofiledata(response.data);
             })
             .catch(function (error) {
@@ -153,7 +154,7 @@ export default function AstroProfile() {
 
         axios(config)
             .then(function (response) {
-                console.log(response.data);
+                // console.log(response.data);
             })
             .catch(function (error) {
                 console.log(error);
@@ -164,10 +165,26 @@ export default function AstroProfile() {
     //     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
     // }, [messages]);
 
+
+    function ChatTimeCalculate() {
+        const available_chat_minutes = Math.floor(wallet.total / profiledata.chatRate);
+        const minutes = available_chat_minutes * 57 * 1000
+        const warning_minutes = available_chat_minutes * 27 * 1000
+
+        setTimeout(() => {
+            document.getElementById("chat-blink").style.display = "flex !important"
+        }, warning_minutes)
+
+        setTimeout(() => {
+            document.getElementById("close-chat").click()
+        }, minutes)
+    }
+
     const openChat = () => {
         document.getElementById("open-chat").style.display = "flex";
         document.getElementById("close-chat").style.display = "flex";
         setStartChat(new Date());
+        ChatTimeCalculate()
     };
 
     const closeChat = () => {
@@ -206,7 +223,7 @@ export default function AstroProfile() {
         axios
             .request(config)
             .then((response) => {
-                console.log("data saved Successfully", response.data);
+                // console.log("data saved Successfully", response.data);
             })
             .catch((error) => {
                 console.log(error);
@@ -243,7 +260,7 @@ export default function AstroProfile() {
 
         axios(config)
             .then(function (response) {
-                console.log(response.data);
+                // console.log(response.data);
             })
             .catch(function (error) {
                 console.log(error);
@@ -314,6 +331,7 @@ export default function AstroProfile() {
 
     useEffect(() => {
         getComments()
+        // eslint-disable-next-line
     }, [])
 
 
@@ -322,6 +340,37 @@ export default function AstroProfile() {
             setOpenDialog(false)
         }, 5000);
     }
+
+
+    useEffect(() => {
+        const getComments = async () => {
+            const res = await fetch(
+                `${apiEndPoint}feedbackform?page=1&size=3`
+            );
+            const data = await res.json();
+            setItems(data.data);
+        };
+
+        getComments();
+    }, []);
+
+    const fetchComments = async () => {
+        const res = await fetch(
+            `${apiEndPoint}feedbackform?page=${page}&size=3`
+        );
+        const data = await res.json();
+        return data.data;
+    };
+
+    const fetchData = async () => {
+        const commentsFormServer = await fetchComments();
+
+        setItems([...items, ...commentsFormServer]);
+        if (commentsFormServer.length === 0 || commentsFormServer.length < 3) {
+            sethasMore(false);
+        }
+        setpage(page + 1);
+    };
 
     const description_modal = 'Please Recharge your wallet! wallet amount is less than astrologer per minutes charge so topup your wallet then talk to astrologer.'
     const title_modal = 'Recharge Your Wallet'
@@ -334,7 +383,7 @@ export default function AstroProfile() {
 
     return (
         <>
-            {user && (profiledata.status === 0 && profiledata.status !== null ) ?
+            {user && (profiledata.status === 0 && profiledata.status !== null) ?
                 <RechargeDialog openDialog={openDialog} description_modal={description_modal} title_modal={title_modal} />
                 :
                 ''
@@ -657,7 +706,7 @@ export default function AstroProfile() {
                                                 <div className="ratting_star">
                                                     <Rating
                                                         name="half-rating"
-                                                        defaultValue={rating.star_rating}
+                                                        value={parseInt(rating.star_rating)}
                                                         precision={0.5}
                                                         readOnly
                                                     />
@@ -774,30 +823,45 @@ export default function AstroProfile() {
                                 </div>
                                 <div className="col-md-6 hide_mobile_view">
                                     <div className="reply_review_customer review_border_radius">
-                                        <h2 className="ratting_heading">User Reviews</h2>
-
-                                        {comments?.map((value, index) => {
-                                            const { rating, description, createdAt } = value
-                                            return (
-                                                <div key={index} className="box_reply_review">
-                                                    <div className="picture_profile bg_dark_green_name"> N</div>
-                                                    <div className="rate_reply">
-                                                        <Rating
-                                                            name="half-rating"
-                                                            defaultValue={rating}
-                                                            precision={0.5}
-                                                            readOnly
-                                                        />
-                                                        <div className="date_rate_reply">{moment(createdAt).format('Do MMMM YYYY')}</div>
-                                                        <div className="comment_rate_reply">
-                                                            {description}
+                                        <div className="d-flex">
+                                            <aside>
+                                                <h2 className="ratting_heading text-left ">User Reviews</h2>
+                                            </aside>
+                                            <aside style={{ flex: 2 }}>
+                                                <div className="text-sm text-right">Total Reviews: <b> {comments.length} </b> </div>
+                                            </aside>
+                                        </div>
+                                        {/* <InfiniteScroll
+                                            dataLength={items.length} //This is important field to render the next data
+                                            next={fetchData}
+                                            hasMore={hasMore}
+                                            loader={<h4>Loading...</h4>}
+                                            endMessage={<p style={{ textAlign: 'center' }}>
+                                                <b>Yay! You have seen it all</b>
+                                            </p>}
+                                        > */}
+                                            {comments?.map((value, index) => {
+                                                const { rating, description, createdAt } = value
+                                                return (
+                                                    <div key={index} className="box_reply_review">
+                                                        <div className="picture_profile bg_dark_green_name"> N</div>
+                                                        <div className="rate_reply">
+                                                            <Rating
+                                                                name="half-rating"
+                                                                defaultValue={rating}
+                                                                precision={0.5}
+                                                                readOnly
+                                                            />
+                                                            <div className="date_rate_reply">{moment(createdAt).format('Do MMMM YYYY')}</div>
+                                                            <div className="comment_rate_reply">
+                                                                {description}
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            )
-                                        })}
+                                                )
+                                            })}
 
-
+                                        {/* </InfiniteScroll> */}
                                     </div>
                                 </div>
                             </div>
@@ -819,14 +883,17 @@ export default function AstroProfile() {
             </button>
             <section className="chatbox-popup" id="open-chat">
                 <header className="chatbox-popup__header">
-                    <aside style={{ flex: 3 }}>
+                    <aside style={{ flex: 2 }}>
                         <i
                             className="fa fa-user-circle fa-4x chatbox-popup__avatar"
                             aria-hidden="true"
                         />
                     </aside>
-                    <aside style={{ flex: 8 }}>
+                    <aside style={{ flex: 4 }}>
                         <h1>{profiledata.astrologerName}</h1> Agent (Online)
+                    </aside>
+                    <aside style={{ flex: 6 }}>
+                        <blink id="chat-blink" className="text-warning text-sm d-none">Chat is Close within 30sec. you wallet is empty.</blink>
                     </aside>
                 </header>
                 <main className="chatbox-popup__main">

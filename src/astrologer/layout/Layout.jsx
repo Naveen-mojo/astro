@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import Stack from '@mui/material/Stack';
-import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
-// import Notification from '../component/Notification'
+import Notification from '../component/Notification'
 import logo from '../assest/images/logo.png'
 import { AuthContext } from '../context/AuthContext';
 import VideoCall from '../pages/videocall/VideoCall';
@@ -11,8 +8,7 @@ import { apiEndPoint } from '../../enviroment';
 var axios = require('axios');
 
 
-function Layout() {
-
+function Layout(props) {
     const { user, logoutUser } = useContext(AuthContext)
 
     const videoCall = (startTime, endTime, callFrom) => {
@@ -45,6 +41,20 @@ function Layout() {
 
     return (
         <>
+            {
+                user?.isActive === 0 ?
+                    <div className="announcement-bar view announcement-bar--open" data-controller="announcement-bar" data-announcement-id="header_promo_mar23" data-background-image="https://cms-assets.tutsplus.com/uploads/users/16/topics/12/announcement_background_image/blue.jpg" data-fallback-background-color="#273ab2" data-text-color="#FFFFFF" data-link-color style={{ backgroundImage: 'linear-gradient(to left, rgb(52, 76, 172), rgb(46, 87, 175), rgb(44, 96, 176), rgb(48, 105, 176), rgb(57, 114, 175), rgb(54, 113, 176), rgb(51, 112, 176), rgb(47, 111, 177), rgb(30, 100, 179), rgb(23, 87, 178), rgb(30, 74, 176), rgb(45, 58, 172))', backgroundSize: 'inherit', backgroundColor: 'rgb(39, 58, 178)', color: 'rgb(255, 255, 255)' }}>
+                        <div className="announcement-bar__content">
+                            <div className="announcement-bar__primary">
+                                <div className="announcement-bar__title">
+                                    <div className='py-3' align="center">
+                                        <b>Your profile is under verification process please try after it's activated.</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> : ""
+            }
             <header className='admin-header'>
                 <section id="desktop_view_header" className="head_section head_section_normal">
                     <div className="nav_head">
@@ -55,13 +65,9 @@ function Layout() {
                                         Kundli</Link></div>
                                     <div className="navLinks"><Link className="nav-link" to="match-making">Match
                                         Making</Link></div> */}
-                                    {/* <Notification /> */}
 
-                                    <Stack spacing={4} direction="row" sx={{ color: 'action.active', margin: "8px 25px 0px 10px" }}>
-                                        <Badge color="secondary" badgeContent={10}>
-                                            <MailIcon />
-                                        </Badge>
-                                    </Stack>
+                                    <Notification arrivalMessage={props.arrivalMessage} status={props.status} />
+
                                     {
                                         user ? <h4 className="contact_btn btnn btn">{user.username}</h4> : <div className="contact_btn btnn btn">
                                             <Link to='login' className="">

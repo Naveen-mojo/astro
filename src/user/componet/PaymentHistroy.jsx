@@ -7,7 +7,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-
+import Box from '@mui/material/Box';
+import { DataGrid } from "@mui/x-data-grid";
 
 function PaymentHistroy() {
 
@@ -15,6 +16,21 @@ function PaymentHistroy() {
     const [error, setError] = useState("")
 
     const { user } = useContext(AuthContext);
+
+    let rows = []
+
+    data?.map((val, index) => rows.push(
+        { id: val._id, col1: index + 1, col2: val.amount, col3: val.userId, col4: val.email, col5: val.status, col6: moment(val.createdAt).format('MMMM Do YYYY, h:mm:ss a') },
+    ))
+
+    const columns = [
+        { field: "col1", headerName: "S.No.", width: 150 },
+        { field: "col2", headerName: "Amount", width: 150 },
+        { field: "col3", headerName: "UserId", width: 300 },
+        { field: "col4", headerName: "Email", width: 200 },
+        { field: "col5", headerName: "Status", width: 200 },
+        { field: "col6", headerName: "Date & Time", width: 250 },
+    ];
 
     useEffect(() => {
         let config = {
@@ -41,46 +57,21 @@ function PaymentHistroy() {
                             Payemnt Histroy
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            <div className='container my-5'>
-                                <div className='row'>
-                                    <div className='col-md-12'>
-                                        <table className="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">S.No.</th>
-                                                    <th scope="col">Amount</th>
-                                                    <th scope="col">UserId</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Date & Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {
-                                                    data.map((value, index) => {
-                                                        const { amount, userId, email, status, createdAt } = value;
-                                                        return (
-                                                            <tr key={index}>
-                                                                <th scope="row">{index + 1}</th>
-                                                                <td>{amount}</td>
-                                                                <td>{userId}</td>
-                                                                <td>{email}</td>
-                                                                <td className='text-success text-bold text-capitalize'>{status}</td>
-                                                                <td>{moment(createdAt).format('MMMM Do YYYY, h:mm:ss a')}</td>
-                                                            </tr>
-                                                        )
-                                                    })
-                                                }
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                            <Box sx={{ height: 372, width: 1 }}>
+                                <DataGrid
+                                    rows={rows}
+                                    columns={columns}
+                                    initialState={{
+                                        ...data.initialState,
+                                        pagination: { paginationModel: { pageSize: 5 } },
+                                    }}
+                                    pageSizeOptions={[5, 10, 25]}
+                                />
+                            </Box>
                         </Typography>
                     </CardContent>
                 </CardActionArea>
             </Card>
-
         </>
     )
 }
