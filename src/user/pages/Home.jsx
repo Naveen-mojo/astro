@@ -4,7 +4,7 @@ import bannerImg from '../assest/images/sunny.webp'
 
 function Home() {
     var settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 100,
         slidesToShow: 4,
@@ -110,6 +110,18 @@ function Home() {
                         <div className="slider server-crosal">
                             <Slider {...settings} className="carousel d-flex">
                                 <div className="slide pr-4 col-md-3 col-4">
+                                    <a className="box_section free_service" href="/compatibility/aries/aries">
+                                        <div className="icon">
+                                            <span className="icons_saprate_image fastival_icon" />
+                                        </div>
+                                        <div className="title">Zodiac Compatibility</div>
+                                        <div className="discription">Festival -- "Its Nothing but an
+                                            Uncountable forms of celebrations". Check Out for more</div>
+                                        <div className="readmore_icon">
+                                            <i className="fa fa-arrow-right" /></div>
+                                    </a>
+                                </div>
+                                <div className="slide pr-4 col-md-3 col-4">
                                     <a className="box_section free_service" href="https://www.mobilegamingarcade.com/astrotalk.com/horoscope/daily-horoscope">
                                         <div className="icon">
                                             <span className="icons_saprate_image compatibility_icon" />
@@ -122,18 +134,7 @@ function Home() {
                                             <i className="fa fa-arrow-right" /></div>
                                     </a>
                                 </div>
-                                <div className="slide pr-4 col-md-3 col-4">
-                                    <a className="box_section free_service" href="http://localhost/astrotalk.com/indian-calendar-festivals-2022">
-                                        <div className="icon">
-                                            <span className="icons_saprate_image fastival_icon" />
-                                        </div>
-                                        <div className="title">Festival</div>
-                                        <div className="discription">Festival -- "Its Nothing but an
-                                            Uncountable forms of celebrations". Check Out for more</div>
-                                        <div className="readmore_icon">
-                                            <i className="fa fa-arrow-right" /></div>
-                                    </a>
-                                </div>
+                              
                                 <div className="slide pr-4 col-md-3 col-4">
                                     <a className="box_section free_service" href="http://localhost/astrotalk.com/matchmaking">
                                         <div className="icon">

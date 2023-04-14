@@ -11,6 +11,10 @@ import TalkWithAstrologer from "./pages/TalkWithAstrologer";
 import AstroProfile from "./pages/AstroProfile";
 import Payment from "./pages/Payment";
 import AddWallet from "./pages/AddWallet";
+import PaymentSuccess from './componet/PaymentSuccess';
+import PaymentCancle from './componet/PaymentCancle';
+import Compatibility from "./pages/Compatibility";
+import TodaysDetail from "./pages/horoscope/TodaysDetail";
 import StripeContainer from './pages/stripe/StripeContainer';
 import ProfileAndAccount from "./pages/ProfileAndAccount";
 
@@ -27,6 +31,10 @@ function Routes() {
                 { path: "chat-with-astrologer", element: <ChatWithAstrologer /> },
                 { path: "talk-with-astrologer", element: <TalkWithAstrologer /> },
                 { path: "astro-profile/:id", element: <AstroProfile /> },
+                { path: "compatibility/:fromId/:toId", element: <Compatibility /> },
+                { path: "horoscope/:zodiacType/:zodiacSign", element: <TodaysDetail /> },
+                // fetch api data
+                // { path: "horoscope/:zodiacTypeId/:zodiacId", element: <TodaysDetail /> },
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
                 { path: "pay-with-card/:id", element: <StripeContainer /> },
