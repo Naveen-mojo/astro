@@ -2423,7 +2423,9 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0;
 }
 .input-group
-  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+    .valid-feedback
+  ):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -9934,18 +9936,24 @@ fieldset:disabled .btn {
   border-color: #0000;
 }
 .mat-calendar-body-disabled
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .mat-form-field-disabled .mat-date-range-input-separator {
   color: #00000061;
 }
 .mat-calendar-body-in-preview {
   color: #0000003d;
 }
-.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
   border-color: #00000061;
 }
 .mat-calendar-body-disabled
-  > .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  > .mat-calendar-body-today:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
   border-color: #0000002e;
 }
 .mat-calendar-body-in-range:before {
@@ -9983,12 +9991,18 @@ fieldset:disabled .btn {
 }
 .cdk-keyboard-focused
   .mat-calendar-body-active
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .cdk-program-focused
   .mat-calendar-body-active
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
   background-color: #ffeb3b4d;
 }
 .mat-datepicker-content {
@@ -10049,14 +10063,20 @@ fieldset:disabled .btn {
 .mat-datepicker-content.mat-accent
   .cdk-keyboard-focused
   .mat-calendar-body-active
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .mat-datepicker-content.mat-accent
   .cdk-program-focused
   .mat-calendar-body-active
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .mat-datepicker-content.mat-accent
   .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
   background-color: #ffca284d;
 }
 .mat-datepicker-content.mat-warn .mat-calendar-body-in-range:before {
@@ -10110,14 +10130,20 @@ fieldset:disabled .btn {
 .mat-datepicker-content.mat-warn
   .cdk-keyboard-focused
   .mat-calendar-body-active
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .mat-datepicker-content.mat-warn
   .cdk-program-focused
   .mat-calendar-body-active
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ),
 .mat-datepicker-content.mat-warn
   .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
   background-color: #f443364d;
 }
 .mat-datepicker-content-touch {
@@ -10372,7 +10398,9 @@ fieldset:disabled .btn {
 .mat-raised-button:not([class*="mat-elevation-z"]) {
   box-shadow: 0 3px 1px -2px #0003, 0 2px 2px 0 #00000024, 0 1px 5px 0 #0000001f;
 }
-.mat-raised-button:not(.mat-button-disabled):active:not([class*="mat-elevation-z"]) {
+.mat-raised-button:not(.mat-button-disabled):active:not(
+    [class*="mat-elevation-z"]
+  ) {
   box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024,
     0 3px 14px 2px #0000001f;
 }
@@ -16605,18 +16633,18 @@ ul#breadcrumbs-two {
   }
 }
 .icons_saprate_image {
-   background-image: url(https://astrotalk.com/icon4.666c4836c46d11f27101.webp); 
+  background-image: url(https://astrotalk.com/icon4.666c4836c46d11f27101.webp);
   display: inline-block;
 }
 .chat_with_astrologer_icon {
-    height: 65px;
-    width: 65px;
-    background-position: 439px 713px;
+  height: 65px;
+  width: 65px;
+  background-position: 439px 713px;
 }
 .talk_with_astrologer_icon {
- height: 65px;
-    width: 65px;
-    background-position: 528px 716px;
+  height: 65px;
+  width: 65px;
+  background-position: 528px 716px;
 }
 .live_on_astrotv_icon {
   height: 65px;
@@ -17577,84 +17605,105 @@ html.lb-disable-scrolling {
   padding-bottom: 10px !important;
 }
 .box_special_offer[_ngcontent-serverApp-c101] {
-    display: flex;
-    background: linear-gradient(90deg,#f0df20,#f9f8e3 30%);
-    border-radius: 20px;
-    padding: 20px 50px 0 60px;
-    position: relative;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  background: linear-gradient(90deg, #f0df20, #f9f8e3 30%);
+  border-radius: 20px;
+  padding: 20px 50px 0 60px;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
 }
 .left_side_offer_icon[_ngcontent-serverApp-c101] {
-    width: 260px;
-    min-width: 260px;
-    height: 269px;
-    position: relative;
+  width: 260px;
+  min-width: 260px;
+  height: 269px;
+  position: relative;
 }
-.left_side_offer_icon[_ngcontent-serverApp-c101] img[_ngcontent-serverApp-c101] {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+.left_side_offer_icon[_ngcontent-serverApp-c101]
+  img[_ngcontent-serverApp-c101] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 img[alt][_ngcontent-serverApp-c101] {
-    font-size: .75em;
-    color: #ddd;
+  font-size: 0.75em;
+  color: #ddd;
 }
 .right_side_Details_offers[_ngcontent-serverApp-c101] {
-    text-align: right;
-    padding-bottom: 20px;
+  text-align: right;
+  padding-bottom: 20px;
 }
-.right_side_Details_offers[_ngcontent-serverApp-c101] h1[_ngcontent-serverApp-c101] {
-    margin-bottom: 30px;
-    font-size: 2.5rem;
+.right_side_Details_offers[_ngcontent-serverApp-c101]
+  h1[_ngcontent-serverApp-c101] {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
 }
-.right_side_Details_offers[_ngcontent-serverApp-c101] .po-title[_ngcontent-serverApp-c101] {
-    font-size: 42px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    display: block;
-    color: #313131;
+.right_side_Details_offers[_ngcontent-serverApp-c101]
+  .po-title[_ngcontent-serverApp-c101] {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: block;
+  color: #313131;
 }
-.right_side_Details_offers[_ngcontent-serverApp-c101] .po-subtitle[_ngcontent-serverApp-c101] {
-    font-size: 52px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    display: block;
-    color: #313131;
+.right_side_Details_offers[_ngcontent-serverApp-c101]
+  .po-subtitle[_ngcontent-serverApp-c101] {
+  font-size: 52px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  color: #313131;
 }
-.right_side_Details_offers[_ngcontent-serverApp-c101] .po-title[_ngcontent-serverApp-c101] {
-    font-size: 42px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    display: block;
-    color: #313131;
+.right_side_Details_offers[_ngcontent-serverApp-c101]
+  .po-title[_ngcontent-serverApp-c101] {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: block;
+  color: #313131;
 }
 .talk_now_button[_ngcontent-serverApp-c101] {
-    background-color: #f0df20;
-    border: 1px solid #000;
-    font-size: 24px;
-    color: #000;
-    padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: .3s ease-in-out;
-    text-decoration: none;
+  background-color: #f0df20;
+  border: 1px solid #000;
+  font-size: 24px;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
 .left_side_offer_icon[_ngcontent-serverApp-c101]:after {
-    content: "Sunny Leone";
-    color: #000;
-    position: absolute;
-    white-space: nowrap;
-    bottom: 10px;
-    font-weight: 600;
-    font-style: italic;
-    right: -100px;
-    font-size: 18px;
+  content: "Sunny Leone";
+  color: #000;
+  position: absolute;
+  white-space: nowrap;
+  bottom: 10px;
+  font-weight: 600;
+  font-style: italic;
+  right: -100px;
+  font-size: 18px;
 }
 .blog_on_astrotv_icon {
-    height: 65px;
-    width: 65px;
-    background-position: 85px 448px;
+  height: 65px;
+  width: 65px;
+  background-position: 85px 448px;
+}
+.review_border_radius {
+  border: 1px solid #0003;
+  border-radius: 10px;
+  padding: 10px 10px 0;
+}
+
+.css-cveggr-MuiListItemIcon-root {
+  min-width: 30px !important;
+  color: rgba(0, 0, 0, 0.54);
+  flex-shrink: 0;
+  display: inline !important;
+  margin-right: 10px;
+}
+.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root {
+  z-index: 9999 !important;
 }

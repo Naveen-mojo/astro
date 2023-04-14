@@ -3,7 +3,6 @@ import AuthProvider from './context/AuthContext';
 import LoginPopup from './user/auth/LoginPopup';
 import Routes from './user/Routes';
 import OTPModel from './user/auth/OTPModel';
-import ProfileModal from './user/componet/ProfileModal';
 import AstroProvider from './context/AstroContext';
 import './user/assest/css/app.scss';
 import { useLocation } from 'react-router-dom';
@@ -11,6 +10,8 @@ import AdminAuthProvider from './astrologer/context/AuthContext'
 import AdminRoutes from './astrologer/Routes'
 import ZodiacProvider from './context/ZodiacContext';
 import HoroscopeProvider from './context/HoroscopeTypeContext';
+import WalletProvider from './context/WalletContext';
+
 
 function App() {
   const location = useLocation();
@@ -28,7 +29,6 @@ function App() {
       <>
         <AuthProvider>
           <LoginPopup />
-          <ProfileModal />
           <OTPModel />
           <AstroProvider>
             <ZodiacProvider>
@@ -36,6 +36,9 @@ function App() {
                 <Routes />
               </HoroscopeProvider>
             </ZodiacProvider>
+            <WalletProvider>
+              <Routes />
+            </WalletProvider>
           </AstroProvider>
         </AuthProvider>
       </>

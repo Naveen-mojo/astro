@@ -15,6 +15,8 @@ import PaymentSuccess from './componet/PaymentSuccess';
 import PaymentCancle from './componet/PaymentCancle';
 import Compatibility from "./pages/Compatibility";
 import TodaysDetail from "./pages/horoscope/TodaysDetail";
+import StripeContainer from './pages/stripe/StripeContainer';
+import ProfileAndAccount from "./pages/ProfileAndAccount";
 
 function Routes() {
     return useRoutes([
@@ -35,8 +37,8 @@ function Routes() {
                 // { path: "horoscope/:zodiacTypeId/:zodiacId", element: <TodaysDetail /> },
                 { path: "add-money-wallet", element: <AddWallet /> },
                 { path: "payment/:id", element: <Payment /> },
-                { path: "success", element: <PaymentSuccess /> },
-                { path: "cancel", element: <PaymentCancle /> },
+                { path: "pay-with-card/:id", element: <StripeContainer /> },
+                { path: "profile-and-account", element: <ProfileAndAccount /> },
                 { path: "*", element: <PageNotFound /> },
             ],
         },

@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from '../../context/AuthContext'
+import { WalletContext } from '../../context/WalletContext'
 import { apiEndPoint } from "../../enviroment";
 
 export default function AddWallet() {
-    const { user } = useContext(AuthContext)
+    const { wallet } = useContext(WalletContext);
+
 
     const [state, setstate] = useState([])
 
@@ -56,7 +57,12 @@ export default function AddWallet() {
                                 <h1 className="heading_money_wallet">Add Money to Wallet</h1>
                             </div>
                         </div>
-                        <div className="available_balance mb-3">Available balance: ₹ {user.wallet}</div>
+                        <div className="available_balance mb-3">Available balance:
+
+                            {
+                                wallet ? <main className="balance_avail"> ₹ {wallet?.total} </main> : <main className="balance_avail"> ₹ 0 </main>
+                            }
+                        </div>
                     </form>
                     <div className="row padding_right_left">
                         {

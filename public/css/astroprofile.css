@@ -85,7 +85,7 @@ img.ng-lazyloaded {
   padding: 3px 5px;
   text-align: center;
   font-size: 13px;
-  margin: 0 40px 15px;
+  margin: 0 0px 15px;
 }
 
 .success-msg {
@@ -2679,8 +2679,8 @@ textarea {
   line-height: calc(16px + 16px / 2);
   color: #888;
   background-color: none;
-  border: 0;
-  outline: 0 !important;
+  border: 1px solid #bda2a2;
+  outline: 1px soild #000 !important;
   resize: none;
   overflow: hidden;
 }
@@ -2731,7 +2731,7 @@ textarea::placeholder {
   color: #888;
   text-align: center;
   height: 51vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .chatbox-popup .chatbox-popup__footer {

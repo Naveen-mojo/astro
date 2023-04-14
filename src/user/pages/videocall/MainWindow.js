@@ -9,7 +9,7 @@ function useClientID() {
   useEffect(() => {
     socket
       .on('init', ({ id }) => {
-        console.log("id", id)
+        // console.log("id", id)
         // document.title = `${id} - VideoCall`;
         setClientID(id);
       });

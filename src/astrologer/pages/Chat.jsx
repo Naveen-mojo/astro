@@ -3,11 +3,10 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { io } from "socket.io-client";
-import {apiEndPoint} from "../../enviroment";
+import { apiEndPoint } from "../../enviroment";
 import Conversation from "./Conversation";
 
-
-export default function Messenger() {
+export default function Messenger(props) {
     const [conversations, setConversations] = useState([]);
     const [currentChat, setCurrentChat] = useState(null);
     const [messages, setMessages] = useState([]);
@@ -21,7 +20,7 @@ export default function Messenger() {
 
 
     useEffect(() => {
-        socket.current = io("wss://astro-socket.onrender.com/");
+        socket.current = io("http://localhost:8900");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,
@@ -115,34 +114,37 @@ export default function Messenger() {
     }
 
 
-    // const updateProfile = () => {
-    //     var formdata = new FormData();
-    //     formdata.append("status", status);
+    const updateProfile = () => {
+        var formdata = new FormData();
+        formdata.append("status", status);
 
-    //     const config = {
-    //         method: 'PATCH',
-    //         url: `${apiEnviroment.astroEnviroment}update/${user.id}`,
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         data: formdata
-    //     }
+        const config = {
+            method: 'PATCH',
+            url: `${apiEndPoint}astro/update/status/${user.id}`,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: formdata
+        }
 
-    //     axios(config).then((res) => {
-    //         console.log(res.data)
-    //     }).catch((error) => {
-    //         console.log(error)
-    //     })
-    // }
+        axios(config).then((res) => {
+            console.log(res.data)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
 
     useEffect(() => {
-        // updateProfile()
+        updateProfile()
     }, [status])
 
+    useEffect(() => {
+        props.onNotification(arrivalMessage, status)
+    }, [arrivalMessage, status])
 
     return (
         <>
-            <section style={{ backgroundImage: "url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg')" }}>
+            <section style={{ backgroundImage: "url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg')", height: "100vh" }}>
                 <div className="messenger">
                     <div className="chatMenu">
                         <div className="chatMenuWrapper">

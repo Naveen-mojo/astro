@@ -1,13 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import Slider from "react-slick";
 import verifiedImg from "../assest/images/Chat_with_astrologers.jpeg";
 import { Link } from "react-router-dom";
 import { AstroContext } from "../../context/AstroContext";
+import { WalletContext } from "../../context/WalletContext";
+import Button from '@mui/material/Button';
+import axios from "axios";
+import { apiEndPoint } from "../../enviroment";
+import RechargeDialog from '../componet/Dialog'
 
 function ChatWithAstrologer() {
     const { user } = useContext(AuthContext);
-    const { astro, loading } = useContext(AstroContext);
+    const { wallet } = useContext(WalletContext);
+    const { astro } = useContext(AstroContext);
+    const [search, setSearch] = useState("")
+    const [astrologer, setAstrologer] = useState([])
+    const [error, setError] = useState("")
+    const [openDialog, setOpenDialog] = React.useState(false);
 
     var settings = {
         dots: true,
@@ -34,8 +44,43 @@ function ChatWithAstrologer() {
         ]
     };
 
+    function getSearch() {
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: `${apiEndPoint}astro/search?astrologerName=${search}`,
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setAstrologer(response.data);
+            })
+            .catch((error) => {
+                setError(error);
+            });
+    }
+
+    useEffect(() => {
+        getSearch()
+    }, [search])
+
+    useEffect(() => {
+        setAstrologer(astro)
+    }, [astro])
+
+    if (openDialog) {
+        setTimeout(() => {
+            setOpenDialog(false)
+        }, 5000);
+    }
+
+    const description_modal = 'Please Login to open more option and you can also chat and videocall options are enabled after login.'
+    const title_modal = 'Please Login'
+
     return (
         <>
+            <RechargeDialog openDialog={openDialog} description_modal={description_modal} title_modal={title_modal} />
+
             <section className="chat_with_astrologers">
                 <div className="container">
                     <form className="mbl_view_padding ng-untouched ng-pristine ng-valid">
@@ -64,7 +109,7 @@ function ChatWithAstrologer() {
                                         Available balance:
 
                                         {
-                                            user ? <main className="balance_avail"> ₹ {user?.wallet} </main> : <main className="balance_avail"> ₹ 0 </main>
+                                            wallet ? <main className="balance_avail"> ₹ {wallet?.total} </main> : <main className="balance_avail"> ₹ 0 </main>
                                         }
 
                                     </span>
@@ -73,7 +118,7 @@ function ChatWithAstrologer() {
                             <div className="col-md-6 pd0">
                                 <div className="recharge_btn">
                                     {
-                                        user ? <Link to='/add-money-wallet'>Recharge</Link> : <div type="button" onClick={() => { alert('please Login!') }} class="btn btn-outline-success">Recharge</div>
+                                        user ? <Link to='/add-money-wallet'>Recharge</Link> : <Button variant="outlined" color="success" onClick={() => { setOpenDialog(true) }} >Recharge</Button>
                                     }
                                     <button className="filter_short_by_desktop_view">
                                         <i className="fa fa-filter" /> Filter
@@ -90,6 +135,7 @@ function ChatWithAstrologer() {
                                             name="searchText"
                                             type="search"
                                             autoComplete="off"
+                                            onChange={(event) => setSearch(event.target.value)}
                                             id="searchAstroQuery"
                                             className="form-control postion_Rel ng-untouched ng-pristine ng-valid"
                                             placeholder="Search name..."
@@ -110,8 +156,8 @@ function ChatWithAstrologer() {
                     </form>
 
                     <div className="row astrolgers_list">
-                        {astro.map((curValue) => {
-                            const { astrologerName, _id, skill, language, exp, profileImage } = curValue;
+                        {astrologer?.map((curValue) => {
+                            const { astrologerName, _id, skill, language, exp, profileImage, chatRate } = curValue;
                             return (
                                 <div
                                     className="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-3"
@@ -224,7 +270,7 @@ function ChatWithAstrologer() {
                                                 <div className="astrologers_prices_chat">
                                                     <span className="bold_class">
                                                         <span>₹ </span>
-                                                        30
+                                                        {chatRate}
                                                     </span>
                                                     &nbsp;
                                                 </div>
@@ -251,7 +297,7 @@ function ChatWithAstrologer() {
                                                         </div>
                                                     </div>
                                                 </Link> :
-                                                    <div className="chat_button" onClick={() => { alert('Please Login!') }}>
+                                                    <div className="chat_button" onClick={() => { setOpenDialog(true) }}>
                                                         <div className="btn_cht busy-status cursor-pointer">
                                                             Chat
                                                         </div>

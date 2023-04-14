@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { apiEndPoint } from '../../enviroment'
+// import { apiEndPoint } from '../../enviroment'
 
 export default function Payment() {
 
@@ -23,29 +23,29 @@ export default function Payment() {
         userId: user.id
     })
 
-    const onToken = (e) => {
-        e.preventDefault();
-        const config = {
-            method: "post",
-            url: `${apiEndPoint}create-checkout-session`,
-            headers: {
-                "Content-Type": "application/json",
-            },
-            data: {
-                product: product
-            },
-        }
+    // const onToken = (e) => {
+    //     e.preventDefault();
+    //     const config = {
+    //         method: "post",
+    //         url: `${apiEndPoint}create-checkout-session`,
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         data: {
+    //             product: product
+    //         },
+    //     }
 
-        axios(config)
-            .then((response) => {
-                return response.data.url
-            }).then((url) => {
-                window.open(url, '_blank');
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+    //     axios(config)
+    //         .then((response) => {
+    //             return response.data.url
+    //         }).then((url) => {
+    //             window.open(url, '_blank');
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // };
 
     return (
         <>
@@ -89,9 +89,10 @@ export default function Payment() {
                                     <h1 className="payment_heading my-4">Payment Options </h1>
                                 </div>
                                 <div className="col-md-3 p-3 bg-payment-page">
-                                    <form onSubmit={onToken} method="POST">
+                                    {/* <form onSubmit={onToken} method="POST">
                                         <button type="submit">Pay With Card</button>
-                                    </form>
+                                    </form> */}
+                                    <Link to={`/pay-with-card/${totalAmount}`}>Pay With Card</Link>
                                 </div>
                             </div>
                         </div>

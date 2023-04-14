@@ -9,15 +9,24 @@ import Profile from "./pages/Profile";
 import PrivateRoute from './utils/PrivateRoute'
 
 function AstrologerRoutes() {
+    
+    const [message, setarrivalMessage] = React.useState(null)
+    const [st, setstatus] = React.useState(null)
+
+    function onNotification (arrivalMessage, status){
+        setarrivalMessage(arrivalMessage)
+        setstatus(status)
+    }
+
     return useRoutes([
         {
             path: "astro",
-            element: <Layout />,
+            element: <Layout arrivalMessage={message} status={st} />,
             children: [
                 { path: "login", element: <Login /> },
                 { path: "signup", element: <Registration /> },
                 { path: "dashboard", element: <PrivateRoute> <Dashboard /> </PrivateRoute> },
-                { path: "chat", element: <PrivateRoute> <Chat /> </PrivateRoute> },
+                { path: "chat", element: <PrivateRoute> <Chat onNotification={onNotification} /> </PrivateRoute> },
                 { path: "profile", element: <PrivateRoute> <Profile /> </PrivateRoute> },
             ],
         },
